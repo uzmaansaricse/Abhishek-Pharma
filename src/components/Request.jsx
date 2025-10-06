@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Container from '../pages/Container';
-import { FaFileInvoice, FaCheckCircle, FaTruck, FaPercent, FaClipboardList } from 'react-icons/fa';
+import { FaFileInvoice, FaCheckCircle, FaTruck, FaPercent, FaClipboardList, FaGlobe } from 'react-icons/fa';
 import { MdSend } from 'react-icons/md';
 
 export default function Request() {
@@ -16,6 +16,119 @@ export default function Request() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [language, setLanguage] = useState('en');
+
+  const content = {
+    en: {
+      heroTitle: 'Request',
+      heroHighlight: 'Quote',
+      heroSubtitle: 'Get instant access to our product catalog and competitive pricing',
+      heroDesc: 'Fill out the form below and receive detailed quotations within 24 hours',
+      benefits: [
+        { title: 'Instant Quotes', desc: 'Receive detailed pricing within 24 hours' },
+        { title: 'Fast Delivery', desc: 'Quick dispatch and reliable shipping' },
+        { title: 'Best Prices', desc: 'Competitive wholesale rates for bulk orders' },
+        { title: 'Custom Lists', desc: 'Tailored product catalogs for your needs' }
+      ],
+      productCategories: [
+        { value: 'Tablets', icon: '💊' },
+        { value: 'Syrups', icon: '🧪' },
+        { value: 'Injections', icon: '💉' },
+        { value: 'Ayurvedic Medicines', icon: '🌿' },
+        { value: 'Promotional Products', icon: '🎁' },
+        { value: 'OTC Products', icon: '🏥' },
+        { value: 'All Products', icon: '📋' },
+        { value: 'Other', icon: '📦' }
+      ],
+      formHeader: 'Request Your Quote',
+      formSubtitle: "We'll respond within 24 hours with detailed pricing",
+      personalDetails: 'Personal Details',
+      fullName: 'Full Name',
+      phoneNumber: 'Phone Number',
+      businessInfo: 'Business Information',
+      businessName: 'Business/Pharmacy Name',
+      cityLocation: 'City/Location',
+      productReq: 'Product Requirements',
+      selectCategory: 'Select Product Category',
+      additionalReq: 'Additional Requirements',
+      namePlaceholder: 'Enter your full name',
+      phonePlaceholder: '+91 XXXXX XXXXX',
+      businessPlaceholder: 'Your business name',
+      cityPlaceholder: 'Your city',
+      messagePlaceholder: 'Please specify quantities, brands, or any special requirements...',
+      submitBtn: 'Submit Quote Request',
+      loadingMsg: 'Processing your request...',
+      loadingSubMsg: 'Please wait while we submit your quotation request',
+      successTitle: 'Request Submitted Successfully!',
+      successMsg: 'Thank you for your interest in Abhishek Pharma',
+      successSubMsg: 'Our team will contact you within 24 hours with a detailed quotation and product catalog.',
+      anotherRequest: 'Submit Another Request',
+      privacyNote: '🔒 Your information is secure and will only be used to process your quote request',
+      whyTitle: 'Why Request a Quote from',
+      whyHighlight: 'Abhishek Pharma?',
+      whyChoose: [
+        { icon: '✅', title: 'Verified Quality', desc: 'ISO certified products' },
+        { icon: '💰', title: 'Best Wholesale Rates', desc: 'Competitive bulk pricing' },
+        { icon: '🚀', title: 'Fast Processing', desc: '24-hour quote delivery' }
+      ]
+    },
+    hi: {
+      heroTitle: 'कोट का',
+      heroHighlight: 'अनुरोध करें',
+      heroSubtitle: 'हमारी उत्पाद कैटलॉग और प्रतिस्पर्धी मूल्य निर्धारण तक त्वरित पहुंच प्राप्त करें',
+      heroDesc: 'नीचे दिया गया फॉर्म भरें और 24 घंटे के भीतर विस्तृत कोटेशन प्राप्त करें',
+      benefits: [
+        { title: 'त्वरित कोट', desc: '24 घंटे के भीतर विस्तृत मूल्य निर्धारण प्राप्त करें' },
+        { title: 'तेज डिलीवरी', desc: 'त्वरित डिस्पैच और विश्वसनीय शिपिंग' },
+        { title: 'सर्वोत्तम मूल्य', desc: 'थोक ऑर्डर के लिए प्रतिस्पर्धी दरें' },
+        { title: 'कस्टम सूची', desc: 'आपकी जरूरतों के लिए अनुकूलित उत्पाद कैटलॉग' }
+      ],
+      productCategories: [
+        { value: 'गोलियां', icon: '💊' },
+        { value: 'सिरप', icon: '🧪' },
+        { value: 'इंजेक्शन', icon: '💉' },
+        { value: 'आयुर्वेदिक दवाएं', icon: '🌿' },
+        { value: 'प्रचार उत्पाद', icon: '🎁' },
+        { value: 'ओटीसी उत्पाद', icon: '🏥' },
+        { value: 'सभी उत्पाद', icon: '📋' },
+        { value: 'अन्य', icon: '📦' }
+      ],
+      formHeader: 'अपना कोट अनुरोध करें',
+      formSubtitle: 'हम 24 घंटे के भीतर विस्तृत मूल्य निर्धारण के साथ जवाब देंगे',
+      personalDetails: 'व्यक्तिगत विवरण',
+      fullName: 'पूरा नाम',
+      phoneNumber: 'फोन नंबर',
+      businessInfo: 'व्यवसाय की जानकारी',
+      businessName: 'व्यवसाय/फार्मेसी का नाम',
+      cityLocation: 'शहर/स्थान',
+      productReq: 'उत्पाद आवश्यकताएं',
+      selectCategory: 'उत्पाद श्रेणी चुनें',
+      additionalReq: 'अतिरिक्त आवश्यकताएं',
+      namePlaceholder: 'अपना पूरा नाम दर्ज करें',
+      phonePlaceholder: '+91 XXXXX XXXXX',
+      businessPlaceholder: 'आपके व्यवसाय का नाम',
+      cityPlaceholder: 'आपका शहर',
+      messagePlaceholder: 'कृपया मात्रा, ब्रांड, या किसी विशेष आवश्यकताओं को निर्दिष्ट करें...',
+      submitBtn: 'कोट अनुरोध सबमिट करें',
+      loadingMsg: 'आपका अनुरोध संसाधित किया जा रहा है...',
+      loadingSubMsg: 'कृपया प्रतीक्षा करें जबकि हम आपका कोटेशन अनुरोध सबमिट करते हैं',
+      successTitle: 'अनुरोध सफलतापूर्वक सबमिट किया गया!',
+      successMsg: 'अभिषेक फार्मा में आपकी रुचि के लिए धन्यवाद',
+      successSubMsg: 'हमारी टीम 24 घंटे के भीतर विस्तृत कोटेशन और उत्पाद कैटलॉग के साथ आपसे संपर्क करेगी।',
+      anotherRequest: 'एक और अनुरोध सबमिट करें',
+      privacyNote: '🔒 आपकी जानकारी सुरक्षित है और केवल आपके कोट अनुरोध को संसाधित करने के लिए उपयोग की जाएगी',
+      whyTitle: 'क्यों कोट का अनुरोध करें',
+      whyHighlight: 'अभिषेक फार्मा से?',
+      whyChoose: [
+        { icon: '✅', title: 'सत्यापित गुणवत्ता', desc: 'आईएसओ प्रमाणित उत्पाद' },
+        { icon: '💰', title: 'सर्वोत्तम थोक दरें', desc: 'प्रतिस्पर्धी थोक मूल्य निर्धारण' },
+        { icon: '🚀', title: 'तेज प्रसंस्करण', desc: '24-घंटे कोट वितरण' }
+      ]
+    }
+  };
+
+  const t = content[language];
+  const benefitIcons = [FaFileInvoice, FaTruck, FaPercent, FaClipboardList];
 
   const handleChange = (e) => {
     setFormData({
@@ -55,26 +168,19 @@ export default function Request() {
       });
   };
 
-  const benefits = [
-    { icon: FaFileInvoice, title: 'Instant Quotes', desc: 'Receive detailed pricing within 24 hours' },
-    { icon: FaTruck, title: 'Fast Delivery', desc: 'Quick dispatch and reliable shipping' },
-    { icon: FaPercent, title: 'Best Prices', desc: 'Competitive wholesale rates for bulk orders' },
-    { icon: FaClipboardList, title: 'Custom Lists', desc: 'Tailored product catalogs for your needs' }
-  ];
-
-  const productCategories = [
-    { value: 'Tablets', icon: '💊' },
-    { value: 'Syrups', icon: '🧪' },
-    { value: 'Injections', icon: '💉' },
-    { value: 'Ayurvedic Medicines', icon: '🌿' },
-    { value: 'Promotional Products', icon: '🎁' },
-    { value: 'OTC Products', icon: '🏥' },
-    { value: 'All Products', icon: '📋' },
-    { value: 'Other', icon: '📦' }
-  ];
-
   return (
-    <div className="bg-gradient-to-br from-white via-teal-50/30 to-emerald-50/30 min-h-screen">
+    <div className=" w-[100vw] overflow-x-hidden bg-gradient-to-br from-white via-teal-50/30 to-emerald-50/30 min-h-screen">
+      {/* Language Toggle Button */}
+      <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
+        <button
+          onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
+          className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+        >
+          <FaGlobe className="w-5 h-5" />
+          <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
+        </button>
+      </div>
+
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-700 text-white py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -89,15 +195,15 @@ export default function Request() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-aos="zoom-in">
-              Request <span className="text-yellow-300">Quote</span>
+              {t.heroTitle} <span className="text-yellow-300">{t.heroHighlight}</span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-teal-100 mb-4" data-aos="fade-up" data-aos-delay="200">
-              Get instant access to our product catalog and competitive pricing
+              {t.heroSubtitle}
             </p>
             
             <p className="text-lg text-teal-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
-              Fill out the form below and receive detailed quotations within 24 hours
+              {t.heroDesc}
             </p>
           </div>
         </Container>
@@ -107,20 +213,23 @@ export default function Request() {
       <div className="py-10 -mt-16 relative z-10" data-aos="fade-up">
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200"
-                data-aos="flip-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="inline-flex p-3 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl mb-4">
-                  <benefit.icon className="w-6 h-6 text-teal-600" />
+            {t.benefits.map((benefit, index) => {
+              const Icon = benefitIcons[index];
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200"
+                  data-aos="flip-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="inline-flex p-3 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl mb-4">
+                    <Icon className="w-6 h-6 text-teal-600" />
+                  </div>
+                  <h3 className="font-bold text-gray-800 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.desc}</p>
                 </div>
-                <h3 className="font-bold text-gray-800 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </div>
@@ -132,8 +241,8 @@ export default function Request() {
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
               {/* Form Header */}
               <div className="bg-gradient-to-r from-teal-500 to-emerald-500 p-8 text-white text-center">
-                <h2 className="text-3xl font-bold mb-2">Request Your Quote</h2>
-                <p className="text-teal-100">We'll respond within 24 hours with detailed pricing</p>
+                <h2 className="text-3xl font-bold mb-2">{t.formHeader}</h2>
+                <p className="text-teal-100">{t.formSubtitle}</p>
               </div>
 
               {/* Form Content */}
@@ -141,22 +250,22 @@ export default function Request() {
                 {loading ? (
                   <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300 text-yellow-800 p-8 rounded-2xl shadow-lg text-center" data-aos="zoom-in">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-4 border-yellow-600 mx-auto mb-4"></div>
-                    <p className="font-semibold text-lg">Processing your request...</p>
-                    <p className="text-sm mt-2">Please wait while we submit your quotation request</p>
+                    <p className="font-semibold text-lg">{t.loadingMsg}</p>
+                    <p className="text-sm mt-2">{t.loadingSubMsg}</p>
                   </div>
                 ) : submitted ? (
                   <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-emerald-300 text-emerald-800 p-8 rounded-2xl shadow-lg text-center" data-aos="zoom-in">
                     <div className="inline-flex p-4 bg-emerald-500 rounded-full mb-4">
                       <FaCheckCircle className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Request Submitted Successfully!</h3>
-                    <p className="text-lg mb-4">Thank you for your interest in Abhishek Pharma</p>
-                    <p className="text-sm mb-6">Our team will contact you within 24 hours with a detailed quotation and product catalog.</p>
+                    <h3 className="text-2xl font-bold mb-2">{t.successTitle}</h3>
+                    <p className="text-lg mb-4">{t.successMsg}</p>
+                    <p className="text-sm mb-6">{t.successSubMsg}</p>
                     <button
                       onClick={() => setSubmitted(false)}
                       className="px-6 py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors"
                     >
-                      Submit Another Request
+                      {t.anotherRequest}
                     </button>
                   </div>
                 ) : (
@@ -164,12 +273,12 @@ export default function Request() {
                     {/* Personal Details Section */}
                     <div>
                       <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-teal-200">
-                        Personal Details
+                        {t.personalDetails}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="group">
                           <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
-                            Full Name <span className="text-red-500">*</span>
+                            {t.fullName} <span className="text-red-500">*</span>
                           </label>
                           <input
                             type="text"
@@ -178,13 +287,13 @@ export default function Request() {
                             onChange={handleChange}
                             required
                             className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
-                            placeholder="Enter your full name"
+                            placeholder={t.namePlaceholder}
                           />
                         </div>
 
                         <div className="group">
                           <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
-                            Phone Number <span className="text-red-500">*</span>
+                            {t.phoneNumber} <span className="text-red-500">*</span>
                           </label>
                           <input
                             type="tel"
@@ -193,7 +302,7 @@ export default function Request() {
                             onChange={handleChange}
                             required
                             className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
-                            placeholder="+91 XXXXX XXXXX"
+                            placeholder={t.phonePlaceholder}
                           />
                         </div>
                       </div>
@@ -201,13 +310,13 @@ export default function Request() {
 
                     {/* Business Details Section */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-teal-200">
-                        Business Information
+                      <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-teal-200">
+                        {t.businessInfo}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="group">
                           <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
-                            Business/Pharmacy Name
+                            {t.businessName}
                           </label>
                           <input
                             type="text"
@@ -215,13 +324,13 @@ export default function Request() {
                             value={formData.businessName}
                             onChange={handleChange}
                             className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
-                            placeholder="Your business name"
+                            placeholder={t.businessPlaceholder}
                           />
                         </div>
 
                         <div className="group">
                           <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
-                            City/Location
+                            {t.cityLocation}
                           </label>
                           <input
                             type="text"
@@ -229,7 +338,7 @@ export default function Request() {
                             value={formData.city}
                             onChange={handleChange}
                             className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
-                            placeholder="Your city"
+                            placeholder={t.cityPlaceholder}
                           />
                         </div>
                       </div>
@@ -238,15 +347,15 @@ export default function Request() {
                     {/* Product Selection Section */}
                     <div>
                       <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-teal-200">
-                        Product Requirements
+                        {t.productReq}
                       </h3>
                       
                       <div className="group mb-6">
                         <label className="block text-gray-700 font-semibold mb-3 group-focus-within:text-teal-600 transition-colors">
-                          Select Product Category <span className="text-red-500">*</span>
+                          {t.selectCategory} <span className="text-red-500">*</span>
                         </label>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                          {productCategories.map((category, index) => (
+                          {t.productCategories.map((category, index) => (
                             <label
                               key={index}
                               className={`flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 ${
@@ -275,7 +384,7 @@ export default function Request() {
 
                       <div className="group">
                         <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
-                          Additional Requirements
+                          {t.additionalReq}
                         </label>
                         <textarea
                           name="message"
@@ -283,7 +392,7 @@ export default function Request() {
                           onChange={handleChange}
                           rows="5"
                           className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
-                          placeholder="Please specify quantities, brands, or any special requirements..."
+                          placeholder={t.messagePlaceholder}
                         ></textarea>
                       </div>
                     </div>
@@ -294,12 +403,12 @@ export default function Request() {
                       className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-4 px-8 hover:from-teal-600 hover:to-emerald-600 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
                     >
                       <MdSend className="w-6 h-6" />
-                      Submit Quote Request
+                      {t.submitBtn}
                     </button>
 
                     {/* Privacy Note */}
                     <p className="text-center text-sm text-gray-500 mt-4">
-                      🔒 Your information is secure and will only be used to process your quote request
+                      {t.privacyNote}
                     </p>
                   </form>
                 )}
@@ -314,15 +423,11 @@ export default function Request() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-              Why Request a Quote from <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Abhishek Pharma?</span>
+              {t.whyTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.whyHighlight}</span>
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6 mt-10">
-              {[
-                { icon: '✅', title: 'Verified Quality', desc: 'ISO certified products' },
-                { icon: '💰', title: 'Best Wholesale Rates', desc: 'Competitive bulk pricing' },
-                { icon: '🚀', title: 'Fast Processing', desc: '24-hour quote delivery' }
-              ].map((item, index) => (
+              {t.whyChoose.map((item, index) => (
                 <div
                   key={index}
                   className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"

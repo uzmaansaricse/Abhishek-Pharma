@@ -1,53 +1,129 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom';
 
-export default function Slider() {
-    const navigate = useNavigate(); // Add this hook
+export default function Slider({ language = 'en' }) {
+    const navigate = useNavigate();
 
-    const slides = [
-        {
-            image: '/images/bannerimg.jpg',
-            title: 'Empowering Healthcare with Quality Medicines!',
-            subtitle: 'Reliable Wholesale Supplier of Branded Medicines',
-            points: [
-                'High-quality branded and promotional medicines',
-                'Tablets, Injections & Syrups',
-                'Ayurvedic & OTC Products',
-                'Bulk Orders & Promotions',
-            ],
-            button: 'Explore Products',
-            buttonLink: '/products', // Add link
-            contentImage: '/images/bszw84mq0i.jpg',
-        },
-        {
-            image: '/images/large_note012020-570x416.jpg',
-            title: 'Your Trusted Partner in Pharmaceutical Supply!',
-            subtitle: 'Comprehensive Healthcare Solutions',
-            points: [
-                'Quality, compliance, and timely delivery',
-                'Wholesale Distribution',
-                'Customized Supply Chains',
-                'Competitive Pricing',
-            ],
-            button: 'Contact Us',
-            buttonLink: '/contact', // Add link
-            contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
-        },
-        {
-            image: '/images/bannerimg.jpg',
-            title: 'Abhishek Pharma Delivers Excellence!',
-            subtitle: 'Supporting Healthcare Providers Nationwide',
-            points: [
-                'Reliable and authentic pharmaceutical products',
-                'Promotional Campaigns',
-                'Healthcare Partnerships',
-                'Expert Support Team',
-            ],
-            button: 'Get Quote',
-            buttonLink: '/request', // Add link
-            contentImage: '/images/lois-blog.jpg',
-        },
-    ];
+    const slidesData = {
+        en: [
+            {
+                image: '/images/bannerimg.jpg',
+                title: 'Empowering Healthcare with Quality Medicines!',
+                subtitle: 'Reliable Wholesale Supplier of Branded Medicines',
+                points: [
+                    'High-quality branded and promotional medicines',
+                    'Tablets, Injections & Syrups',
+                    'Ayurvedic & OTC Products',
+                    'Bulk Orders & Promotions',
+                ],
+                button: 'Explore Products',
+                buttonLink: '/products',
+                contentImage: '/images/bszw84mq0i.jpg',
+                badge: 'Trusted Since 2010',
+                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+            },
+            {
+                image: '/images/large_note012020-570x416.jpg',
+                title: 'Your Trusted Partner in Pharmaceutical Supply!',
+                subtitle: 'Comprehensive Healthcare Solutions',
+                points: [
+                    'Quality, compliance, and timely delivery',
+                    'Wholesale Distribution',
+                    'Customized Supply Chains',
+                    'Competitive Pricing',
+                ],
+                button: 'Contact Us',
+                buttonLink: '/contact',
+                contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
+                badge: 'Trusted Since 2010',
+                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+            },
+            {
+                image: '/images/bannerimg.jpg',
+                title: 'Abhishek Pharma Delivers Excellence!',
+                subtitle: 'Supporting Healthcare Providers Nationwide',
+                points: [
+                    'Reliable and authentic pharmaceutical products',
+                    'Promotional Campaigns',
+                    'Healthcare Partnerships',
+                    'Expert Support Team',
+                ],
+                button: 'Get Quote',
+                buttonLink: '/request',
+                contentImage: '/images/lois-blog.jpg',
+                badge: 'Trusted Since 2010',
+                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+            },
+        ],
+        hi: [
+            {
+                image: '/images/bannerimg.jpg',
+                title: 'गुणवत्तापूर्ण दवाओं के साथ स्वास्थ्य सेवा को सशक्त बनाना!',
+                subtitle: 'ब्रांडेड दवाओं का विश्वसनीय थोक आपूर्तिकर्ता',
+                points: [
+                    'उच्च गुणवत्ता वाली ब्रांडेड और प्रचार दवाएं',
+                    'गोलियां, इंजेक्शन और सिरप',
+                    'आयुर्वेदिक और ओटीसी उत्पाद',
+                    'थोक ऑर्डर और प्रचार',
+                ],
+                button: 'उत्पाद देखें',
+                buttonLink: '/products',
+                contentImage: '/images/bszw84mq0i.jpg',
+                badge: '2010 से विश्वसनीय',
+                floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
+            },
+            {
+                image: '/images/large_note012020-570x416.jpg',
+                title: 'फार्मास्युटिकल आपूर्ति में आपका विश्वसनीय साझेदार!',
+                subtitle: 'व्यापक स्वास्थ्य सेवा समाधान',
+                points: [
+                    'गुणवत्ता, अनुपालन और समय पर डिलीवरी',
+                    'थोक वितरण',
+                    'अनुकूलित आपूर्ति श्रृंखला',
+                    'प्रतिस्पर्धी मूल्य निर्धारण',
+                ],
+                button: 'संपर्क करें',
+                buttonLink: '/contact',
+                contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
+                badge: '2010 से विश्वसनीय',
+                floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
+            },
+            {
+                image: '/images/bannerimg.jpg',
+                title: 'अभिषेक फार्मा उत्कृष्टता प्रदान करता है!',
+                subtitle: 'देशभर के स्वास्थ्य सेवा प्रदाताओं का समर्थन',
+                points: [
+                    'विश्वसनीय और प्रामाणिक फार्मास्युटिकल उत्पाद',
+                    'प्रचार अभियान',
+                    'स्वास्थ्य सेवा साझेदारी',
+                    'विशेषज्ञ सहायता टीम',
+                ],
+                button: 'कोट प्राप्त करें',
+                buttonLink: '/request',
+                contentImage: '/images/lois-blog.jpg',
+                badge: '2010 से विश्वसनीय',
+                floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
+            },
+        ]
+    };
+
+    const trustIndicators = {
+        en: [
+            { icon: '🏆', text: '500+ Partners', subtext: 'Nationwide' },
+            { icon: '✅', text: 'ISO Certified', subtext: 'Quality Assured' },
+            { icon: '📦', text: '10K+ Products', subtext: 'In Stock' },
+            { icon: '⚡', text: '24/7 Support', subtext: 'Always Available' }
+        ],
+        hi: [
+            { icon: '🏆', text: '500+ साझेदार', subtext: 'देशव्यापी' },
+            { icon: '✅', text: 'आईएसओ प्रमाणित', subtext: 'गुणवत्ता आश्वासन' },
+            { icon: '📦', text: '10K+ उत्पाद', subtext: 'स्टॉक में' },
+            { icon: '⚡', text: '24/7 सहायता', subtext: 'हमेशा उपलब्ध' }
+        ]
+    };
+
+    const slides = slidesData[language];
+    const indicators = trustIndicators[language];
 
     const [open, setOpen] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
@@ -75,7 +151,6 @@ export default function Slider() {
         }
     };
 
-    // Add navigation handler
     const handleButtonClick = (link) => {
         navigate(link);
     };
@@ -107,7 +182,7 @@ export default function Slider() {
                                     {/* Subtitle Badge */}
                                     <div className='inline-block'>
                                         <span className='bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg'>
-                                            ✨ Trusted Since 2010
+                                            ✨ {slide.badge}
                                         </span>
                                     </div>
 
@@ -142,7 +217,7 @@ export default function Slider() {
                                         ))}
                                     </div>
 
-                                    {/* CTA Button - Updated with onClick */}
+                                    {/* CTA Button */}
                                     <button 
                                         onClick={() => handleButtonClick(slide.buttonLink)}
                                         className='group bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-full lg:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8'
@@ -170,8 +245,8 @@ export default function Slider() {
                                                 <span className='text-white font-bold text-xl'>✓</span>
                                             </div>
                                             <div>
-                                                <p className='font-bold text-gray-800'>Certified</p>
-                                                <p className='text-sm text-gray-600'>ISO Compliant</p>
+                                                <p className='font-bold text-gray-800'>{slide.floatingBadge.title}</p>
+                                                <p className='text-sm text-gray-600'>{slide.floatingBadge.subtitle}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -226,15 +301,10 @@ export default function Slider() {
             </div>
 
             {/* Trust Indicators - Bottom Bar */}
-            <div className='absolute bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-teal-100 py-6'>
+            <div className='hidden lg:flex absolute bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-teal-100 py-6'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-16'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
-                        {[
-                            { icon: '🏆', text: '500+ Partners', subtext: 'Nationwide' },
-                            { icon: '✅', text: 'ISO Certified', subtext: 'Quality Assured' },
-                            { icon: '📦', text: '10K+ Products', subtext: 'In Stock' },
-                            { icon: '⚡', text: '24/7 Support', subtext: 'Always Available' }
-                        ].map((item, idx) => (
+                        {indicators.map((item, idx) => (
                             <div key={idx} className='text-center group cursor-pointer'>
                                 <div className='text-2xl lg:text-3xl mb-2 group-hover:scale-125 transition-transform'>{item.icon}</div>
                                 <p className='font-bold text-gray-800 text-sm lg:text-base'>{item.text}</p>

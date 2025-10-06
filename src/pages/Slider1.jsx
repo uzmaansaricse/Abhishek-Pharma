@@ -1,49 +1,95 @@
 import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-export default function Slider1() {
-    const slides = [
-        {
-            name: 'Dr. Rajesh Sharma',
-            position: 'Pharmacy Owner',
-            location: 'Mumbai',
-            image: 'https://randomuser.me/api/portraits/men/32.jpg',
-            rating: 5,
-            text: 'Abhishek Pharma has been our reliable supplier for branded medicines. Their quality and timely delivery are unmatched!',
-        },
-        {
-            name: 'Dr. Priya Singh',
-            position: 'Medical Distributor',
-            location: 'Delhi',
-            image: 'https://randomuser.me/api/portraits/women/44.jpg',
-            rating: 5,
-            text: 'We appreciate their bulk supply options and promotional products. Great service and competitive pricing!',
-        },
-        {
-            name: 'Dr. Anil Kumar',
-            position: 'Hospital Manager',
-            location: 'Bangalore',
-            image: 'https://randomuser.me/api/portraits/men/52.jpg',
-            rating: 5,
-            text: 'Abhishek Pharma ensures authentic medicines and excellent support. Highly recommended for healthcare providers.',
-        },
-        {
-            name: 'Dr. Sunita Verma',
-            position: 'Clinical Director',
-            location: 'Chennai',
-            image: 'https://randomuser.me/api/portraits/women/65.jpg',
-            rating: 5,
-            text: 'Outstanding pharmaceutical solutions with genuine products. Their team is professional, responsive, and always reliable.',
-        },
-        {
-            name: 'Vikram Patel',
-            position: 'Pharmacy Chain Owner',
-            location: 'Pune',
-            image: 'https://randomuser.me/api/portraits/men/71.jpg',
-            rating: 5,
-            text: 'Working with Abhishek Pharma for 5+ years. Their consistency in quality and delivery makes them our trusted partner.',
-        },
-    ];
+export default function Slider1({ language = 'en' }) {
+    const slidesData = {
+        en: [
+            {
+                name: 'Dr. Rajesh Sharma',
+                position: 'Pharmacy Owner',
+                location: 'Mumbai',
+                image: 'https://randomuser.me/api/portraits/men/32.jpg',
+                rating: 5,
+                text: 'Abhishek Pharma has been our reliable supplier for branded medicines. Their quality and timely delivery are unmatched!',
+            },
+            {
+                name: 'Dr. Priya Singh',
+                position: 'Medical Distributor',
+                location: 'Delhi',
+                image: 'https://randomuser.me/api/portraits/women/44.jpg',
+                rating: 5,
+                text: 'We appreciate their bulk supply options and promotional products. Great service and competitive pricing!',
+            },
+            {
+                name: 'Dr. Anil Kumar',
+                position: 'Hospital Manager',
+                location: 'Bangalore',
+                image: 'https://randomuser.me/api/portraits/men/52.jpg',
+                rating: 5,
+                text: 'Abhishek Pharma ensures authentic medicines and excellent support. Highly recommended for healthcare providers.',
+            },
+            {
+                name: 'Dr. Sunita Verma',
+                position: 'Clinical Director',
+                location: 'Chennai',
+                image: 'https://randomuser.me/api/portraits/women/65.jpg',
+                rating: 5,
+                text: 'Outstanding pharmaceutical solutions with genuine products. Their team is professional, responsive, and always reliable.',
+            },
+            {
+                name: 'Vikram Patel',
+                position: 'Pharmacy Chain Owner',
+                location: 'Pune',
+                image: 'https://randomuser.me/api/portraits/men/71.jpg',
+                rating: 5,
+                text: 'Working with Abhishek Pharma for 5+ years. Their consistency in quality and delivery makes them our trusted partner.',
+            },
+        ],
+        hi: [
+            {
+                name: 'डॉ. राजेश शर्मा',
+                position: 'फार्मेसी मालिक',
+                location: 'मुंबई',
+                image: 'https://randomuser.me/api/portraits/men/32.jpg',
+                rating: 5,
+                text: 'अभिषेक फार्मा ब्रांडेड दवाओं के लिए हमारा विश्वसनीय आपूर्तिकर्ता रहा है। उनकी गुणवत्ता और समय पर डिलीवरी बेजोड़ है!',
+            },
+            {
+                name: 'डॉ. प्रिया सिंह',
+                position: 'चिकित्सा वितरक',
+                location: 'दिल्ली',
+                image: 'https://randomuser.me/api/portraits/women/44.jpg',
+                rating: 5,
+                text: 'हम उनके थोक आपूर्ति विकल्पों और प्रचार उत्पादों की सराहना करते हैं। बढ़िया सेवा और प्रतिस्पर्धी मूल्य निर्धारण!',
+            },
+            {
+                name: 'डॉ. अनिल कुमार',
+                position: 'अस्पताल प्रबंधक',
+                location: 'बैंगलोर',
+                image: 'https://randomuser.me/api/portraits/men/52.jpg',
+                rating: 5,
+                text: 'अभिषेक फार्मा प्रामाणिक दवाएं और उत्कृष्ट सहायता सुनिश्चित करता है। स्वास्थ्य सेवा प्रदाताओं के लिए अत्यधिक अनुशंसित।',
+            },
+            {
+                name: 'डॉ. सुनीता वर्मा',
+                position: 'क्लिनिकल निदेशक',
+                location: 'चेन्नई',
+                image: 'https://randomuser.me/api/portraits/women/65.jpg',
+                rating: 5,
+                text: 'वास्तविक उत्पादों के साथ उत्कृष्ट फार्मास्युटिकल समाधान। उनकी टीम पेशेवर, उत्तरदायी और हमेशा विश्वसनीय है।',
+            },
+            {
+                name: 'विक्रम पटेल',
+                position: 'फार्मेसी चेन मालिक',
+                location: 'पुणे',
+                image: 'https://randomuser.me/api/portraits/men/71.jpg',
+                rating: 5,
+                text: '5+ वर्षों से अभिषेक फार्मा के साथ काम कर रहे हैं। गुणवत्ता और वितरण में उनकी स्थिरता उन्हें हमारा विश्वसनीय साझेदार बनाती है।',
+            },
+        ]
+    };
+
+    const slides = slidesData[language];
 
     const [open, setOpen] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
@@ -221,10 +267,6 @@ export default function Slider1() {
                     />
                 ))}
             </div>
-
-            {/* Trust Badge - Removed for compact design */}
-            
-            
         </div>
     );
 }
