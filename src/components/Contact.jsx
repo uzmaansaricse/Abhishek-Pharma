@@ -144,11 +144,11 @@ export default function Contact() {
     const contactInfo = [
         {
             icon: FaPhoneAlt,
-            color: 'gray-700'
+            color: 'gray-800'
         },
         {
             icon: FaEnvelope,
-            color: 'gray-600'
+            color: 'gray-800'
         },
         {
             icon: FaMapMarkerAlt,
