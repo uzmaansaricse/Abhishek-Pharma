@@ -1,0 +1,249 @@
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'; // Add this import
+
+export default function Slider() {
+    const navigate = useNavigate(); // Add this hook
+
+    const slides = [
+        {
+            image: '/images/bannerimg.jpg',
+            title: 'Empowering Healthcare with Quality Medicines!',
+            subtitle: 'Reliable Wholesale Supplier of Branded Medicines',
+            points: [
+                'High-quality branded and promotional medicines',
+                'Tablets, Injections & Syrups',
+                'Ayurvedic & OTC Products',
+                'Bulk Orders & Promotions',
+            ],
+            button: 'Explore Products',
+            buttonLink: '/products', // Add link
+            contentImage: '/images/bszw84mq0i.jpg',
+        },
+        {
+            image: '/images/large_note012020-570x416.jpg',
+            title: 'Your Trusted Partner in Pharmaceutical Supply!',
+            subtitle: 'Comprehensive Healthcare Solutions',
+            points: [
+                'Quality, compliance, and timely delivery',
+                'Wholesale Distribution',
+                'Customized Supply Chains',
+                'Competitive Pricing',
+            ],
+            button: 'Contact Us',
+            buttonLink: '/contact', // Add link
+            contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
+        },
+        {
+            image: '/images/bannerimg.jpg',
+            title: 'Abhishek Pharma Delivers Excellence!',
+            subtitle: 'Supporting Healthcare Providers Nationwide',
+            points: [
+                'Reliable and authentic pharmaceutical products',
+                'Promotional Campaigns',
+                'Healthcare Partnerships',
+                'Expert Support Team',
+            ],
+            button: 'Get Quote',
+            buttonLink: '/request', // Add link
+            contentImage: '/images/lois-blog.jpg',
+        },
+    ];
+
+    const [open, setOpen] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleNext();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [open]);
+
+    const handleNext = () => {
+        if (!isAnimating) {
+            setIsAnimating(true);
+            setOpen((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+            setTimeout(() => setIsAnimating(false), 700);
+        }
+    };
+
+    const handlePrev = () => {
+        if (!isAnimating) {
+            setIsAnimating(true);
+            setOpen((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+            setTimeout(() => setIsAnimating(false), 700);
+        }
+    };
+
+    // Add navigation handler
+    const handleButtonClick = (link) => {
+        navigate(link);
+    };
+
+    return (
+        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-cyan-50 via-teal-50 to-emerald-50">
+            {/* Background Decorative Elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                <div className="absolute top-0 left-0 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+
+            {/* Slides Container */}
+            <div 
+                style={{ transform: `translateX(-${open * 100}%)` }}
+                className="flex transition-transform duration-700 ease-in-out w-full h-full relative z-10"
+            >
+                {slides.map((slide, index) => (
+                    <div key={index} className="w-full h-full shrink-0 relative pb-32 lg:pb-40">
+                        {/* Background overlay for better text contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-teal-50/90 to-cyan-50/80 z-10"></div>
+                        
+                        {/* Content Container */}
+                        <div className="relative z-20 w-full h-full flex items-center lg:px-16 md:px-10 px-6 py-12">
+                            <div className='grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12 w-full items-center max-w-7xl mx-auto'>
+                                
+                                {/* Left Content */}
+                                <div className='space-y-6 animate-fadeInLeft'>
+                                    {/* Subtitle Badge */}
+                                    <div className='inline-block'>
+                                        <span className='bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg'>
+                                            ✨ Trusted Since 2010
+                                        </span>
+                                    </div>
+
+                                    {/* Main Title */}
+                                    <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl leading-tight text-gray-800 animate-slideInUp'>
+                                        {slide.title.split('!')[0]}
+                                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>
+                                            !
+                                        </span>
+                                    </h1>
+
+                                    {/* Subtitle */}
+                                    <p className='text-lg md:text-xl text-gray-700 font-medium animate-fadeIn'>
+                                        {slide.subtitle}
+                                    </p>
+
+                                    {/* Points List */}
+                                    <div className='space-y-3 mt-6'>
+                                        {slide.points.map((point, i) => (
+                                            <div 
+                                                key={i}
+                                                className='flex items-start gap-3 animate-slideInLeft'
+                                                style={{ animationDelay: `${i * 100}ms` }}
+                                            >
+                                                <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mt-1 shadow-md'>
+                                                    <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={3} d='M5 13l4 4L19 7' />
+                                                    </svg>
+                                                </div>
+                                                <p className='text-gray-700 lg:text-lg font-medium'>{point}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* CTA Button - Updated with onClick */}
+                                    <button 
+                                        onClick={() => handleButtonClick(slide.buttonLink)}
+                                        className='group bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-full lg:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8'
+                                    >
+                                        {slide.button}
+                                        <svg className='w-5 h-5 group-hover:translate-x-1 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7l5 5m0 0l-5 5m5-5H6' />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                {/* Right Content - Image */}
+                                <div className='relative animate-fadeInRight hidden md:block'>
+                                    <div className='absolute inset-0 bg-gradient-to-br from-teal-400/20 to-emerald-400/20 rounded-3xl blur-2xl transform rotate-6'></div>
+                                    <img 
+                                        src={slide.contentImage} 
+                                        alt="Healthcare Solutions" 
+                                        className='relative w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white/50 backdrop-blur-sm' 
+                                    />
+                                    
+                                    {/* Floating Badge */}
+                                    <div className='absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl animate-float'>
+                                        <div className='flex items-center gap-3'>
+                                            <div className='w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center'>
+                                                <span className='text-white font-bold text-xl'>✓</span>
+                                            </div>
+                                            <div>
+                                                <p className='font-bold text-gray-800'>Certified</p>
+                                                <p className='text-sm text-gray-600'>ISO Compliant</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button 
+                onClick={handlePrev}
+                className='absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 lg:p-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 group'
+                aria-label="Previous slide"
+            >
+                <svg className='w-6 h-6 text-teal-600 group-hover:text-emerald-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
+                </svg>
+            </button>
+
+            <button 
+                onClick={handleNext}
+                className='absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 lg:p-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 group'
+                aria-label="Next slide"
+            >
+                <svg className='w-6 h-6 text-teal-600 group-hover:text-emerald-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+                </svg>
+            </button>
+
+            {/* Dots Navigation */}
+            <div className='absolute bottom-32 lg:bottom-36 left-1/2 -translate-x-1/2 z-40 flex gap-3'>
+                {slides.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => {
+                            if (!isAnimating) {
+                                setIsAnimating(true);
+                                setOpen(index);
+                                setTimeout(() => setIsAnimating(false), 700);
+                            }
+                        }}
+                        className={`transition-all duration-300 rounded-full ${
+                            open === index 
+                                ? 'w-12 h-3 bg-gradient-to-r from-teal-500 to-emerald-500' 
+                                : 'w-3 h-3 bg-white/70 hover:bg-white'
+                        } shadow-lg hover:scale-110`}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
+            </div>
+
+            {/* Trust Indicators - Bottom Bar */}
+            <div className='absolute bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-teal-100 py-6'>
+                <div className='max-w-7xl mx-auto px-4 lg:px-16'>
+                    <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
+                        {[
+                            { icon: '🏆', text: '500+ Partners', subtext: 'Nationwide' },
+                            { icon: '✅', text: 'ISO Certified', subtext: 'Quality Assured' },
+                            { icon: '📦', text: '10K+ Products', subtext: 'In Stock' },
+                            { icon: '⚡', text: '24/7 Support', subtext: 'Always Available' }
+                        ].map((item, idx) => (
+                            <div key={idx} className='text-center group cursor-pointer'>
+                                <div className='text-2xl lg:text-3xl mb-2 group-hover:scale-125 transition-transform'>{item.icon}</div>
+                                <p className='font-bold text-gray-800 text-sm lg:text-base'>{item.text}</p>
+                                <p className='text-xs lg:text-sm text-gray-600'>{item.subtext}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
