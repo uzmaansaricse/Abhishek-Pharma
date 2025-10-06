@@ -169,47 +169,47 @@ export default function Request() {
   };
 
   return (
-    <div className=" w-[100vw] overflow-x-hidden bg-gradient-to-br from-white via-teal-50/30 to-emerald-50/30 min-h-screen">
-      {/* Language Toggle Button */}
+    <div className="w-[100vw] overflow-x-hidden bg-white min-h-screen">
+      {/* Language Toggle Button - Gray Theme */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
         >
           <FaGlobe className="w-5 h-5" />
           <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
         </button>
       </div>
 
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-700 text-white py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"></div>
+      {/* Hero Section - Clean Gray */}
+      <div className="relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-20 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-600/10 rounded-full blur-3xl"></div>
         
         <Container>
           <div className="relative z-10 text-center max-w-4xl mx-auto" data-aos="fade-up">
             <div className="inline-block mb-6">
-              <div className="inline-flex p-4 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
+              <div className="inline-flex p-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <FaFileInvoice className="w-8 h-8" />
               </div>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-aos="zoom-in">
-              {t.heroTitle} <span className="text-yellow-300">{t.heroHighlight}</span>
+              {t.heroTitle} <span className="text-gray-300">{t.heroHighlight}</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-teal-100 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-4" data-aos="fade-up" data-aos-delay="200">
               {t.heroSubtitle}
             </p>
             
-            <p className="text-lg text-teal-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
               {t.heroDesc}
             </p>
           </div>
         </Container>
       </div>
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Gray Theme */}
       <div className="py-10 -mt-16 relative z-10" data-aos="fade-up">
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -218,14 +218,14 @@ export default function Request() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200"
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-400"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="inline-flex p-3 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl mb-4">
-                    <Icon className="w-6 h-6 text-teal-600" />
+                  <div className="inline-flex p-3 bg-gray-200 rounded-xl mb-4">
+                    <Icon className="w-6 h-6 text-gray-700" />
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-2">{benefit.title}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm">{benefit.desc}</p>
                 </div>
               );
@@ -234,28 +234,28 @@ export default function Request() {
         </Container>
       </div>
 
-      {/* Main Form Section */}
-      <div className="py-16" data-aos="fade-up">
+      {/* Main Form Section - Light Gray Background */}
+      <div className="py-16 bg-gray-50" data-aos="fade-up">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              {/* Form Header */}
-              <div className="bg-gradient-to-r from-teal-500 to-emerald-500 p-8 text-white text-center">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+              {/* Form Header - Gray Theme */}
+              <div className="bg-gray-800 p-8 text-white text-center">
                 <h2 className="text-3xl font-bold mb-2">{t.formHeader}</h2>
-                <p className="text-teal-100">{t.formSubtitle}</p>
+                <p className="text-gray-300">{t.formSubtitle}</p>
               </div>
 
               {/* Form Content */}
               <div className="p-8 lg:p-12">
                 {loading ? (
-                  <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300 text-yellow-800 p-8 rounded-2xl shadow-lg text-center" data-aos="zoom-in">
+                  <div className="bg-yellow-50 border-2 border-yellow-300 text-yellow-800 p-8 rounded-xl shadow-sm text-center" data-aos="zoom-in">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-4 border-yellow-600 mx-auto mb-4"></div>
                     <p className="font-semibold text-lg">{t.loadingMsg}</p>
                     <p className="text-sm mt-2">{t.loadingSubMsg}</p>
                   </div>
                 ) : submitted ? (
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-emerald-300 text-emerald-800 p-8 rounded-2xl shadow-lg text-center" data-aos="zoom-in">
-                    <div className="inline-flex p-4 bg-emerald-500 rounded-full mb-4">
+                  <div className="bg-green-50 border-2 border-green-300 text-green-800 p-8 rounded-xl shadow-sm text-center" data-aos="zoom-in">
+                    <div className="inline-flex p-4 bg-green-500 rounded-full mb-4">
                       <FaCheckCircle className="w-12 h-12 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">{t.successTitle}</h3>
@@ -263,7 +263,7 @@ export default function Request() {
                     <p className="text-sm mb-6">{t.successSubMsg}</p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="px-6 py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors"
+                      className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
                     >
                       {t.anotherRequest}
                     </button>
@@ -272,12 +272,12 @@ export default function Request() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Personal Details Section */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-teal-200">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
                         {t.personalDetails}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="group">
-                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                             {t.fullName} <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -286,13 +286,13 @@ export default function Request() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                             placeholder={t.namePlaceholder}
                           />
                         </div>
 
                         <div className="group">
-                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                             {t.phoneNumber} <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -301,7 +301,7 @@ export default function Request() {
                             value={formData.phone}
                             onChange={handleChange}
                             required
-                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                             placeholder={t.phonePlaceholder}
                           />
                         </div>
@@ -310,12 +310,12 @@ export default function Request() {
 
                     {/* Business Details Section */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-teal-200">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
                         {t.businessInfo}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="group">
-                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                             {t.businessName}
                           </label>
                           <input
@@ -323,13 +323,13 @@ export default function Request() {
                             name="businessName"
                             value={formData.businessName}
                             onChange={handleChange}
-                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                             placeholder={t.businessPlaceholder}
                           />
                         </div>
 
                         <div className="group">
-                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                          <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                             {t.cityLocation}
                           </label>
                           <input
@@ -337,7 +337,7 @@ export default function Request() {
                             name="city"
                             value={formData.city}
                             onChange={handleChange}
-                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                             placeholder={t.cityPlaceholder}
                           />
                         </div>
@@ -346,22 +346,22 @@ export default function Request() {
 
                     {/* Product Selection Section */}
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-teal-200">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
                         {t.productReq}
                       </h3>
                       
                       <div className="group mb-6">
-                        <label className="block text-gray-700 font-semibold mb-3 group-focus-within:text-teal-600 transition-colors">
+                        <label className="block text-gray-700 font-semibold mb-3 group-focus-within:text-gray-900 transition-colors">
                           {t.selectCategory} <span className="text-red-500">*</span>
                         </label>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                           {t.productCategories.map((category, index) => (
                             <label
                               key={index}
-                              className={`flex items-center gap-3 p-4 border-2 rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 ${
+                              className={`flex items-center gap-3 p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 hover:scale-105 ${
                                 formData.products === category.value
-                                  ? 'bg-gradient-to-br from-teal-500 to-emerald-500 border-teal-500 text-white shadow-lg'
-                                  : 'bg-white border-gray-200 hover:border-teal-300'
+                                  ? 'bg-gray-800 border-gray-800 text-white shadow-md'
+                                  : 'bg-white border-gray-200 hover:border-gray-400'
                               }`}
                             >
                               <input
@@ -383,7 +383,7 @@ export default function Request() {
                       </div>
 
                       <div className="group">
-                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                           {t.additionalReq}
                         </label>
                         <textarea
@@ -391,16 +391,16 @@ export default function Request() {
                           value={formData.message}
                           onChange={handleChange}
                           rows="5"
-                          className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                          className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                           placeholder={t.messagePlaceholder}
                         ></textarea>
                       </div>
                     </div>
 
-                    {/* Submit Button */}
+                    {/* Submit Button - Gray Theme */}
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-4 px-8 hover:from-teal-600 hover:to-emerald-600 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+                      className="w-full bg-gray-800 text-white py-4 px-8 hover:bg-gray-900 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
                     >
                       <MdSend className="w-6 h-6" />
                       {t.submitBtn}
@@ -418,24 +418,24 @@ export default function Request() {
         </Container>
       </div>
 
-      {/* Why Choose Section */}
-      <div className="py-16 bg-gradient-to-br from-gray-50 to-teal-50/50" data-aos="fade-up">
+      {/* Why Choose Section - White Background */}
+      <div className="py-16 bg-white" data-aos="fade-up">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-              {t.whyTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.whyHighlight}</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              {t.whyTitle} <span className="text-gray-700">{t.whyHighlight}</span>
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6 mt-10">
               {t.whyChoose.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                  className="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-2 border border-gray-200"
                   data-aos="zoom-in"
                   data-aos-delay={index * 100}
                 >
                   <div className="text-4xl mb-3">{item.icon}</div>
-                  <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
                 </div>
               ))}

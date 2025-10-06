@@ -18,9 +18,6 @@ export default function Contact() {
     const [loading, setLoading] = useState(false);
     const [language, setLanguage] = useState('en');
 
-  
-
-
     const content = {
         en: {
             heroTitle: 'Get In',
@@ -147,93 +144,88 @@ export default function Contact() {
     const contactInfo = [
         {
             icon: FaPhoneAlt,
-            color: 'from-teal-500 to-emerald-500'
+            color: 'gray-700'
         },
         {
             icon: FaEnvelope,
-            color: 'from-emerald-500 to-teal-500'
+            color: 'gray-600'
         },
         {
             icon: FaMapMarkerAlt,
-            color: 'from-teal-600 to-cyan-600'
+            color: 'gray-800'
         }
     ];
 
-
-
     return (
-        <div className=" w-[100vw] overflow-x-hidden bg-gradient-to-br from-white via-teal-50/30 to-emerald-50/30 min-h-screen">
-            {/* Language Toggle Button */}
+        <div className="w-[100vw] overflow-x-hidden bg-white min-h-screen">
+            {/* Language Toggle Button - Gray Theme */}
             <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
                 <button
                     onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-                    className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                    className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                     <FaGlobe className="w-5 h-5" />
                     <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
                 </button>
             </div>
 
-            {/* Hero Section */}
-            <div className="relative bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-700 text-white py-20 overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"></div>
+            {/* Hero Section - Clean Gray */}
+            <div className="relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-20 overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-600/10 rounded-full blur-3xl"></div>
                 
                 <Container>
                     <div className="relative z-10 text-center max-w-4xl mx-auto" data-aos="fade-up">
                         <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-aos="zoom-in">
-                            {t.heroTitle} <span className="text-yellow-300">{t.heroHighlight}</span>
+                            {t.heroTitle} <span className="text-gray-300">{t.heroHighlight}</span>
                         </h1>
-                        <p className="text-xl lg:text-2xl text-teal-100" data-aos="fade-up" data-aos-delay="200">
+                        <p className="text-xl lg:text-2xl text-gray-300" data-aos="fade-up" data-aos-delay="200">
                             {t.heroSubtitle}
                         </p>
                     </div>
                 </Container>
             </div>
 
-            {/* Quick Contact Cards */}
-          {/* Quick Contact Cards */}
-{/* Quick Contact Cards */}
-<div className="py-10 -mt-16 relative z-10" data-aos="fade-up">
-    <Container>
-        <div className="grid md:grid-cols-3 gap-6">
-            {t.contactCards.map((info, index) => {
-                const IconComponent = contactInfo[index].icon;
-                return (
-                    <a
-                        key={index}
-                        href={info.link}
-                        className="group bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200"
-                        data-aos="flip-up"
-                        data-aos-delay={index * 100}
-                    >
-                        <div className={`inline-flex p-4 bg-gradient-to-br ${contactInfo[index].color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-800 mb-2">{info.title}</h3>
-                        <p className="text-teal-600 font-medium">{info.detail}</p>
-                    </a>
-                );
-            })}
-        </div>
-    </Container>
-</div>
+            {/* Quick Contact Cards - Gray Theme */}
+            <div className="py-10 -mt-16 relative z-10" data-aos="fade-up">
+                <Container>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {t.contactCards.map((info, index) => {
+                            const IconComponent = contactInfo[index].icon;
+                            return (
+                                <a
+                                    key={index}
+                                    href={info.link}
+                                    className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-400"
+                                    data-aos="flip-up"
+                                    data-aos-delay={index * 100}
+                                >
+                                    <div className={`inline-flex p-4 bg-${contactInfo[index].color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                                        <IconComponent className="w-6 h-6 text-white" />
+                                    </div>
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
+                                    <p className="text-gray-700 font-medium">{info.detail}</p>
+                                </a>
+                            );
+                        })}
+                    </div>
+                </Container>
+            </div>
 
-
-            {/* Main Content */}
-            <div className="py-16" data-aos="fade-up">
+            {/* Main Content - Light Gray Background */}
+            <div className="py-16 bg-gray-50" data-aos="fade-up">
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Form Section */}
-                        <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl" data-aos="fade-right">
+                        <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-200" data-aos="fade-right">
                             <div className="mb-8">
                                 <div className="inline-block mb-4">
-                                    <span className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                    <span className="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                                         {t.formBadge}
                                     </span>
                                 </div>
-                                <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                                    {t.formTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.formHighlight}</span>
+                                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                    {t.formTitle} <span className="text-gray-700">{t.formHighlight}</span>
                                 </h2>
                                 <p className="text-gray-600">
                                     {t.formSubtitle}
@@ -241,14 +233,14 @@ export default function Contact() {
                             </div>
 
                             {loading ? (
-                                <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300 text-yellow-800 p-6 rounded-2xl shadow-lg flex items-center gap-4">
+                                <div className="bg-yellow-50 border-2 border-yellow-300 text-yellow-800 p-6 rounded-xl shadow-sm flex items-center gap-4">
                                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-yellow-600"></div>
                                     <span className="font-medium">{t.loadingMsg}</span>
                                 </div>
                             ) : submitted ? (
-                                <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-emerald-300 text-emerald-800 p-6 rounded-2xl shadow-lg" data-aos="zoom-in">
+                                <div className="bg-green-50 border-2 border-green-300 text-green-800 p-6 rounded-xl shadow-sm" data-aos="zoom-in">
                                     <div className="flex items-center gap-4 mb-4">
-                                        <div className="p-3 bg-emerald-500 rounded-full">
+                                        <div className="p-3 bg-green-500 rounded-full">
                                             <FaCheckCircle className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
@@ -262,7 +254,7 @@ export default function Contact() {
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                                 {t.nameLabel} <span className="text-red-500">*</span>
                                             </label>
                                             <input
@@ -271,13 +263,13 @@ export default function Contact() {
                                                 value={formData.name}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                                                 placeholder={t.namePlaceholder}
                                             />
                                         </div>
 
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                                 {t.businessLabel}
                                             </label>
                                             <input
@@ -285,7 +277,7 @@ export default function Contact() {
                                                 name="companyName"
                                                 value={formData.companyName}
                                                 onChange={handleChange}
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                                                 placeholder={t.businessPlaceholder}
                                             />
                                         </div>
@@ -293,7 +285,7 @@ export default function Contact() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                                 {t.cityLabel}
                                             </label>
                                             <input
@@ -301,13 +293,13 @@ export default function Contact() {
                                                 name="jobTitle"
                                                 value={formData.jobTitle}
                                                 onChange={handleChange}
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                                                 placeholder={t.cityPlaceholder}
                                             />
                                         </div>
 
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                                 {t.emailLabel} <span className="text-red-500">*</span>
                                             </label>
                                             <input
@@ -316,14 +308,14 @@ export default function Contact() {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                                                 placeholder={t.emailPlaceholder}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="group">
-                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                             {t.phoneLabel} <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -332,13 +324,13 @@ export default function Contact() {
                                             value={formData.mobile}
                                             onChange={handleChange}
                                             required
-                                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white"
+                                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
                                             placeholder={t.phonePlaceholder}
                                         />
                                     </div>
 
                                     <div className="group">
-                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-teal-600 transition-colors">
+                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
                                             {t.messageLabel} <span className="text-red-500">*</span>
                                         </label>
                                         <textarea
@@ -347,14 +339,14 @@ export default function Contact() {
                                             onChange={handleChange}
                                             rows="5"
                                             required
-                                            className="w-full p-4 border-2 border-gray-200 focus:border-teal-500 focus:outline-none rounded-xl transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
                                             placeholder={t.messagePlaceholder}
                                         ></textarea>
                                     </div>
 
                                     <button
                                         type="submit"
-                                        className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-4 px-8 hover:from-teal-600 hover:to-emerald-600 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+                                        className="w-full bg-gray-800 text-white py-4 px-8 hover:bg-gray-900 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
                                     >
                                         <MdSend className="w-5 h-5" />
                                         {t.submitBtn}
@@ -365,45 +357,45 @@ export default function Contact() {
 
                         {/* Office Info Section */}
                         <div className="space-y-8" data-aos="fade-left">
-                            {/* Office Details Card */}
-                            <div className="bg-gradient-to-br from-teal-500 to-emerald-600 text-white rounded-3xl p-8 lg:p-10 shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                            {/* Office Details Card - Gray Theme */}
+                            <div className="bg-gray-800 text-white rounded-2xl p-8 lg:p-10 shadow-lg relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
                                 
                                 <div className="relative z-10">
                                     <h3 className="text-2xl lg:text-3xl font-bold mb-6">{t.officeTitle}</h3>
                                     
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                                            <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                                                 <FaMapMarkerAlt className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <p className="font-semibold mb-2">{t.officeAddress}</p>
-                                                <p className="text-teal-100 whitespace-pre-line">
+                                                <p className="text-gray-300 whitespace-pre-line">
                                                     {t.officeLocation}
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                                            <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                                                 <FaPhoneAlt className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-teal-100 text-sm mb-1">{t.phoneText}</p>
-                                                <a href="tel:+919876543210" className="font-semibold hover:text-yellow-300 transition-colors">
+                                                <p className="text-gray-300 text-sm mb-1">{t.phoneText}</p>
+                                                <a href="tel:+919876543210" className="font-semibold hover:text-gray-300 transition-colors">
                                                     +91 98765 43210
                                                 </a>
                                             </div>
                                         </div>
 
                                         <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl">
+                                            <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                                                 <FaEnvelope className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-teal-100 text-sm mb-1">{t.emailText}</p>
-                                                <a href="mailto:info@abhishekpharma.com" className="font-semibold hover:text-yellow-300 transition-colors break-all">
+                                                <p className="text-gray-300 text-sm mb-1">{t.emailText}</p>
+                                                <a href="mailto:info@abhishekpharma.com" className="font-semibold hover:text-gray-300 transition-colors break-all">
                                                     info@abhishekpharma.com
                                                 </a>
                                             </div>
@@ -412,7 +404,7 @@ export default function Contact() {
                                 </div>
                             </div>
 
-                            {/* Why Contact Us Cards */}
+                            {/* Why Contact Us Cards - Gray Theme */}
                             <div className="grid md:grid-cols-2 gap-4">
                                 {t.whyContact.map((item, index) => {
                                     const icons = [FaClock, FaHeadset];
@@ -420,14 +412,14 @@ export default function Contact() {
                                     return (
                                         <div
                                             key={index}
-                                            className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                                            className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-200"
                                             data-aos="zoom-in"
                                             data-aos-delay={index * 100}
                                         >
-                                            <div className="inline-flex p-3 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl mb-4">
-                                                <Icon className="w-6 h-6 text-teal-600" />
+                                            <div className="inline-flex p-3 bg-gray-200 rounded-xl mb-4">
+                                                <Icon className="w-6 h-6 text-gray-700" />
                                             </div>
-                                            <h4 className="font-bold text-gray-800 mb-2">{item.title}</h4>
+                                            <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
                                             <p className="text-gray-600 text-sm">{item.desc}</p>
                                         </div>
                                     );

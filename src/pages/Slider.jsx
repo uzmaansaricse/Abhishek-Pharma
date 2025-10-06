@@ -156,11 +156,11 @@ export default function Slider({ language = 'en' }) {
     };
 
     return (
-        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-cyan-50 via-teal-50 to-emerald-50">
-            {/* Background Decorative Elements */}
+        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100">
+            {/* Background Decorative Elements - Subtle Gray */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                <div className="absolute top-0 left-0 w-96 h-96 bg-gray-200/20 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-300/20 rounded-full blur-3xl"></div>
             </div>
 
             {/* Slides Container */}
@@ -170,8 +170,8 @@ export default function Slider({ language = 'en' }) {
             >
                 {slides.map((slide, index) => (
                     <div key={index} className="w-full h-full shrink-0 relative pb-32 lg:pb-40">
-                        {/* Background overlay for better text contrast */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-teal-50/90 to-cyan-50/80 z-10"></div>
+                        {/* Background overlay for contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-gray-50/95 to-white/90 z-10"></div>
                         
                         {/* Content Container */}
                         <div className="relative z-20 w-full h-full flex items-center lg:px-16 md:px-10 px-6 py-12">
@@ -179,27 +179,25 @@ export default function Slider({ language = 'en' }) {
                                 
                                 {/* Left Content */}
                                 <div className='space-y-6 animate-fadeInLeft'>
-                                    {/* Subtitle Badge */}
+                                    {/* Subtitle Badge - Gray Theme */}
                                     <div className='inline-block'>
-                                        <span className='bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-lg'>
+                                        <span className='bg-gray-800 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md'>
                                             ✨ {slide.badge}
                                         </span>
                                     </div>
 
-                                    {/* Main Title */}
-                                    <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl leading-tight text-gray-800 animate-slideInUp'>
+                                    {/* Main Title - Gray Accent */}
+                                    <h1 className='font-bold text-3xl md:text-4xl lg:text-6xl leading-tight text-gray-900 animate-slideInUp'>
                                         {slide.title.split('!')[0]}
-                                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>
-                                            !
-                                        </span>
+                                        <span className='text-gray-700'>!</span>
                                     </h1>
 
                                     {/* Subtitle */}
-                                    <p className='text-lg md:text-xl text-gray-700 font-medium animate-fadeIn'>
+                                    <p className='text-lg md:text-xl text-gray-600 font-medium animate-fadeIn'>
                                         {slide.subtitle}
                                     </p>
 
-                                    {/* Points List */}
+                                    {/* Points List - Gray Checkmarks */}
                                     <div className='space-y-3 mt-6'>
                                         {slide.points.map((point, i) => (
                                             <div 
@@ -207,7 +205,7 @@ export default function Slider({ language = 'en' }) {
                                                 className='flex items-start gap-3 animate-slideInLeft'
                                                 style={{ animationDelay: `${i * 100}ms` }}
                                             >
-                                                <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mt-1 shadow-md'>
+                                                <div className='flex-shrink-0 w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center mt-1 shadow-sm'>
                                                     <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={3} d='M5 13l4 4L19 7' />
                                                     </svg>
@@ -217,10 +215,10 @@ export default function Slider({ language = 'en' }) {
                                         ))}
                                     </div>
 
-                                    {/* CTA Button */}
+                                    {/* CTA Button - Clean Gray */}
                                     <button 
                                         onClick={() => handleButtonClick(slide.buttonLink)}
-                                        className='group bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-8 py-4 rounded-full lg:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8'
+                                        className='group bg-gray-800 hover:bg-gray-900 text-white font-bold px-8 py-4 rounded-lg lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8'
                                     >
                                         {slide.button}
                                         <svg className='w-5 h-5 group-hover:translate-x-1 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -231,21 +229,21 @@ export default function Slider({ language = 'en' }) {
 
                                 {/* Right Content - Image */}
                                 <div className='relative animate-fadeInRight hidden md:block'>
-                                    <div className='absolute inset-0 bg-gradient-to-br from-teal-400/20 to-emerald-400/20 rounded-3xl blur-2xl transform rotate-6'></div>
+                                    <div className='absolute inset-0 bg-gray-300/10 rounded-2xl blur-xl'></div>
                                     <img 
                                         src={slide.contentImage} 
                                         alt="Healthcare Solutions" 
-                                        className='relative w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500 border-4 border-white/50 backdrop-blur-sm' 
+                                        className='relative w-full h-auto rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-500 border-4 border-white' 
                                     />
                                     
-                                    {/* Floating Badge */}
-                                    <div className='absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl animate-float'>
+                                    {/* Floating Badge - Gray Accent */}
+                                    <div className='absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl animate-float border border-gray-200'>
                                         <div className='flex items-center gap-3'>
-                                            <div className='w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center'>
+                                            <div className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center'>
                                                 <span className='text-white font-bold text-xl'>✓</span>
                                             </div>
                                             <div>
-                                                <p className='font-bold text-gray-800'>{slide.floatingBadge.title}</p>
+                                                <p className='font-bold text-gray-900'>{slide.floatingBadge.title}</p>
                                                 <p className='text-sm text-gray-600'>{slide.floatingBadge.subtitle}</p>
                                             </div>
                                         </div>
@@ -257,28 +255,28 @@ export default function Slider({ language = 'en' }) {
                 ))}
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Gray Theme */}
             <button 
                 onClick={handlePrev}
-                className='absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 lg:p-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 group'
+                className='absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-white p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-gray-200'
                 aria-label="Previous slide"
             >
-                <svg className='w-6 h-6 text-teal-600 group-hover:text-emerald-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='w-6 h-6 text-gray-700 group-hover:text-gray-900' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
                 </svg>
             </button>
 
             <button 
                 onClick={handleNext}
-                className='absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-white p-3 lg:p-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 group'
+                className='absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-white p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-gray-200'
                 aria-label="Next slide"
             >
-                <svg className='w-6 h-6 text-teal-600 group-hover:text-emerald-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='w-6 h-6 text-gray-700 group-hover:text-gray-900' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                 </svg>
             </button>
 
-            {/* Dots Navigation */}
+            {/* Dots Navigation - Gray Dots */}
             <div className='absolute bottom-32 lg:bottom-36 left-1/2 -translate-x-1/2 z-40 flex gap-3'>
                 {slides.map((_, index) => (
                     <button
@@ -292,28 +290,117 @@ export default function Slider({ language = 'en' }) {
                         }}
                         className={`transition-all duration-300 rounded-full ${
                             open === index 
-                                ? 'w-12 h-3 bg-gradient-to-r from-teal-500 to-emerald-500' 
-                                : 'w-3 h-3 bg-white/70 hover:bg-white'
-                        } shadow-lg hover:scale-110`}
+                                ? 'w-12 h-3 bg-gray-800' 
+                                : 'w-3 h-3 bg-gray-400 hover:bg-gray-600'
+                        } shadow-md hover:scale-110`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}
             </div>
 
-            {/* Trust Indicators - Bottom Bar */}
-            <div className='hidden lg:flex absolute bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-teal-100 py-6'>
+            {/* Trust Indicators - Bottom Bar (Clean White) */}
+            <div className='hidden lg:flex absolute bottom-0 left-0 right-0 z-30 bg-white/98 backdrop-blur-sm border-t border-gray-200 py-6 shadow-md'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-16'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
                         {indicators.map((item, idx) => (
                             <div key={idx} className='text-center group cursor-pointer'>
                                 <div className='text-2xl lg:text-3xl mb-2 group-hover:scale-125 transition-transform'>{item.icon}</div>
-                                <p className='font-bold text-gray-800 text-sm lg:text-base'>{item.text}</p>
+                                <p className='font-bold text-gray-900 text-sm lg:text-base'>{item.text}</p>
                                 <p className='text-xs lg:text-sm text-gray-600'>{item.subtext}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
+
+            {/* CSS Animations */}
+            <style jsx>{`
+                @keyframes fadeInLeft {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes fadeInRight {
+                    from {
+                        opacity: 0;
+                        transform: translateX(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes slideInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes slideInLeft {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+
+                .animate-fadeInLeft {
+                    animation: fadeInLeft 0.8s ease-out forwards;
+                }
+
+                .animate-fadeInRight {
+                    animation: fadeInRight 0.8s ease-out forwards;
+                }
+
+                .animate-slideInUp {
+                    animation: slideInUp 0.6s ease-out forwards;
+                }
+
+                .animate-slideInLeft {
+                    animation: slideInLeft 0.5s ease-out forwards;
+                }
+
+                .animate-fadeIn {
+                    animation: fadeIn 0.8s ease-out forwards;
+                }
+
+                .animate-float {
+                    animation: float 3s ease-in-out infinite;
+                }
+            `}</style>
         </div>
     );
 }

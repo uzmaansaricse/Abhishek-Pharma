@@ -106,29 +106,29 @@ export default function About() {
   const certIcons = [FaCertificate, FaShieldAlt, MdVerified];
 
   return (
-    <div className=" w-[100vw] overflow-x-hidden bg-gradient-to-br from-white via-teal-50/30 to-emerald-50/30">
-      {/* Language Toggle Button */}
+    <div className="w-[100vw] overflow-x-hidden bg-white">
+      {/* Language Toggle Button - Gray Theme */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
         >
           <FaGlobe className="w-5 h-5" />
           <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
         </button>
       </div>
 
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-700 text-white py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"></div>
+      {/* Hero Section - Clean Gray */}
+      <div className="relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-20 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-600/10 rounded-full blur-3xl"></div>
         
         <Container>
           <div className="relative z-10 text-center" data-aos="fade-up">
             <h1 className="text-4xl lg:text-6xl font-bold mb-4" data-aos="zoom-in">
-              {t.heroTitle} <span className="text-yellow-300">{t.heroHighlight}</span>
+              {t.heroTitle} <span className="text-gray-300">{t.heroHighlight}</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-teal-100 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               {t.heroSubtitle}
             </p>
             
@@ -137,12 +137,12 @@ export default function About() {
               {t.stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/15 transition-all duration-300 transform hover:scale-105"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
-                  <h3 className="text-3xl lg:text-4xl font-bold text-yellow-300 mb-2">{stat.number}</h3>
-                  <p className="text-sm lg:text-base text-teal-100">{stat.label}</p>
+                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-2">{stat.number}</h3>
+                  <p className="text-sm lg:text-base text-gray-300">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -150,21 +150,21 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Our Story Section */}
-      <div className="py-16" data-aos="fade-up">
+      {/* Our Story Section - Light Gray Background */}
+      <div className="py-16 bg-gray-50" data-aos="fade-up">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image Section */}
             <div className="relative" data-aos="fade-right">
-              <div className="absolute -inset-4 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-3xl blur-2xl opacity-20"></div>
+              <div className="absolute -inset-4 bg-gray-200 rounded-3xl blur-xl opacity-50"></div>
               <img
                 src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800"
                 alt="Pharmaceutical Excellence"
-                className="relative rounded-3xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500"
+                className="relative rounded-2xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-500 border-2 border-gray-200"
               />
               
-              {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-2xl p-6 shadow-2xl animate-float">
+              {/* Floating Badge - Gray Accent */}
+              <div className="absolute -bottom-6 -right-6 bg-gray-800 rounded-xl p-6 shadow-xl animate-float border-2 border-gray-200">
                 <MdVerified className="w-12 h-12 text-white" />
                 <p className="text-white font-bold mt-2">{language === 'en' ? 'ISO Certified' : 'आईएसओ प्रमाणित'}</p>
               </div>
@@ -173,27 +173,27 @@ export default function About() {
             {/* Content Section */}
             <div className="space-y-6" data-aos="fade-left">
               <div className="inline-block">
-                <span className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <span className="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                   {t.storyBadge}
                 </span>
               </div>
               
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">
-                {t.storyTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.storyHighlight}</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+                {t.storyTitle} <span className="text-gray-700">{t.storyHighlight}</span>
               </h2>
               
-              <div className="space-y-4 text-gray-700 leading-relaxed">
+              <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-lg">{t.storyPara1}</p>
                 <p className="text-lg">{t.storyPara2}</p>
                 <p className="text-lg">{t.storyPara3}</p>
               </div>
 
-              {/* Feature Pills */}
+              {/* Feature Pills - Gray Design */}
               <div className="flex flex-wrap gap-3 pt-4">
                 {t.features.map((feature, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gradient-to-br from-teal-50 to-emerald-50 border-2 border-teal-200 rounded-full text-teal-700 font-medium text-sm hover:scale-105 transition-transform duration-300"
+                    className="px-4 py-2 bg-gray-100 border-2 border-gray-300 rounded-lg text-gray-800 font-medium text-sm hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all duration-300"
                   >
                     {feature}
                   </span>
@@ -204,12 +204,12 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Values Section */}
-      <div className="py-16 bg-gradient-to-br from-gray-50 to-teal-50/50" data-aos="fade-up">
+      {/* Values Section - White Background */}
+      <div className="py-16 bg-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-4">
-              {t.valuesTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.valuesHighlight}</span>
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              {t.valuesTitle} <span className="text-gray-700">{t.valuesHighlight}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t.valuesSubtitle}
@@ -222,16 +222,16 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200"
+                  className="group bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-400"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
                   <div className="mb-6">
-                    <div className="inline-block p-4 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                      <Icon className="w-10 h-10 text-teal-600" />
+                    <div className="inline-block p-4 bg-gray-200 rounded-xl group-hover:bg-gray-800 transition-all duration-300">
+                      <Icon className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
                     {value.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -244,22 +244,22 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Vision & Mission Section */}
-      <div className="py-16" data-aos="fade-up">
+      {/* Vision & Mission Section - Light Gray */}
+      <div className="py-16 bg-gray-50" data-aos="fade-up">
         <Container>
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Vision Card */}
             <div
-              className="relative bg-gradient-to-br from-teal-500 to-emerald-600 rounded-3xl p-10 text-white overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500"
+              className="relative bg-gray-800 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
               data-aos="fade-right"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
               <div className="relative z-10">
-                <div className="inline-block p-4 bg-white/20 rounded-2xl mb-6">
+                <div className="inline-block p-4 bg-white/10 rounded-xl mb-6">
                   <FaBullseye className="w-12 h-12" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">{t.visionTitle}</h3>
-                <p className="text-lg text-teal-50 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed">
                   {t.visionDesc}
                 </p>
               </div>
@@ -267,16 +267,16 @@ export default function About() {
 
             {/* Mission Card */}
             <div
-              className="relative bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-10 text-white overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500"
+              className="relative bg-gray-700 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
               data-aos="fade-left"
             >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
               <div className="relative z-10">
-                <div className="inline-block p-4 bg-white/20 rounded-2xl mb-6">
+                <div className="inline-block p-4 bg-white/10 rounded-xl mb-6">
                   <FaHeart className="w-12 h-12" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">{t.missionTitle}</h3>
-                <p className="text-lg text-emerald-50 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed">
                   {t.missionDesc}
                 </p>
               </div>
@@ -285,14 +285,14 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Certifications Section */}
-      <div className="py-16 bg-gradient-to-br from-gray-900 to-teal-900 text-white" data-aos="fade-up">
+      {/* Certifications Section - Dark Gray */}
+      <div className="py-16 bg-gray-900 text-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-              {t.certTitle} <span className="text-yellow-300">{t.certHighlight}</span>
+              {t.certTitle} <span className="text-gray-300">{t.certHighlight}</span>
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-400">
               {t.certSubtitle}
             </p>
           </div>
@@ -303,48 +303,48 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border-2 border-white/20 hover:bg-white/20 hover:border-yellow-300 transition-all duration-300 transform hover:scale-105"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center border-2 border-white/10 hover:bg-white/10 hover:border-gray-300 transition-all duration-300 transform hover:scale-105"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="inline-block p-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl mb-4">
+                  <div className="inline-block p-4 bg-gray-800 rounded-xl mb-4">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-yellow-300">{cert.title}</h3>
-                  <p className="text-gray-300">{cert.desc}</p>
+                  <h3 className="text-xl font-bold mb-2 text-gray-200">{cert.title}</h3>
+                  <p className="text-gray-400">{cert.desc}</p>
                 </div>
               );
             })}
           </div>
 
           <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
               {t.certDesc}
             </p>
           </div>
         </Container>
       </div>
 
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-teal-600 to-emerald-600 text-white" data-aos="fade-up">
+      {/* CTA Section - Gray Gradient */}
+      <div className="py-16 bg-gradient-to-r from-gray-800 to-gray-700 text-white" data-aos="fade-up">
         <Container>
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-aos="zoom-in">
               {t.ctaTitle}
             </h2>
-            <p className="text-xl mb-8 text-teal-100" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-xl mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="200">
               {t.ctaSubtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-white text-teal-600 font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transform transition-all duration-300"
+                className="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
               >
                 {t.ctaBtn1}
               </a>
               <a
                 href="/request"
-                className="px-8 py-4 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transform transition-all duration-300"
+                className="px-8 py-4 bg-gray-900 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 border-2 border-white"
               >
                 {t.ctaBtn2}
               </a>

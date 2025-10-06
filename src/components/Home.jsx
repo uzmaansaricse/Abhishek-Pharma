@@ -10,22 +10,20 @@ import { useNavigate } from 'react-router'
 
 export default function Home() {
   const [open, setOpen] = useState(null);
-  const [language, setLanguage] = useState('en'); // en or hi
+  const [language, setLanguage] = useState('en');
   const toggles = (val) => { setOpen(val == open ? null : val) }
   
   const navigate = useNavigate();
 
-  // Healthcare Partners Logos
   const partners = [
     { name: 'Apollo Hospitals', logo: 'https://yt3.googleusercontent.com/g4a0IbVJmpT8nG3Mwqw4qqgqFLq69zFek4UtEIcmKqFkTkxRveLu-sKXWhVVq2zZI5hQXtWFLw8=s900-c-k-c0x00ffffff-no-rj' },
     { name: 'Fortis Healthcare', logo: 'https://yt3.googleusercontent.com/AgN3MSbFuFpFhLfV_Vm9mrnk6EOKKCMynjqhzOE7fcvP5DgkG-kPADb_vUdg58S2cpclpmHH=s900-c-k-c0x00ffffff-no-rj' },
-    { name: 'Max Healthcare', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQERRsGQOM6L9A/company-logo_200_200/company-logo_200_200/0/1660630545677/max_healthcare_logo?e=2147483647&v=beta&t=NRaCQxsjqqiNZfNBLecX9vR1cuKng-oC3yAoRBpNfS8' },
+    { name: 'Max Healthcare', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDev_KLmjbAAo7Ym9n4klpQkWmume0q7De_A&s' },
     { name: 'Medanta', logo: 'https://medanta.s3.ap-south-1.amazonaws.com/posts/May2025/zBYNG0E3OEmq9V93Ve0VgrCMqhGade-metaTWVkYW50YS1Mb2dvLUNUQy1wbmcucG5n-.png' },
     { name: 'Manipal Hospitals', logo: 'https://upload.wikimedia.org/wikipedia/en/d/dd/Manipal_Hospitals_%28logo%29.png' },
     { name: 'Narayana Health', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaifWhNuo2NRLj2ExyoitdFEzk1Q77WUmXqA&s' }
   ];
 
-  // Content in both languages
   const content = {
     en: {
       heroTitle: 'Your Partner in',
@@ -140,52 +138,52 @@ export default function Home() {
   const t = content[language];
 
   return (
-    <div className='w-[100vw]  overflow-x-hidden  overflow-x-hidden'>
-      {/* Language Toggle Button - Fixed at top right */}
+    <div className='w-[100vw] overflow-x-hidden bg-gray-50'>
+      {/* Language Toggle Button */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
         >
-          <FaGlobe className="w-5 h-5" />
-          <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
+          <FaGlobe className="w-4 h-4" />
+          <span className="text-sm">{language === 'en' ? 'हिंदी' : 'English'}</span>
         </button>
       </div>
 
-      {/* Hero Slider with Enhanced Animation */}
+      {/* Hero Slider */}
       <div className="w-full mb-5 h-full" data-aos="fade-down" data-aos-duration="800">
         <Slider language={language} />
       </div>
 
-      {/* About Section with Soft Pastel Theme */}
-      <div className="w-full h-full py-8 bg-gradient-to-br from-teal-50 via-white to-emerald-50" data-aos="fade-up" data-aos-duration="1000">
+      {/* About Section - White & Gray Theme */}
+      <div className="w-full h-full py-12 bg-white" data-aos="fade-up" data-aos-duration="1000">
         <Container>
-          <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-6 items-center">
-            <div className='relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group' data-aos="zoom-in" data-aos-duration="800">
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8 items-center">
+            <div className='relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group' data-aos="zoom-in" data-aos-duration="800">
               <img 
-                className='rounded-2xl w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700' 
+                className='rounded-lg w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700' 
                 src="https://vijay-overseas.vercel.app/img/firm.jpg" 
                 alt="Pharmaceutical Excellence" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
             <div className='md:space-y-5 space-y-3 order-1 md:order-2 p-4' data-aos="fade-left" data-aos-delay="200">
-              <h1 className='font-bold lg:text-5xl text-3xl text-gray-800 leading-tight'>
-                {t.heroTitle} <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>{t.heroTitleHighlight}</span>
+              <h1 className='font-bold lg:text-4xl text-3xl text-gray-900 leading-tight'>
+                {t.heroTitle} <span className='text-gray-600'>{t.heroTitleHighlight}</span>
               </h1>
               <div className='space-y-4'>
-                <p className='lg:text-lg text-gray-700 leading-relaxed'>
+                <p className='lg:text-base text-gray-600 leading-relaxed'>
                   {t.heroPara1}
                 </p>
-                <p className='lg:text-lg text-gray-700 leading-relaxed'>
+                <p className='lg:text-base text-gray-600 leading-relaxed'>
                   {t.heroPara2}
                 </p>
-                <p className='lg:text-lg text-gray-700 leading-relaxed'>
+                <p className='lg:text-base text-gray-600 leading-relaxed'>
                   {t.heroPara3}
                 </p>
               </div>
-              <button onClick={() => navigate('/about')} className='bg-gradient-to-r from-teal-500 to-emerald-500 cursor-pointer text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 hover:from-teal-600 hover:to-emerald-600'>
+              <button onClick={() => navigate('/about')} className='bg-gray-800 hover:bg-gray-900 cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                 {t.learnMore}
               </button>
             </div>
@@ -194,10 +192,10 @@ export default function Home() {
       </div>
 
       {/* Healthcare Partners Slider */}
-      <div className="bg-white py-12" data-aos="fade-up">
+      <div className="bg-gray-50 py-12 border-y border-gray-200" data-aos="fade-up">
         <Container>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-800">
-            {t.partnersTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">{t.partnersHighlight}</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
+            {t.partnersTitle} <span className="text-gray-600">{t.partnersHighlight}</span>
           </h2>
           
           <div className="relative overflow-hidden">
@@ -205,7 +203,7 @@ export default function Home() {
               {[...partners, ...partners].map((partner, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-110 border-2 border-gray-100"
+                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-gray-200"
                 >
                   <img
                     src={partner.logo}
@@ -219,37 +217,37 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* Product Categories with Soft Green Gradient */}
-      <div className="bg-gradient-to-br from-teal-100 via-emerald-50 to-teal-50 text-gray-800 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
+      {/* Product Categories */}
+      <div className="bg-white text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
         <Container>
           <div className="md:space-y-10 space-y-6">
             <div className='text-center space-y-4' data-aos="zoom-in">
-              <h1 className='font-bold lg:text-5xl text-3xl text-gray-800'>{t.productsTitle}</h1>
-              <p className='lg:text-lg text-gray-700 lg:w-[850px] mx-auto w-full px-4'>
+              <h1 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h1>
+              <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
                 {t.productsDesc}
               </p>
             </div>
             
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-4">
-              <div className='flex flex-col rounded-2xl items-center bg-white text-gray-800 justify-center p-8 shadow-md hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 group' data-aos="flip-left" data-aos-duration="600">
-                <div className='bg-gradient-to-br from-teal-100 to-emerald-100 p-6 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300'>
+              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transform hover:-translate-y-2 transition-all duration-500 group' data-aos="flip-left" data-aos-duration="600">
+                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Tablets" />
                 </div>
-                <h2 className='text-xl font-bold text-teal-700'>{t.tablets}</h2>
+                <h2 className='text-xl font-bold text-gray-900'>{t.tablets}</h2>
               </div>
               
-              <div className='flex flex-col rounded-2xl items-center bg-white text-gray-800 justify-center p-8 shadow-md hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 group' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
-                <div className='bg-gradient-to-br from-teal-100 to-emerald-100 p-6 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300'>
+              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transform hover:-translate-y-2 transition-all duration-500 group' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
+                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Injections" />
                 </div>
-                <h2 className='text-xl font-bold text-center text-teal-700'>{t.injections}</h2>
+                <h2 className='text-xl font-bold text-center text-gray-900'>{t.injections}</h2>
               </div>
               
-              <div className='flex flex-col rounded-2xl items-center bg-white text-gray-800 justify-center p-8 shadow-md hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 group' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
-                <div className='bg-gradient-to-br from-teal-100 to-emerald-100 p-6 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300'>
+              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transform hover:-translate-y-2 transition-all duration-500 group' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
+                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Syrups" />
                 </div>
-                <h2 className='text-xl font-bold text-teal-700'>{t.syrups}</h2>
+                <h2 className='text-xl font-bold text-gray-900'>{t.syrups}</h2>
               </div>
             </div>
           </div>
@@ -257,23 +255,23 @@ export default function Home() {
       </div>
 
       {/* Testimonials Section */}
-      <div className='py-10 bg-white'>
-        <h1 className='font-bold text-center lg:text-5xl text-3xl mb-8 text-gray-800' data-aos="fade-up">
-          {t.testimonialsTitle} <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>{t.testimonialsHighlight}</span>
+      <div className='py-10 bg-gray-50'>
+        <h1 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-gray-900' data-aos="fade-up">
+          {t.testimonialsTitle} <span className='text-gray-600'>{t.testimonialsHighlight}</span>
         </h1>
         <div className="mx-auto w-full lg:mb-5 mb-2 h-full" data-aos="fade-up" data-aos-delay="200">
           <Slider1 language={language} />
         </div>
       </div>
 
-      {/* ABCDEF Framework with Light Theme */}
-      <div className='bg-gradient-to-br from-emerald-50 via-teal-50 to-white py-12' data-aos="fade-up">
+      {/* ABCDEF Framework */}
+      <div className='bg-white py-12 border-y border-gray-200' data-aos="fade-up">
         <Container>
           <div className="lg:my-10 my-3 text-center space-y-6">
-            <h1 className='text-center lg:text-5xl text-3xl font-bold text-gray-800' data-aos="zoom-in">
-              {t.frameworkTitle} <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>{t.frameworkHighlight}</span> {t.frameworkSubtitle}
+            <h1 className='text-center lg:text-4xl text-3xl font-bold text-gray-900' data-aos="zoom-in">
+              {t.frameworkTitle} <span className='text-gray-600'>{t.frameworkHighlight}</span> {t.frameworkSubtitle}
             </h1>
-            <p className="lg:text-xl text-gray-700 max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
+            <p className="lg:text-lg text-gray-600 max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
               {t.frameworkDesc}
             </p>
             
@@ -288,15 +286,15 @@ export default function Home() {
               ].map((item, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white group shadow-md rounded-2xl hover:shadow-2xl duration-500 flex flex-col items-center justify-center p-8 transform hover:-translate-y-2 border-2 border-transparent hover:border-teal-200" 
+                  className="bg-gray-50 group shadow-sm rounded-lg hover:shadow-md duration-500 flex flex-col items-center justify-center p-8 transform hover:-translate-y-2 border border-gray-200 hover:border-gray-300" 
                   data-aos="zoom-in" 
                   data-aos-delay={item.delay}
                 >
-                  <div className='bg-gradient-to-br from-teal-100 to-emerald-100 p-6 rounded-2xl mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300'>
+                  <div className='bg-white border border-gray-200 p-6 rounded-lg mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300'>
                     <img width={80} src={`https://vijay-overseas.vercel.app/img/${item.icon}`} alt={item.title} />
                   </div>
-                  <h2 className='lg:text-2xl text-xl uppercase font-bold text-teal-700 mb-3'>{item.title}</h2>
-                  <p className='text-center lg:text-base text-gray-700 leading-relaxed'>{item.desc}</p>
+                  <h2 className='lg:text-xl text-lg uppercase font-bold text-gray-900 mb-3'>{item.title}</h2>
+                  <p className='text-center lg:text-base text-sm text-gray-600 leading-relaxed'>{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -304,11 +302,11 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* Why Choose Us - Enhanced Light Theme */}
-      <div className="bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-600 text-white lg:py-16 py-10 w-full shadow-xl" data-aos="fade-up">
+      {/* Why Choose Us */}
+      <div className="bg-gray-800 text-white lg:py-16 py-10 w-full" data-aos="fade-up">
         <Container>
           <div className="flex flex-col items-center justify-center">
-            <h1 className='font-bold text-center lg:mb-12 mb-8 text-3xl lg:text-5xl' data-aos="zoom-in">
+            <h1 className='font-bold text-center lg:mb-12 mb-8 text-3xl lg:text-4xl' data-aos="zoom-in">
               {t.whyChooseTitle}
             </h1>
             
@@ -325,14 +323,14 @@ export default function Home() {
               ].map(({ Icon, text, delay }, idx) => (
                 <div 
                   key={idx}
-                  className='flex flex-col items-center justify-center gap-4 p-6 rounded-2xl hover:bg-white/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-105' 
+                  className='flex flex-col items-center justify-center gap-4 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105' 
                   data-aos="fade-up" 
                   data-aos-delay={delay}
                 >
-                  <div className='bg-white/20 p-4 rounded-full hover:bg-white hover:text-teal-600 transition-all duration-300'>
-                    <Icon size={32} />
+                  <div className='bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-all duration-300'>
+                    <Icon size={28} />
                   </div>
-                  <p className='lg:text-base text-sm font-semibold text-center leading-snug'>{text}</p>
+                  <p className='lg:text-sm text-xs font-medium text-center leading-snug'>{text}</p>
                 </div>
               ))}
             </div>
@@ -340,10 +338,10 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* FAQ Section - Light & Clean */}
-      <div className='bg-gradient-to-br from-white via-teal-50 to-emerald-50 py-12'>
-        <h1 className='lg:text-5xl text-center text-3xl font-bold lg:my-10 my-8 text-gray-800' data-aos="fade-up">
-          {t.faqTitle} <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500'>{t.faqHighlight}</span>
+      {/* FAQ Section */}
+      <div className='bg-gray-50 py-12'>
+        <h1 className='lg:text-4xl text-center text-3xl font-bold lg:my-10 my-8 text-gray-900' data-aos="fade-up">
+          {t.faqTitle} <span className='text-gray-600'>{t.faqHighlight}</span>
         </h1>
         
         <Container>
@@ -357,13 +355,13 @@ export default function Home() {
             ].map(({ id, q, a, delay }) => (
               <div 
                 key={id}
-                className="border-2 border-teal-200 bg-white lg:text-lg text-sm rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden" 
+                className="border border-gray-300 bg-white lg:text-base text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" 
                 data-aos="zoom-in" 
                 data-aos-delay={delay}
               >
                 <div 
                   onClick={() => toggles(id)} 
-                  className="p-4 text-white cursor-pointer font-semibold rounded-t-2xl bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 transition-all duration-300 flex justify-between items-center"
+                  className="p-4 text-white cursor-pointer font-semibold rounded-t-lg bg-gray-800 hover:bg-gray-900 transition-all duration-300 flex justify-between items-center"
                 >
                   <span>{q}</span>
                   <span className={`transform transition-transform duration-300 ${open === id ? 'rotate-180' : ''}`}>
@@ -379,7 +377,7 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* Add CSS for infinite scroll animation */}
+      {/* CSS for infinite scroll animation */}
       <style jsx>{`
         @keyframes scroll {
           0% {
