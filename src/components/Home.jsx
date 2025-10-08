@@ -16,12 +16,64 @@ export default function Home() {
   const navigate = useNavigate();
 
   const partners = [
-    { name: 'Apollo Hospitals', logo: 'https://yt3.googleusercontent.com/g4a0IbVJmpT8nG3Mwqw4qqgqFLq69zFek4UtEIcmKqFkTkxRveLu-sKXWhVVq2zZI5hQXtWFLw8=s900-c-k-c0x00ffffff-no-rj' },
-    { name: 'Fortis Healthcare', logo: 'https://yt3.googleusercontent.com/AgN3MSbFuFpFhLfV_Vm9mrnk6EOKKCMynjqhzOE7fcvP5DgkG-kPADb_vUdg58S2cpclpmHH=s900-c-k-c0x00ffffff-no-rj' },
-    { name: 'Max Healthcare', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDev_KLmjbAAo7Ym9n4klpQkWmume0q7De_A&s' },
-    { name: 'Medanta', logo: 'https://medanta.s3.ap-south-1.amazonaws.com/posts/May2025/zBYNG0E3OEmq9V93Ve0VgrCMqhGade-metaTWVkYW50YS1Mb2dvLUNUQy1wbmcucG5n-.png' },
-    { name: 'Manipal Hospitals', logo: 'https://upload.wikimedia.org/wikipedia/en/d/dd/Manipal_Hospitals_%28logo%29.png' },
-    { name: 'Narayana Health', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaifWhNuo2NRLj2ExyoitdFEzk1Q77WUmXqA&s' }
+    { name: 'Intas', logo: 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/188d613a288679f1fd181d32eadff902' },
+    { name: 'Alkem', logo: 'https://bl-i.thgim.com/public/incoming/8iqg0i/article67888261.ece/alternates/LANDSCAPE_1200/ALKEM.jpg' },
+    { name: 'Alembic', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTKpce6EVMgVuPklFSlotjlQxiACqyTYvRg&s' },
+    { name: 'Cipla', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cipla_logo.svg/1200px-Cipla_logo.svg.png' },
+    { name: 'Pil', logo: 'https://pilindia.co.in/cdn/shop/files/logo.webp?crop=center&height=300&v=1746648055&width=300' },
+    { name: 'Medley', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGAXkf3MCI2ow/company-logo_200_200/company-logo_200_200/0/1630594190088/medley_pharmaceuticals_ltd_logo?e=2147483647&v=beta&t=g80fBimliYkyiI5OTZe984ULobr5DGngSLtTQw6d0h4' },
+    { name: 'Bestochem', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29mIsOYOFI2IZGxF1x90hr4b1Zp1HkRiaEw&s ' },
+    { name: 'Lupin', logo: ' https://upload.wikimedia.org/wikipedia/en/f/f7/The_Lupin_Logo.svg' },
+    { name: 'Biochem', logo: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT8ONYntbhBOSTRmZ0vp-b8MsBuFag7hg06z2hMtfAV6Wjn-5F_WrnY-NkFNJPUBaKjA&usqp=CAU' },
+    { name: 'Morphem', logo: 'https://m.media-amazon.com/images/S/abs-image-upload-na/f/AmazonStores/A21TJRUUN4KGV/b1883b3231e613b2fd7948c5c6c56644.w400.h400.jpg ' },
+    { name: 'Zen Lab', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGbGcbWldAl59fdCb6blIM_xlwaZHOdxb7OAkDTVX-qssr1vqtAy7vabyB2jqvmF4vg4E&usqp=CAU ' },
+    { name: 'Orison Pharma', logo: 'https://orisonpharmaceutical.com/assets/images/1695753131orison.png ' },
+    { name: 'LeeFord', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBz1c4_n0smveOSWBIhbl00QfObVGBZyoyGA&s ' },
+    { name: 'Elder', logo: 'https://medicaldialogues.in/wp-content/uploads/2015/10/No-plans-to-inv12279.jpg ' },
+    { name: 'zydus cadila', logo: 'https://ehealth.eletsonline.com/wp-content/uploads/2019/03/Zydus-Cadila.jpg ' },
+    { name: 'Abbot', logo: 'https://www.abbott.in/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png ' },
+    { name: 'Torque', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSrRSOWa9_LHTT5ZsMtzck0UYox4CP_UWuag&s ' },
+    { name: 'Germed', logo: ' https://www.pharmacompass.com/image/logo/germed-55673.png' },
+    { name: 'Khandelwal Laboratories', logo: ' https://media.licdn.com/dms/image/v2/C4D0BAQG7MbK_nYQ7bQ/company-logo_200_200/company-logo_200_200/0/1642426049446/khandelwal_laboratories_privatelimited_logo?e=2147483647&v=beta&t=ayXTcIyBVaIKHvAv0anmV8cUaUNVzSkF2E7-zFDDKF0' },
+    { name: 'Glenmark', logo: ' https://upload.wikimedia.org/wikipedia/en/6/62/Glenmark_Pharmaceuticals_logo.png' },
+    { name: 'Mankind', logo: 'https://media.licdn.com/dms/image/v2/C560BAQELBuDa-xrYFQ/company-logo_200_200/company-logo_200_200/0/1631313525504?e=2147483647&v=beta&t=thgCGmJkuv1qqLNLVdBBxIKLSiyQA3-Nb4edlbasaf8 ' },
+    { name: 'Ranbaxy Lab', logo: 'https://smartisystems.com/wp-content/uploads/2024/05/image1.jpg ' },
+    { name: 'IndSwift', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVftkZ50LQZpfSVbAtXSwiBFIrsFElLgvgw&s ' },
+    { name: 'Universal', logo: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZWKhGczmuGxvfOiTEb9Z9N2-AWlKCtnpGDQ&s' },
+    { name: 'Univent', logo: ' https://engexportdirectory.org/wp-content/uploads/2018/08/logo-2-1.png' },
+    { name: 'Torrent', logo: ' https://media.licdn.com/dms/image/v2/C560BAQFW13K-6R9CGg/company-logo_200_200/company-logo_200_200/0/1631350983906?e=2147483647&v=beta&t=Y6U60HqfR4NHjIyG0LaUAw9SNW9m4FhtYX2MlnEt_ZE' },
+    { name: 'zuventus', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHED04FqHmBFw/company-logo_200_200/company-logo_200_200/0/1665049635256/zuventushealthcarelimited_logo?e=2147483647&v=beta&t=afYkyjYaILqgAmf0TWwOt-L5rVTo2cU-INPB6Q8z1R0 ' },
+    { name: 'Laborate', logo: 'https://images.jdmagicbox.com/comp/panipat/35/9999pmuldelstds000635/catalogue/laborate-pharmaceuticals-india-ltd-panipat-allopathic-medicine-manufacturers-hge1h6f1xf.jpg ' },
+    
+
+    
+    
+
+  ];
+
+    const partners2 = [
+    // { name: 'Intas', logo: 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/188d613a288679f1fd181d32eadff902' },
+    // { name: 'Abbot', logo: 'https://www.abbott.in/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png ' },
+    { name: 'Mankind', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYNRSB6ys-s0GFZf6fNF6ywgkjpmBgimlLQ&s' },
+    { name: 'Virbac', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Logo_Virbac.svg/1200px-Logo_Virbac.svg.png' },
+    { name: 'Vetquinol', logo: 'https://www.vetoquinol.in/sites/incountry/files/logo_0.png' },
+    { name: 'Wockhardt', logo: 'https://cdn.thepharmaletter.com/files/2024/06/737de020-21d3-11ef-b9fd-3d6df514ffbd-wockhardt-logo-big.jpg' },
+    { name: 'Vets Dharma', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIs4ryVNrwN6TRSpSASQOS0S0K8syh_hb8qQ&s' },
+    { name: 'Vetcare', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtKwlOg7QjbcnOVwtcidGQqufxsonbdun9WA&s' },
+    { name: 'Sushma Pharma', logo: 'https://www.sushima.in/img/logo/logo1.png' },
+    { name: 'MSD Animal HealthCare', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-jQW6840RBz3MAPhqqMdDv3USzN6xTLCgJw&s' },
+    { name: 'Phoenix Pharma', logo: 'https://www.phoenixgroup.eu/fileadmin/media/Logo_PHOENIX_4cc.jpg' },
+    { name: 'Natural Remedies', logo: 'https://www.naturalremedy.com/wp-content/uploads/2025/07/NRPL-logo-512x512-px.jpg' },
+    { name: 'Himalaya', logo: 'https://cdn.shopify.com/s/files/1/0272/4714/9155/files/logo-aboutus.png?1207' },
+    { name: 'Zenex', logo: 'https://www.ifcamc.org/sites/default/files/zenex.png' },
+    { name: 'Alembic Vet', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX3biqHGFnXAqKRRerePZtwr4ACyt5lJs8S7QHHsIF2KWc31f6sESWfmNxOA5DqskyIPg&usqp=CAU' },
+    { name: 'Animax Pharmna', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Mv6lrkcHdjlpOGXjaWC4cMYho5dUTLsn_Q&s' },
+    
+
+
+    
+    
+
   ];
 
   const content = {
@@ -34,9 +86,9 @@ export default function Home() {
       learnMore: 'LEARN MORE',
       productsTitle: 'Our Product Categories',
       productsDesc: 'Abhishek Pharma offers expert-driven pharmaceutical solutions from our offices in India, helping businesses access quality medicines. Our team provides customized supplies to empower healthcare across industries.',
-      tablets: 'Tablets',
-      injections: 'Injections & Vaccines',
-      syrups: 'Syrups & Liquids',
+      tablets: 'Humans',
+      injections: 'Surgical',
+      syrups: 'Veterinary',
       testimonialsTitle: 'What Clients Say About',
       testimonialsHighlight: 'Abhishek Pharma',
       frameworkTitle: 'Abhishek Pharma',
@@ -88,9 +140,9 @@ export default function Home() {
       learnMore: 'और जानें',
       productsTitle: 'हमारी उत्पाद श्रेणियां',
       productsDesc: 'अभिषेक फार्मा भारत में हमारे कार्यालयों से विशेषज्ञ-संचालित फार्मास्युटिकल समाधान प्रदान करता है। हमारी टीम उद्योगों में स्वास्थ्य सेवा को सशक्त बनाने के लिए अनुकूलित आपूर्ति प्रदान करती है।',
-      tablets: 'गोलियां',
-      injections: 'इंजेक्शन और वैक्सीन',
-      syrups: 'सिरप और तरल पदार्थ',
+      tablets: 'इंसान',
+      injections: 'शल्य चिकित्सा',
+      syrups: 'पशु चिकित्सा',
       testimonialsTitle: 'ग्राहक क्या कहते हैं',
       testimonialsHighlight: 'अभिषेक फार्मा के बारे में',
       frameworkTitle: 'अभिषेक फार्मा',
@@ -201,6 +253,23 @@ export default function Home() {
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll">
               {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-gray-200"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-[80%] max-h-[80%] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+           <div className="relative overflow-hidden mt-8">
+            <div className="flex animate-scroll2">
+              {[...partners2, ...partners2].map((partner, index) => (
                 <div
                   key={index}
                   className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-gray-200"
@@ -389,10 +458,27 @@ export default function Home() {
         }
         
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 20s linear infinite;
         }
         
         .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+
+         @keyframes scroll2 {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        
+        .animate-scroll2 {
+          animation: scroll2 20s linear infinite;
+        }
+        
+        .animate-scroll2:hover {
           animation-play-state: paused;
         }
       `}</style>
