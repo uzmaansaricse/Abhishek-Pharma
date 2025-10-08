@@ -6,7 +6,7 @@ import logo from '../../public/lo.png';
 
 export default function Footer() {
   // Replace with your actual WhatsApp number (with country code, no + or spaces)
-  const whatsappNumber = "919876543210"; // Example: 919876543210 for +91 9876543210
+  const whatsappNumber = "919414147250"; 
   const whatsappMessage = "Hello! I'm interested in your pharmaceutical products.";
   
   const handleWhatsAppClick = () => {
@@ -168,7 +168,7 @@ export default function Footer() {
                 </a>
 
                 <a 
-                  href="tel:+919876543210" 
+                  href="tel:+919414147250" 
                   className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-all duration-300 group"
                 >
                   <div className="p-2 bg-gray-200 rounded-lg group-hover:bg-gray-800 transition-all duration-300">
@@ -176,7 +176,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Phone</p>
-                    <p className="font-medium">+91 98765 43210</p>
+                    <p className="font-medium">+91 9414147250</p>
                   </div>
                 </a>
               </div>

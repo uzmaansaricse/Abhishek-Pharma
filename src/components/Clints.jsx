@@ -141,8 +141,8 @@ const Partners = () => {
                       </div>
                       <div>
                         <p className="text-teal-100 text-sm mb-1">Phone</p>
-                        <a href="tel:+919876543210" className="font-semibold hover:text-yellow-300 transition-colors">
-                          +91 98765 43210
+                        <a href="tel:+9414147250" className="font-semibold hover:text-yellow-300 transition-colors">
+                          +91 9414147250
                         </a>
                       </div>
                     </div>

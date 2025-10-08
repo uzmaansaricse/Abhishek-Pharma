@@ -264,13 +264,13 @@ export default function Header() {
           <div className="absolute bottom-0 left-0 right-0 p-6 bg-gray-50 border-t border-gray-200">
             <div className="space-y-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919414147250"
                 className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors duration-300"
               >
                 <div className="p-2 bg-gray-200 rounded-lg">
                   <FaPhoneAlt className="w-4 h-4 text-gray-700" />
                 </div>
-                <span className="font-medium">+91 98765 43210</span>
+                <span className="font-medium">+91 9414147250</span>
               </a>
               <a
                 href="mailto:info@abhishekpharma.com"

@@ -24,7 +24,7 @@ export default function Contact() {
             heroHighlight: 'Touch',
             heroSubtitle: "Have questions? We're here to help with your pharmaceutical needs",
             contactCards: [
-                { title: 'Call Us', detail: '+91 98765 43210', link: 'tel:+919876543210' },
+                { title: 'Call Us', detail: '+91 9414147250', link: 'tel:+9414147250' },
                 { title: 'Email Us', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' },
                 { title: 'Visit Us', detail: '123 Medical Plaza, Mumbai', link: '#location' }
             ],
@@ -64,7 +64,7 @@ export default function Contact() {
             heroHighlight: 'करें',
             heroSubtitle: 'कोई प्रश्न हैं? हम आपकी फार्मास्युटिकल जरूरतों में मदद के लिए यहां हैं',
             contactCards: [
-                { title: 'हमें कॉल करें', detail: '+91 98765 43210', link: 'tel:+919876543210' },
+                { title: 'हमें कॉल करें', detail: '+91 9414147250', link: 'tel:+919414147250' },
                 { title: 'हमें ईमेल करें', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' },
                 { title: 'हमसे मिलें', detail: '123 मेडिकल प्लाजा, मुंबई', link: '#location' }
             ],
@@ -383,8 +383,8 @@ export default function Contact() {
                                             </div>
                                             <div>
                                                 <p className="text-gray-300 text-sm mb-1">{t.phoneText}</p>
-                                                <a href="tel:+919876543210" className="font-semibold hover:text-gray-300 transition-colors">
-                                                    +91 98765 43210
+                                                <a href="tel:+9414147250" className="font-semibold hover:text-gray-300 transition-colors">
+                                                    +91 9414147250
                                                 </a>
                                             </div>
                                         </div>
