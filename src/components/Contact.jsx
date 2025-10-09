@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import Container from '../pages/Container';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCheckCircle, FaClock, FaHeadset, FaGlobe } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
 import { MdSend } from 'react-icons/md';
 
 export default function Contact() {
@@ -153,8 +154,8 @@ export default function Contact() {
             color: 'gray-700'
         },
         {
-            icon: FaEnvelope,
-            color: 'gray-600'
+            icon: MdEmail,
+            color: 'gray-800'
         }
     ];
 
@@ -396,7 +397,7 @@ export default function Contact() {
                                         {/* Email Section */}
                                         <div className="flex items-start gap-4">
                                             <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                                                <FaEnvelope className="w-5 h-5" />
+                                                <MdEmail className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <p className="text-gray-300 text-sm mb-1">{t.emailText}</p>

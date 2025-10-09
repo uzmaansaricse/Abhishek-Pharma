@@ -23,9 +23,7 @@ export default function Footer() {
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50 group">
         {/* Pulsing Rings Animation */}
-        <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>
-        <div className="absolute inset-0 rounded-full bg-green-400 animate-pulse"></div>
-        
+      
         {/* Main WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
