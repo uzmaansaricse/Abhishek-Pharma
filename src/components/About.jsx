@@ -43,9 +43,9 @@ export default function About() {
       certHighlight: 'Licenses',
       certSubtitle: 'Fully compliant with all regulatory requirements',
       certifications: [
-        { title: 'ISO Certified', desc: 'ISO 9001:2015 Quality Management' },
-        { title: 'Drug License', desc: 'License No.: DL-123456789' },
-        { title: 'GSTIN Registered', desc: 'GSTIN: 27XXXXX1234X1ZY' }
+        { title: 'ISO Certified', desc: '' },
+        { title: 'Drug License', desc: '' },
+        { title: 'GSTIN Registered', desc: '' }
       ],
       certDesc: 'We are fully licensed and compliant with all regulatory requirements for pharmaceutical distribution. Our certifications ensure that every product we supply meets the highest standards of quality and safety.',
       ctaTitle: 'Ready to Partner With Us?',
@@ -89,9 +89,9 @@ export default function About() {
       certHighlight: 'लाइसेंस',
       certSubtitle: 'सभी नियामक आवश्यकताओं के साथ पूरी तरह से अनुपालन',
       certifications: [
-        { title: 'आईएसओ प्रमाणित', desc: 'ISO 9001:2015 गुणवत्ता प्रबंधन' },
-        { title: 'औषधि लाइसेंस', desc: 'लाइसेंस नं.: DL-123456789' },
-        { title: 'GSTIN पंजीकृत', desc: 'GSTIN: 27XXXXX1234X1ZY' }
+        { title: 'आईएसओ प्रमाणित', desc: '' },
+        { title: 'औषधि लाइसेंस', desc: '' },
+        { title: 'GSTIN पंजीकृत', desc: '' }
       ],
       certDesc: 'हम फार्मास्युटिकल वितरण के लिए सभी नियामक आवश्यकताओं के साथ पूरी तरह से लाइसेंस प्राप्त और अनुपालन कर रहे हैं। हमारे प्रमाणन यह सुनिश्चित करते हैं कि हम जो भी उत्पाद आपूर्ति करते हैं वह गुणवत्ता और सुरक्षा के उच्चतम मानकों को पूरा करता है।',
       ctaTitle: 'हमारे साथ साझेदारी करने के लिए तैयार हैं?',

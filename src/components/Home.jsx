@@ -333,81 +333,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ABCDEF Framework */}
-      <div className='bg-white py-12 border-y border-gray-200' data-aos="fade-up">
-        <Container>
-          <div className="lg:my-10 my-3 text-center space-y-6">
-            <h1 className='text-center lg:text-4xl text-3xl font-bold text-gray-900' data-aos="zoom-in">
-              {t.frameworkTitle} <span className='text-gray-600'>{t.frameworkHighlight}</span> {t.frameworkSubtitle}
-            </h1>
-            <p className="lg:text-lg text-gray-600 max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
-              {t.frameworkDesc}
-            </p>
-            
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-8 px-4">
-              {[
-                { icon: 'data-analysis_12966774.png', title: t.assess, desc: t.assessDesc, delay: 0 },
-                { icon: 'benchmarking_11726497.png', title: t.benchmark, desc: t.benchmarkDesc, delay: 100 },
-                { icon: 'brilliant_10872503.png', title: t.craft, desc: t.craftDesc, delay: 200 },
-                { icon: 'time_11492093.png', title: t.deploy, desc: t.deployDesc, delay: 300 },
-                { icon: 'check-list_1721936.png', title: t.enhance, desc: t.enhanceDesc, delay: 400 },
-                { icon: 'notes_18594273.png', title: t.followUp, desc: t.followUpDesc, delay: 500 }
-              ].map((item, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-gray-50 group shadow-sm rounded-lg hover:shadow-md duration-500 flex flex-col items-center justify-center p-8 transform hover:-translate-y-2 border border-gray-200 hover:border-gray-300" 
-                  data-aos="zoom-in" 
-                  data-aos-delay={item.delay}
-                >
-                  <div className='bg-white border border-gray-200 p-6 rounded-lg mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300'>
-                    <img width={80} src={`https://vijay-overseas.vercel.app/img/${item.icon}`} alt={item.title} />
-                  </div>
-                  <h2 className='lg:text-xl text-lg uppercase font-bold text-gray-900 mb-3'>{item.title}</h2>
-                  <p className='text-center lg:text-base text-sm text-gray-600 leading-relaxed'>{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      {/* Why Choose Us */}
-      <div className="bg-gray-800 text-white lg:py-16 py-10 w-full" data-aos="fade-up">
-        <Container>
-          <div className="flex flex-col items-center justify-center">
-            <h1 className='font-bold text-center lg:mb-12 mb-8 text-3xl lg:text-4xl' data-aos="zoom-in">
-              {t.whyChooseTitle}
-            </h1>
-            
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-10 gap-6 w-full px-4">
-              {[
-                { Icon: FaTools, text: t.reason1, delay: 0 },
-                { Icon: HiOutlineWrenchScrewdriver, text: t.reason2, delay: 50 },
-                { Icon: FaCogs, text: t.reason3, delay: 100 },
-                { Icon: BiSearchAlt, text: t.reason4, delay: 150 },
-                { Icon: FaRegHandshake, text: t.reason5, delay: 200 },
-                { Icon: GiLaptop, text: t.reason6, delay: 250 },
-                { Icon: FaChartLine, text: t.reason7, delay: 300 },
-                { Icon: FaBullseye, text: t.reason8, delay: 350 }
-              ].map(({ Icon, text, delay }, idx) => (
-                <div 
-                  key={idx}
-                  className='flex flex-col items-center justify-center gap-4 p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105' 
-                  data-aos="fade-up" 
-                  data-aos-delay={delay}
-                >
-                  <div className='bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition-all duration-300'>
-                    <Icon size={28} />
-                  </div>
-                  <p className='lg:text-sm text-xs font-medium text-center leading-snug'>{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      {/* FAQ Section */}
+           {/* FAQ Section */}
       <div className='bg-gray-50 py-12'>
         <h1 className='lg:text-4xl text-center text-3xl font-bold lg:my-10 my-8 text-gray-900' data-aos="fade-up">
           {t.faqTitle} <span className='text-gray-600'>{t.faqHighlight}</span>
@@ -458,7 +384,7 @@ export default function Home() {
         }
         
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 5s linear infinite;
         }
         
         .animate-scroll:hover {
@@ -475,7 +401,7 @@ export default function Home() {
         }
         
         .animate-scroll2 {
-          animation: scroll2 20s linear infinite;
+          animation: scroll2 5s linear infinite;
         }
         
         .animate-scroll2:hover {

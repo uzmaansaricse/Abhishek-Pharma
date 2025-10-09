@@ -19,7 +19,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'Explore Products',
                 buttonLink: '/products',
                 contentImage: '/images/bszw84mq0i.jpg',
-                badge: 'Trusted Since 2010',
+                badge: 'Trusted Since 2003',
                 floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
             },
             {
@@ -35,7 +35,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'Contact Us',
                 buttonLink: '/contact',
                 contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
-                badge: 'Trusted Since 2010',
+                badge: 'Trusted Since 2003',
                 floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
             },
             {
@@ -51,7 +51,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'Get Quote',
                 buttonLink: '/request',
                 contentImage: '/images/lois-blog.jpg',
-                badge: 'Trusted Since 2010',
+                badge: 'Trusted Since 2003',
                 floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
             },
         ],
@@ -69,7 +69,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'उत्पाद देखें',
                 buttonLink: '/products',
                 contentImage: '/images/bszw84mq0i.jpg',
-                badge: '2010 से विश्वसनीय',
+                badge: '2003 से विश्वसनीय',
                 floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
             },
             {
@@ -85,7 +85,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'संपर्क करें',
                 buttonLink: '/contact',
                 contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
-                badge: '2010 से विश्वसनीय',
+                badge: '2003 से विश्वसनीय',
                 floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
             },
             {
@@ -101,7 +101,7 @@ export default function Slider({ language = 'en' }) {
                 button: 'कोट प्राप्त करें',
                 buttonLink: '/request',
                 contentImage: '/images/lois-blog.jpg',
-                badge: '2010 से विश्वसनीय',
+                badge: '2003 से विश्वसनीय',
                 floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
             },
         ]
