@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import logo from '../../public/lo.png';
 
 export default function Footer() {
-  // Replace with your actual WhatsApp number (with country code, no + or spaces)
+  // Updated WhatsApp number for Manoj Kumar Bajaj
   const whatsappNumber = "919414147250"; 
   const whatsappMessage = "Hello! I'm interested in your pharmaceutical products.";
   
@@ -14,13 +14,17 @@ export default function Footer() {
     window.open(url, '_blank');
   };
 
+  const handleMapClick = () => {
+    window.open('https://maps.app.goo.gl/aKTx1nETh1eZMH2b6', '_blank');
+  };
+
   return (
     <>
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50 group">
         {/* Pulsing Rings Animation */}
-        <div className=""></div>
-        <div className=""></div>
+        <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></div>
+        <div className="absolute inset-0 rounded-full bg-green-400 animate-pulse"></div>
         
         {/* Main WhatsApp Button */}
         <button
@@ -128,27 +132,43 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Our Office */}
+            {/* Our Office with Google Maps */}
             <div>
               <h3 className="text-lg font-bold mb-5 text-gray-900">
                 Our Office
               </h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3 group">
+                <div 
+                  onClick={handleMapClick}
+                  className="flex items-start gap-3 group cursor-pointer"
+                >
                   <div className="mt-1 p-2 bg-gray-200 rounded-lg group-hover:bg-gray-800 transition-all duration-300">
                     <FaMapMarkerAlt className="text-gray-700 group-hover:text-white transition-colors" />
                   </div>
                   <div className="text-gray-600">
                     <p className="font-semibold text-gray-900">Abhishek Pharma</p>
-                    <p className="text-sm">123 Medical Plaza,</p>
-                    <p className="text-sm">Mumbai, Maharashtra,</p>
-                    <p className="text-sm">India - 400001</p>
+                    <p className="text-sm">Click to view on Google Maps</p>
+                    <p className="text-xs text-blue-600 hover:text-blue-800 mt-1">View Location →</p>
                   </div>
+                </div>
+
+                {/* Embedded Google Map */}
+                <div className="mt-4 rounded-lg overflow-hidden shadow-md border-2 border-gray-200">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8429547668985!2d75.81674231504473!3d26.918854983135827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5c6b5b5b5b5%3A0x0!2zMjbCsDU1JzA3LjkiTiA3NcKwNDknMDYuMyJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="100%"
+                    height="150"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Abhishek Pharma Location"
+                  ></iframe>
                 </div>
               </div>
             </div>
 
-            {/* Get in Touch */}
+            {/* Get in Touch - Updated Contact Numbers */}
             <div>
               <h3 className="text-lg font-bold mb-5 text-gray-900">
                 Get in Touch
@@ -167,18 +187,35 @@ export default function Footer() {
                   </div>
                 </a>
 
-                <a 
-                  href="tel:+919414147250" 
-                  className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-all duration-300 group"
-                >
-                  <div className="p-2 bg-gray-200 rounded-lg group-hover:bg-gray-800 transition-all duration-300">
-                    <FaPhoneAlt className="text-gray-700 group-hover:text-white transition-colors" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500">Phone</p>
-                    <p className="font-medium">+91 9414147250</p>
-                  </div>
-                </a>
+                {/* Phone Numbers - Two Contacts */}
+                <div className="space-y-3">
+                  <a 
+                    href="tel:+919414147250" 
+                    className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-all duration-300 group"
+                  >
+                    <div className="p-2 bg-gray-200 rounded-lg group-hover:bg-gray-800 transition-all duration-300">
+                      <FaPhoneAlt className="text-gray-700 group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500">Phone</p>
+                      <p className="font-medium">Manoj Kumar Bajaj</p>
+                      <p className="text-sm">+91 9414147250</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href="tel:+919636302626" 
+                    className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-all duration-300 group"
+                  >
+                    <div className="p-2 bg-gray-200 rounded-lg group-hover:bg-gray-800 transition-all duration-300">
+                      <FaPhoneAlt className="text-gray-700 group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Dinesh Bajaj</p>
+                      <p className="text-sm">+91 9636302626</p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

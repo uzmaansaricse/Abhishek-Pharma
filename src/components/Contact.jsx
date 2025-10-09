@@ -24,9 +24,9 @@ export default function Contact() {
             heroHighlight: 'Touch',
             heroSubtitle: "Have questions? We're here to help with your pharmaceutical needs",
             contactCards: [
-                { title: 'Call Us', detail: '+91 9414147250', link: 'tel:+9414147250' },
-                { title: 'Email Us', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' },
-                { title: 'Visit Us', detail: '123 Medical Plaza, Mumbai', link: '#location' }
+                { title: 'Call Manoj Kumar', detail: '+91 9414147250', link: 'tel:+919414147250' },
+                { title: 'Call Dinesh Bajaj', detail: '+91 9636302626', link: 'tel:+919636302626' },
+                { title: 'Email Us', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' }
             ],
             formBadge: 'Send Enquiry',
             formTitle: "Let's Start a",
@@ -51,9 +51,10 @@ export default function Contact() {
             successSubMsg: "We'll get back to you within 24 hours.",
             officeTitle: 'Our Office',
             officeAddress: 'Abhishek Pharma',
-            officeLocation: '123 Medical Plaza,\nMumbai, Maharashtra,\nIndia - 400001',
-            phoneText: 'Phone',
+            phoneText: 'Contact Numbers',
             emailText: 'Email',
+            locationText: 'Location',
+            viewMap: 'View on Google Maps',
             whyContact: [
                 { title: '24-Hour Response', desc: 'Quick reply guaranteed' },
                 { title: 'Expert Support', desc: 'Professional assistance' }
@@ -64,9 +65,9 @@ export default function Contact() {
             heroHighlight: 'करें',
             heroSubtitle: 'कोई प्रश्न हैं? हम आपकी फार्मास्युटिकल जरूरतों में मदद के लिए यहां हैं',
             contactCards: [
-                { title: 'हमें कॉल करें', detail: '+91 9414147250', link: 'tel:+919414147250' },
-                { title: 'हमें ईमेल करें', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' },
-                { title: 'हमसे मिलें', detail: '123 मेडिकल प्लाजा, मुंबई', link: '#location' }
+                { title: 'मनोज कुमार को कॉल करें', detail: '+91 9414147250', link: 'tel:+919414147250' },
+                { title: 'दिनेश बजाज को कॉल करें', detail: '+91 9636302626', link: 'tel:+919636302626' },
+                { title: 'हमें ईमेल करें', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' }
             ],
             formBadge: 'पूछताछ भेजें',
             formTitle: 'आइए शुरू करें',
@@ -91,9 +92,10 @@ export default function Contact() {
             successSubMsg: 'हम 24 घंटे के भीतर आपसे संपर्क करेंगे।',
             officeTitle: 'हमारा कार्यालय',
             officeAddress: 'अभिषेक फार्मा',
-            officeLocation: '123 मेडिकल प्लाजा,\nमुंबई, महाराष्ट्र,\nभारत - 400001',
-            phoneText: 'फोन',
+            phoneText: 'संपर्क नंबर',
             emailText: 'ईमेल',
+            locationText: 'स्थान',
+            viewMap: 'गूगल मैप्स पर देखें',
             whyContact: [
                 { title: '24-घंटे प्रतिक्रिया', desc: 'त्वरित उत्तर की गारंटी' },
                 { title: 'विशेषज्ञ सहायता', desc: 'पेशेवर सहायता' }
@@ -147,14 +149,18 @@ export default function Contact() {
             color: 'gray-800'
         },
         {
-            icon: FaEnvelope,
-            color: 'gray-800'
+            icon: FaPhoneAlt,
+            color: 'gray-700'
         },
         {
-            icon: FaMapMarkerAlt,
-            color: 'gray-800'
+            icon: FaEnvelope,
+            color: 'gray-600'
         }
     ];
+
+    const handleMapClick = () => {
+        window.open('https://maps.app.goo.gl/aKTx1nETh1eZMH2b6', '_blank');
+    };
 
     return (
         <div className="w-[100vw] overflow-x-hidden bg-white min-h-screen">
@@ -186,7 +192,7 @@ export default function Contact() {
                 </Container>
             </div>
 
-            {/* Quick Contact Cards - Gray Theme */}
+            {/* Quick Contact Cards - Updated with 3 cards */}
             <div className="py-10 -mt-16 relative z-10" data-aos="fade-up">
                 <Container>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -355,7 +361,7 @@ export default function Contact() {
                             )}
                         </div>
 
-                        {/* Office Info Section */}
+                        {/* Office Info Section - Updated */}
                         <div className="space-y-8" data-aos="fade-left">
                             {/* Office Details Card - Gray Theme */}
                             <div className="bg-gray-800 text-white rounded-2xl p-8 lg:p-10 shadow-lg relative overflow-hidden">
@@ -365,30 +371,29 @@ export default function Contact() {
                                     <h3 className="text-2xl lg:text-3xl font-bold mb-6">{t.officeTitle}</h3>
                                     
                                     <div className="space-y-6">
-                                        <div className="flex items-start gap-4">
-                                            <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                                                <FaMapMarkerAlt className="w-5 h-5" />
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold mb-2">{t.officeAddress}</p>
-                                                <p className="text-gray-300 whitespace-pre-line">
-                                                    {t.officeLocation}
-                                                </p>
-                                            </div>
-                                        </div>
-
+                                        {/* Contact Numbers Section */}
                                         <div className="flex items-start gap-4">
                                             <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                                                 <FaPhoneAlt className="w-5 h-5" />
                                             </div>
-                                            <div>
-                                                <p className="text-gray-300 text-sm mb-1">{t.phoneText}</p>
-                                                <a href="tel:+9414147250" className="font-semibold hover:text-gray-300 transition-colors">
-                                                    +91 9414147250
-                                                </a>
+                                            <div className="space-y-3">
+                                                <p className="text-gray-300 text-sm mb-2">{t.phoneText}</p>
+                                                <div>
+                                                    <p className="font-semibold">Manoj Kumar Bajaj</p>
+                                                    <a href="tel:+919414147250" className="text-gray-300 hover:text-white transition-colors">
+                                                        +91 9414147250
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <p className="font-semibold">Dinesh Bajaj</p>
+                                                    <a href="tel:+919636302626" className="text-gray-300 hover:text-white transition-colors">
+                                                        +91 9636302626
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
 
+                                        {/* Email Section */}
                                         <div className="flex items-start gap-4">
                                             <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                                                 <FaEnvelope className="w-5 h-5" />
@@ -400,6 +405,37 @@ export default function Contact() {
                                                 </a>
                                             </div>
                                         </div>
+
+                                        {/* Location with Map Link */}
+                                        <div 
+                                            onClick={handleMapClick}
+                                            className="flex items-start gap-4 cursor-pointer group/map"
+                                        >
+                                            <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl group-hover/map:bg-white/20 transition-colors">
+                                                <FaMapMarkerAlt className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="text-gray-300 text-sm mb-1">{t.locationText}</p>
+                                                <p className="font-semibold mb-2">{t.officeAddress}</p>
+                                                <p className="text-blue-300 hover:text-blue-200 text-sm flex items-center gap-1">
+                                                    {t.viewMap} →
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Embedded Map */}
+                                    <div className="mt-6 rounded-lg overflow-hidden border-2 border-white/10">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8429547668985!2d75.81674231504473!3d26.918854983135827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5c6b5b5b5b5%3A0x0!2zMjbCsDU1JzA3LjkiTiA3NcKwNDknMDYuMyJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                                            width="100%"
+                                            height="200"
+                                            style={{ border: 0 }}
+                                            allowFullScreen=""
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                            title="Abhishek Pharma Location"
+                                        ></iframe>
                                     </div>
                                 </div>
                             </div>
