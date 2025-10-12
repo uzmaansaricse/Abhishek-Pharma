@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
 export default function Slider1({ language = 'en' }) {
     const slidesData = {
@@ -44,6 +44,14 @@ export default function Slider1({ language = 'en' }) {
                 rating: 5,
                 text: 'Working with Abhishek Pharma for 5+ years. Their consistency in quality and delivery makes them our trusted partner.',
             },
+            {
+                name: 'Meera Reddy',
+                position: 'Medical Store Owner',
+                location: 'Hyderabad',
+                image: 'https://randomuser.me/api/portraits/women/28.jpg',
+                rating: 5,
+                text: 'Excellent service with authentic products. The team is always responsive and delivery is always on time.',
+            },
         ],
         hi: [
             {
@@ -86,14 +94,38 @@ export default function Slider1({ language = 'en' }) {
                 rating: 5,
                 text: '5+ वर्षों से अभिषेक फार्मा के साथ काम कर रहे हैं। गुणवत्ता और वितरण में उनकी स्थिरता उन्हें हमारा विश्वसनीय साझेदार बनाती है।',
             },
+            {
+                name: 'मीरा रेड्डी',
+                position: 'मेडिकल स्टोर मालिक',
+                location: 'हैदराबाद',
+                image: 'https://randomuser.me/api/portraits/women/28.jpg',
+                rating: 5,
+                text: 'प्रामाणिक उत्पादों के साथ उत्कृष्ट सेवा। टीम हमेशा उत्तरदायी है और डिलीवरी हमेशा समय पर होती है।',
+            },
         ]
     };
 
     const slides = slidesData[language];
-
-    const [open, setOpen] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect screen size
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Calculate max index based on screen size
+    const getMaxIndex = () => {
+        return isMobile ? slides.length - 1 : slides.length - 3;
+    };
 
     // Auto-play functionality
     useEffect(() => {
@@ -103,12 +135,13 @@ export default function Slider1({ language = 'en' }) {
             }, 5000);
             return () => clearInterval(interval);
         }
-    }, [open, isPaused]);
+    }, [currentIndex, isPaused, isMobile]);
 
     const handleNext = () => {
         if (!isAnimating) {
             setIsAnimating(true);
-            setOpen((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+            const maxIndex = getMaxIndex();
+            setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
             setTimeout(() => setIsAnimating(false), 700);
         }
     };
@@ -116,188 +149,141 @@ export default function Slider1({ language = 'en' }) {
     const handlePrev = () => {
         if (!isAnimating) {
             setIsAnimating(true);
-            setOpen((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+            const maxIndex = getMaxIndex();
+            setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
             setTimeout(() => setIsAnimating(false), 700);
         }
     };
 
-    const goToSlide = (index) => {
-        if (!isAnimating && index !== open) {
-            setIsAnimating(true);
-            setOpen(index);
-            setTimeout(() => setIsAnimating(false), 700);
+    // Calculate the translate value
+    const getTranslateValue = () => {
+        if (isMobile) {
+            return `translateX(-${currentIndex * 100}%)`;
+        } else {
+            // On desktop, shift by one card width (33.333%)
+            return `translateX(-${currentIndex * 33.333}%)`;
         }
     };
 
     return (
         <div 
-            className="relative w-full py-8 px-4"
+            className="relative w-full py-8 md:py-12 bg-gray-50"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
             {/* Container */}
-            <div className="relative max-w-4xl mx-auto overflow-hidden">
+            <div className="relative max-w-7xl mx-auto px-4">
                 
-                {/* Main Card Container */}
-                <div className="relative px-4 md:px-8 lg:px-12 overflow-hidden">
+                {/* Slider Wrapper */}
+                <div className="relative overflow-hidden mx-8 md:mx-16">
                     
-                    {/* Background Card - Clean White with Subtle Gray Border */}
-                    <div className="relative bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-                        
-                        {/* Subtle Background Elements - Minimal Gray */}
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-gray-100/50 rounded-full blur-3xl pointer-events-none"></div>
-                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gray-100/50 rounded-full blur-3xl pointer-events-none"></div>
+                    {/* Cards Container */}
+                    <div
+                        style={{ transform: getTranslateValue() }}
+                        className="flex transition-transform duration-700 ease-in-out"
+                    >
+                        {slides.map((slide, index) => (
+                            <div 
+                                key={index} 
+                                className="w-full md:w-1/3 flex-shrink-0 px-3 md:px-4"
+                            >
+                                {/* Individual Testimonial Card */}
+                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border border-gray-200 h-full flex flex-col">
+                                    
+                                    {/* Quote Icon */}
+                                    <div className="mb-4">
+                                        <FaQuoteLeft className="w-10 h-10 md:w-12 md:h-12 text-gray-200" />
+                                    </div>
 
-                        {/* Large Quote Icon Background - Gray */}
-                        <div className="absolute top-4 left-4 lg:top-6 lg:left-6 opacity-5 pointer-events-none">
-                            <svg className="w-16 h-16 lg:w-24 lg:h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
-                            </svg>
-                        </div>
+                                    {/* Testimonial Text with proper wrapping */}
+                                    <div className="flex-grow mb-6">
+                                        <p className="text-gray-700 text-base md:text-lg leading-relaxed italic break-words whitespace-normal">
+                                            "{slide.text}"
+                                        </p>
+                                    </div>
 
-                        {/* Slider Content Wrapper */}
-                        <div className="relative z-10 overflow-hidden py-12 px-4 md:px-8">
-                            {/* Inner container for slides */}
-                            <div className="">
-                                <div
-                                    style={{ transform: `translateX(-${open * 100}%)` }}
-                                    className="flex transition-transform duration-700 ease-in-out"
-                                >
-                                    {slides.map((slide, index) => (
-                                        <div 
-                                            key={index} 
-                                            className="w-full min-w-full flex-shrink-0 flex flex-col items-center justify-center text-center"
-                                        >
-                                            
-                                            {/* Reviewer Image Section - Clean Gray Border */}
-                                            <div className="relative mb-5 group">
-                                                {/* Simple Gray Ring */}
-                                                <div className="absolute -inset-1.5 bg-gray-200 rounded-full blur-sm"></div>
-                                                
-                                                {/* Main Image Container */}
-                                                <div className="relative">
-                                                    <img
-                                                        src={slide.image}
-                                                        alt={slide.name}
-                                                        className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-full object-cover border-4 border-white shadow-md transform group-hover:scale-105 transition-transform duration-500"
-                                                    />
-                                                    
-                                                    {/* Verified Badge - Gray Accent */}
-                                                    <div className="absolute -bottom-2 -right-2 bg-gray-800 rounded-full p-2 shadow-md border-3 border-white">
-                                                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    {/* Star Rating */}
+                                    <div className="flex gap-1 mb-4">
+                                        {Array.from({ length: slide.rating }).map((_, i) => (
+                                            <span key={i} className="text-yellow-400 text-xl">★</span>
+                                        ))}
+                                    </div>
 
-                                            {/* Star Rating - Gold Stars */}
-                                            <div className="flex gap-1 mb-4 animate-fadeIn">
-                                                {[...Array(slide.rating)].map((_, i) => (
-                                                    <svg 
-                                                        key={i} 
-                                                        className="w-5 h-5 text-yellow-400 fill-current"
-                                                        viewBox="0 0 20 20"
-                                                    >
-                                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                                                    </svg>
-                                                ))}
-                                            </div>
+                                    {/* Divider */}
+                                    <div className="w-16 h-1 bg-gray-800 mb-6"></div>
 
-                                            {/* Testimonial Text - Dark Gray */}
-                                            <div className="max-w-2xl mb-5 px-2 animate-fadeIn">
-                                                <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-medium italic">
-                                                    "{slide.text}"
-                                                </p>
-                                            </div>
-
-                                            {/* Reviewer Info - Clean Typography */}
-                                            <div className="animate-slideUp">
-                                                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
-                                                    {slide.name}
-                                                </h3>
-                                                <p className="text-gray-700 font-semibold text-base lg:text-lg mb-2">
-                                                    {slide.position}
-                                                </p>
-                                                <div className="flex items-center justify-center gap-1.5 text-gray-600">
-                                                    <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                                    </svg>
-                                                    <span className="text-sm lg:text-base font-medium">{slide.location}</span>
-                                                </div>
-                                            </div>
+                                    {/* Reviewer Info */}
+                                    <div className="flex items-center gap-4">
+                                        {/* Avatar */}
+                                        <div className="relative flex-shrink-0">
+                                            <img
+                                                src={slide.image}
+                                                alt={slide.name}
+                                                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-gray-800"
+                                                loading="lazy"
+                                            />
                                         </div>
-                                    ))}
+
+                                        {/* Name & Position */}
+                                        <div className="flex-grow">
+                                            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-1">
+                                                {slide.name}
+                                            </h4>
+                                            <p className="text-gray-600 text-sm md:text-base">
+                                                {slide.position}
+                                            </p>
+                                            <p className="text-gray-500 text-xs md:text-sm">
+                                                {slide.location}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
-
-                    {/* Navigation Arrows - Clean Gray Style */}
-                    <button
-                        onClick={handlePrev}
-                        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-800 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 group border-2 border-gray-200 hover:border-gray-800 hover:scale-110"
-                        aria-label="Previous testimonial"
-                    >
-                        <FaChevronLeft className="w-4 h-4 text-gray-700 group-hover:text-white transition-colors" />
-                    </button>
-
-                    <button
-                        onClick={handleNext}
-                        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-800 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 group border-2 border-gray-200 hover:border-gray-800 hover:scale-110"
-                        aria-label="Next testimonial"
-                    >
-                        <FaChevronRight className="w-4 h-4 text-gray-700 group-hover:text-white transition-colors" />
-                    </button>
                 </div>
+
+                {/* Navigation Arrows */}
+                <button
+                    onClick={handlePrev}
+                    disabled={isAnimating}
+                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-300"
+                    aria-label="Previous testimonials"
+                >
+                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
+                </button>
+
+                <button
+                    onClick={handleNext}
+                    disabled={isAnimating}
+                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-300"
+                    aria-label="Next testimonials"
+                >
+                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
+                </button>
             </div>
 
-            {/* Dot Indicators - Clean Gray Design */}
-            <div className="flex justify-center gap-2 mt-6">
-                {slides.map((_, index) => (
+            {/* Dot Indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+                {Array.from({ length: getMaxIndex() + 1 }).map((_, index) => (
                     <button
                         key={index}
-                        onClick={() => goToSlide(index)}
+                        onClick={() => {
+                            if (!isAnimating) {
+                                setIsAnimating(true);
+                                setCurrentIndex(index);
+                                setTimeout(() => setIsAnimating(false), 700);
+                            }
+                        }}
                         className={`transition-all duration-500 rounded-full ${
-                            open === index
-                                ? 'w-8 h-2.5 bg-gray-800 shadow-sm'
-                                : 'w-2.5 h-2.5 bg-gray-300 hover:bg-gray-500 hover:scale-110'
+                            currentIndex === index
+                                ? 'w-8 h-3 bg-gray-800'
+                                : 'w-3 h-3 bg-gray-300 hover:bg-gray-500'
                         }`}
-                        aria-label={`Go to testimonial ${index + 1}`}
+                        aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}
             </div>
-
-            {/* CSS Animations */}
-            <style jsx>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
-                }
-
-                @keyframes slideUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(10px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .animate-fadeIn {
-                    animation: fadeIn 0.8s ease-out forwards;
-                }
-
-                .animate-slideUp {
-                    animation: slideUp 0.6s ease-out forwards;
-                }
-            `}</style>
         </div>
     );
 }

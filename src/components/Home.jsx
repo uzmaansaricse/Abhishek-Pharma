@@ -5,7 +5,7 @@ import Slider1 from '../pages/Slider1'
 import { FaTools, FaCogs, FaRegHandshake, FaChartLine, FaBullseye, FaGlobe } from 'react-icons/fa'
 import { HiOutlineWrenchScrewdriver } from 'react-icons/hi2'
 import { BiSearchAlt } from 'react-icons/bi'
-
+import { GiLaptop } from 'react-icons/gi'
 import { useNavigate } from 'react-router'
 
 
@@ -30,7 +30,7 @@ export default function Home() {
     { name: 'Biochem', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT8ONYntbhBOSTRmZ0vp-b8MsBuFag7hg06z2hMtfAV6Wjn-5F_WrnY-NkFNJPUBaKjA&usqp=CAU', alt: 'Biochem pharmaceutical logo' },
     { name: 'Morphem', logo: 'https://m.media-amazon.com/images/S/abs-image-upload-na/f/AmazonStores/A21TJRUUN4KGV/b1883b3231e613b2fd7948c5c6c56644.w400.h400.jpg', alt: 'Morphem pharmaceutical logo' },
     { name: 'Zen Lab', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGbGcbWldAl59fdCb6blIM_xlwaZHOdxb7OAkDTVX-qssr1vqtAy7vabyB2jqvmF4vg4E&usqp=CAU', alt: 'Zen Lab pharmaceutical logo' },
-    { name: 'Orison Pharma', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtOXWfj-8JSNRIff5tutFx244huQYjKHKDRw&s', alt: 'Orison pharmaceutical logo' },
+    { name: 'Orison Pharma', logo: 'https://orisonpharmaceutical.com/assets/images/1695753131orison.png', alt: 'Orison pharmaceutical logo' },
     { name: 'LeeFord', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBz1c4_n0smveOSWBIhbl00QfObVGBZyoyGA&s', alt: 'LeeFord pharmaceutical logo' },
     { name: 'Elder', logo: 'https://medicaldialogues.in/wp-content/uploads/2015/10/No-plans-to-inv12279.jpg', alt: 'Elder pharmaceutical logo' },
     { name: 'Zydus Cadila', logo: 'https://ehealth.eletsonline.com/wp-content/uploads/2019/03/Zydus-Cadila.jpg', alt: 'Zydus Cadila pharmaceutical logo' },
@@ -179,6 +179,7 @@ export default function Home() {
                 className='rounded-lg w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700' 
                 src="https://vijay-overseas.vercel.app/img/firm.jpg" 
                 alt="Pharmaceutical Excellence" 
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
@@ -194,7 +195,7 @@ export default function Home() {
                 <p className='lg:text-base text-gray-600 leading-relaxed'>{t.heroPara3}</p>
               </div>
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => navigate('/request')} className='bg-gray-800 hover:bg-gray-900 cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                <button onClick={() => navigate('/request-quote')} className='bg-gray-800 hover:bg-gray-900 cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroCTA}
                 </button>
                 <button onClick={() => navigate('/products')} className='bg-white border-2 border-gray-800 hover:bg-gray-50 cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
@@ -304,7 +305,7 @@ export default function Home() {
       </div>
 
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - NEW 3-CARD SLIDER */}
       <div className='py-10 bg-white'>
         <h2 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-gray-900' data-aos="fade-up">
           {t.testimonialsTitle} <span className='text-gray-600'>{t.testimonialsHighlight}</span>
