@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
-
 export default function Slider1({ language = 'en' }) {
     const slidesData = {
         en: [
@@ -106,13 +105,11 @@ export default function Slider1({ language = 'en' }) {
         ]
     };
 
-
     const slides = slidesData[language];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-
 
     // Detect screen size
     useEffect(() => {
@@ -125,12 +122,10 @@ export default function Slider1({ language = 'en' }) {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-
     // Calculate max index based on screen size
     const getMaxIndex = () => {
         return isMobile ? slides.length - 1 : slides.length - 3;
     };
-
 
     // Auto-play functionality
     useEffect(() => {
@@ -142,7 +137,6 @@ export default function Slider1({ language = 'en' }) {
         }
     }, [currentIndex, isPaused, isMobile]);
 
-
     const handleNext = () => {
         if (!isAnimating) {
             setIsAnimating(true);
@@ -152,7 +146,6 @@ export default function Slider1({ language = 'en' }) {
         }
     };
 
-
     const handlePrev = () => {
         if (!isAnimating) {
             setIsAnimating(true);
@@ -161,7 +154,6 @@ export default function Slider1({ language = 'en' }) {
             setTimeout(() => setIsAnimating(false), 700);
         }
     };
-
 
     // Calculate the translate value
     const getTranslateValue = () => {
@@ -173,10 +165,9 @@ export default function Slider1({ language = 'en' }) {
         }
     };
 
-
     return (
         <div 
-            className="relative w-full py-8 md:py-12 bg-gradient-to-br from-[#f2f8ff] via-[#e8f4ff] to-[#e9fff2]"
+            className="relative w-full py-8 md:py-12 bg-[#F0F7FF]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -196,16 +187,15 @@ export default function Slider1({ language = 'en' }) {
                                 key={index} 
                                 className="w-full md:w-1/3 flex-shrink-0 px-3 md:px-4"
                             >
-                                {/* Individual Testimonial Card - Blue-Green Theme */}
-                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border-2 border-[#DCEBFF] hover:border-[#B0D8FF] h-full flex flex-col group">
+                                {/* Individual Testimonial Card - Light Blue Theme */}
+                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] h-full flex flex-col group">
                                     
-                                    {/* Quote Icon - Blue-Green Gradient */}
+                                    {/* Quote Icon - Light Blue */}
                                     <div className="mb-4">
-                                        <div className="inline-flex p-3 bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] rounded-lg group-hover:from-[#D8EAFF] group-hover:to-[#D8FFE5] transition-all duration-300">
-                                            <FaQuoteLeft className="w-8 h-8 md:w-10 md:h-10 text-[#4C9EFF]" />
+                                        <div className="inline-flex p-3 bg-[#F0F7FF] rounded-lg group-hover:bg-[#E0EFFF] transition-all duration-300">
+                                            <FaQuoteLeft className="w-8 h-8 md:w-10 md:h-10 text-[#5BA3EB]" />
                                         </div>
                                     </div>
-
 
                                     {/* Testimonial Text with proper wrapping */}
                                     <div className="flex-grow mb-6">
@@ -214,7 +204,6 @@ export default function Slider1({ language = 'en' }) {
                                         </p>
                                     </div>
 
-
                                     {/* Star Rating - Yellow/Gold */}
                                     <div className="flex gap-1 mb-4">
                                         {Array.from({ length: slide.rating }).map((_, i) => (
@@ -222,24 +211,21 @@ export default function Slider1({ language = 'en' }) {
                                         ))}
                                     </div>
 
-
-                                    {/* Divider - Blue-Green Gradient */}
-                                    <div className="w-16 h-1 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] mb-6 rounded-full"></div>
-
+                                    {/* Divider - Light Blue */}
+                                    <div className="w-16 h-1 bg-[#5BA3EB] mb-6 rounded-full"></div>
 
                                     {/* Reviewer Info */}
                                     <div className="flex items-center gap-4">
-                                        {/* Avatar with Blue-Green Border */}
+                                        {/* Avatar with Light Blue Border */}
                                         <div className="relative flex-shrink-0">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-sm opacity-50"></div>
+                                            <div className="absolute inset-0 bg-[#D1E5F7] rounded-full blur-sm opacity-40"></div>
                                             <img
                                                 src={slide.image}
                                                 alt={slide.name}
-                                                className="relative w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#DCEBFF]"
+                                                className="relative w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#D1E5F7]"
                                                 loading="lazy"
                                             />
                                         </div>
-
 
                                         {/* Name & Position */}
                                         <div className="flex-grow">
@@ -260,30 +246,27 @@ export default function Slider1({ language = 'en' }) {
                     </div>
                 </div>
 
-
-                {/* Navigation Arrows - Blue-Green Theme */}
+                {/* Navigation Arrows - Light Blue Theme */}
                 <button
                     onClick={handlePrev}
                     disabled={isAnimating}
-                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#DCEBFF] group"
+                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-[#F0F7FF] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#D1E5F7] group"
                     aria-label="Previous testimonials"
                 >
-                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#4C9EFF] transition-colors" />
+                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#5BA3EB] transition-colors" />
                 </button>
-
 
                 <button
                     onClick={handleNext}
                     disabled={isAnimating}
-                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#DCEBFF] group"
+                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-[#F0F7FF] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#D1E5F7] group"
                     aria-label="Next testimonials"
                 >
-                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#46C47E] transition-colors" />
+                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#5BA3EB] transition-colors" />
                 </button>
             </div>
 
-
-            {/* Dot Indicators - Blue-Green Gradient */}
+            {/* Dot Indicators - Light Blue */}
             <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: getMaxIndex() + 1 }).map((_, index) => (
                     <button
@@ -297,8 +280,8 @@ export default function Slider1({ language = 'en' }) {
                         }}
                         className={`transition-all duration-500 rounded-full ${
                             currentIndex === index
-                                ? 'w-8 h-3 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] shadow-sm'
-                                : 'w-3 h-3 bg-[#DCEBFF] hover:bg-gradient-to-r hover:from-[#B0D8FF] hover:to-[#C7F5D9]'
+                                ? 'w-8 h-3 bg-[#5BA3EB] shadow-sm'
+                                : 'w-3 h-3 bg-[#D1E5F7] hover:bg-[#5BA3EB]'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />

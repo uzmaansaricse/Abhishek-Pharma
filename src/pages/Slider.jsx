@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-
 export default function Slider({ language = 'en' }) {
     const navigate = useNavigate();
-
 
     const slidesData = {
         en: [
@@ -27,19 +25,19 @@ export default function Slider({ language = 'en' }) {
             },
             {
                 image: '/images/bannerimg.jpg',
-                title: 'Empowering Healthcare with Quality Medicines!',
-                subtitle: 'Reliable Wholesale Supplier of Branded Medicines',
+                title: 'Effective Medicines at Amazing Prices!',
+                subtitle: 'Unbeatable Wholesale Rates—We Challenge You to Find Lower!',
                 points: [
-                    'High-quality branded and promotional medicines',
-                    'Tablets, Injections & Syrups',
-                    'Ayurvedic & OTC Products',
-                    'Bulk Orders & Promotions',
+                    'Best prices guaranteed on all medicines',
+                    'Return if you find cheaper anywhere else',
+                    'Premium quality at wholesale rates',
+                    'Bulk discounts & promotional offers',
                 ],
-                button: 'Explore Products',
+                button: 'Check Our Prices',
                 buttonLink: '/products',
                 contentImage: '/images/bszw84mq0i.jpg',
-                badge: 'Trusted Since 2003',
-                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+                badge: 'Best Price Guarantee',
+                floatingBadge: { title: 'Price Match', subtitle: 'Challenge Accepted!' }
             },
             {
                 image: '/images/large_note012020-570x416.jpg',
@@ -94,19 +92,19 @@ export default function Slider({ language = 'en' }) {
             },
             {
                 image: '/images/bannerimg.jpg',
-                title: 'गुणवत्तापूर्ण दवाओं के साथ स्वास्थ्य सेवा को सशक्त बनाना!',
-                subtitle: 'ब्रांडेड दवाओं का विश्वसनीय थोक आपूर्तिकर्ता',
+                title: 'अद्भुत कीमतों पर प्रभावी दवाएं!',
+                subtitle: 'अविश्वसनीय थोक दरें—हम चुनौती देते हैं कि कम कीमत खोजें!',
                 points: [
-                    'उच्च गुणवत्ता वाली ब्रांडेड और प्रचार दवाएं',
-                    'गोलियां, इंजेक्शन और सिरप',
-                    'आयुर्वेदिक और ओटीसी उत्पाद',
-                    'थोक ऑर्डर और प्रचार',
+                    'सभी दवाओं पर सर्वोत्तम कीमत की गारंटी',
+                    'कहीं और सस्ता मिले तो वापसी की सुविधा',
+                    'थोक दरों पर प्रीमियम गुणवत्ता',
+                    'थोक छूट और प्रचार प्रस्ताव',
                 ],
-                button: 'उत्पाद देखें',
+                button: 'हमारी कीमतें देखें',
                 buttonLink: '/products',
                 contentImage: '/images/bszw84mq0i.jpg',
-                badge: '2003 से विश्वसनीय',
-                floatingBadge: { title: 'प्रमाणित', subtitle: 'आईएसओ अनुरूप' }
+                badge: 'सर्वोत्तम कीमत गारंटी',
+                floatingBadge: { title: 'मूल्य मिलान', subtitle: 'चुनौती स्वीकार!' }
             },
             {
                 image: '/images/large_note012020-570x416.jpg',
@@ -143,7 +141,6 @@ export default function Slider({ language = 'en' }) {
         ]
     };
 
-
     const trustIndicators = {
         en: [
             { icon: '🏆', text: '500+ Partners', subtext: 'Nationwide' },
@@ -159,14 +156,11 @@ export default function Slider({ language = 'en' }) {
         ]
     };
 
-
     const slides = slidesData[language];
     const indicators = trustIndicators[language];
 
-
     const [open, setOpen] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
-
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -174,7 +168,6 @@ export default function Slider({ language = 'en' }) {
         }, 5000);
         return () => clearInterval(interval);
     }, [open]);
-
 
     const handleNext = () => {
         if (!isAnimating) {
@@ -184,7 +177,6 @@ export default function Slider({ language = 'en' }) {
         }
     };
 
-
     const handlePrev = () => {
         if (!isAnimating) {
             setIsAnimating(true);
@@ -193,21 +185,17 @@ export default function Slider({ language = 'en' }) {
         }
     };
 
-
     const handleButtonClick = (link) => {
         navigate(link);
     };
 
-
     return (
-        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-gradient-to-br from-[#f2f8ff] via-[#e8f4ff] to-[#e9fff2]">
-            {/* Background Decorative Elements - Blue-Green Gradient */}
+        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-[#F0F7FF]">
+            {/* Background Decorative Elements - Light Blue */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-[#B0D8FF]/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C7F5D9]/20 rounded-full blur-3xl"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#E8F2FF]/10 to-[#E8FFF2]/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-0 left-0 w-96 h-96 bg-[#D1E5F7]/30 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#E0EFFF]/30 rounded-full blur-3xl"></div>
             </div>
-
 
             {/* Slides Container */}
             <div 
@@ -217,7 +205,7 @@ export default function Slider({ language = 'en' }) {
                 {slides.map((slide, index) => (
                     <div key={index} className="w-full h-full shrink-0 relative pb-32 lg:pb-40">
                         {/* Background overlay for contrast */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-[#F7FBFF]/95 to-white/90 z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/95 to-white/90 z-10"></div>
                         
                         {/* Content Container */}
                         <div className="relative z-20 w-full h-full flex items-center lg:px-16 md:px-10 px-6 py-12">
@@ -225,36 +213,29 @@ export default function Slider({ language = 'en' }) {
                                 
                                 {/* Left Content */}
                                 <div className='space-y-6 animate-fadeInLeft'>
-                                    {/* Subtitle Badge - Blue-Green Gradient for first slide */}
+                                    {/* Subtitle Badge - Light Blue */}
                                     <div className='inline-block'>
-                                        <span className={`px-5 py-2 rounded-full text-sm font-semibold shadow-md ${
-                                            index === 0 
-                                                ? 'bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] text-white animate-pulse' 
-                                                : 'bg-gradient-to-r from-[#BEE3FF] to-[#C7F5D9] text-gray-800'
+                                        <span className={`px-5 py-2 rounded-lg text-sm font-semibold shadow-md ${
+                                            index === 0 || index === 1
+                                                ? 'bg-[#5BA3EB] text-white animate-pulse' 
+                                                : 'bg-[#E0EFFF] text-gray-700'
                                         }`}>
-                                            {index === 0 ? '🎉 ' : '✨ '}{slide.badge}
+                                            {index === 0 ? '🎉 ' : index === 1 ? '💰 ' : '✨ '}{slide.badge}
                                         </span>
                                     </div>
 
-
-                                    {/* Main Title - Blue-Green Gradient */}
-                                    <h1 className={`font-bold text-3xl md:text-4xl lg:text-6xl leading-tight animate-slideInUp ${
-                                        index === 0 
-                                            ? 'bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent' 
-                                            : 'text-gray-900'
-                                    }`}>
+                                    {/* Main Title - LIGHTER Blue for ALL slides */}
+                                    <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl leading-tight animate-slideInUp text-[#5BA3EB]">
                                         {slide.title.split('!')[0]}
-                                        <span className={index === 0 ? '' : 'text-gray-700'}>!</span>
+                                        <span className="text-[#5BA3EB]">!</span>
                                     </h1>
 
-
-                                    {/* Subtitle */}
-                                    <p className='text-lg md:text-xl text-gray-600 font-medium animate-fadeIn'>
+                                    {/* Subtitle - Lighter gray */}
+                                    <p className='text-lg md:text-xl text-gray-500 font-medium animate-fadeIn'>
                                         {slide.subtitle}
                                     </p>
 
-
-                                    {/* Points List - Blue-Green Checkmarks */}
+                                    {/* Points List - Light Blue Checkmarks */}
                                     <div className='space-y-3 mt-6'>
                                         {slide.points.map((point, i) => (
                                             <div 
@@ -262,29 +243,20 @@ export default function Slider({ language = 'en' }) {
                                                 className='flex items-start gap-3 animate-slideInLeft'
                                                 style={{ animationDelay: `${i * 100}ms` }}
                                             >
-                                                <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1 shadow-sm ${
-                                                    index === 0 
-                                                        ? 'bg-gradient-to-br from-[#4C9EFF] to-[#46C47E]' 
-                                                        : 'bg-gradient-to-br from-[#A4D3FF] to-[#8DE4AF]'
-                                                }`}>
+                                                <div className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-1 shadow-sm bg-[#9BCBF5]">
                                                     <svg className='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={3} d='M5 13l4 4L19 7' />
                                                     </svg>
                                                 </div>
-                                                <p className='text-gray-700 lg:text-lg font-medium'>{point}</p>
+                                                <p className='text-gray-600 lg:text-lg font-normal'>{point}</p>
                                             </div>
                                         ))}
                                     </div>
 
-
-                                    {/* CTA Button - Blue-Green Gradient */}
+                                    {/* CTA Button - Light Blue */}
                                     <button 
                                         onClick={() => handleButtonClick(slide.buttonLink)}
-                                        className={`group font-bold px-8 py-4 rounded-full lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8 ${
-                                            index === 0 
-                                                ? 'bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] hover:from-[#3A8AE8] hover:to-[#3AB56D] text-white' 
-                                                : 'bg-gradient-to-r from-[#BEE3FF] via-[#A4D3FF] to-[#C7F5D9] hover:from-[#A4D3FF] hover:to-[#8DE4AF] text-gray-800'
-                                        }`}
+                                        className="group font-bold px-8 py-4 rounded-lg lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 mt-8 bg-[#5BA3EB] hover:bg-[#4A92DA] text-white"
                                     >
                                         {slide.button}
                                         <svg className='w-5 h-5 group-hover:translate-x-1 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -293,33 +265,26 @@ export default function Slider({ language = 'en' }) {
                                     </button>
                                 </div>
 
-
                                 {/* Right Content - Image */}
                                 <div className='relative animate-fadeInRight hidden md:block'>
-                                    <div className='absolute inset-0 bg-gradient-to-br from-[#B0D8FF]/20 to-[#C7F5D9]/20 rounded-2xl blur-xl'></div>
+                                    <div className='absolute inset-0 bg-[#D1E5F7]/20 rounded-2xl blur-xl'></div>
                                     <img 
                                         src={slide.contentImage} 
                                         alt="Healthcare Solutions" 
                                         className='relative w-full h-auto rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-500 border-4 border-white' 
                                     />
                                     
-                                    {/* Floating Badge - Blue-Green Gradient */}
-                                    <div className={`absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl animate-float border-2 ${
-                                        index === 0 ? 'border-[#B0D8FF]' : 'border-[#DCEBFF]'
-                                    }`}>
+                                    {/* Floating Badge - Light Blue */}
+                                    <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-xl animate-float border-2 border-[#D1E5F7]">
                                         <div className='flex items-center gap-3'>
-                                            <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                                                index === 0 
-                                                    ? 'bg-gradient-to-br from-[#4C9EFF] to-[#46C47E]' 
-                                                    : 'bg-gradient-to-br from-[#A4D3FF] to-[#8DE4AF]'
-                                            }`}>
+                                            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-[#9BCBF5]">
                                                 <span className='text-white font-bold text-xl'>
-                                                    {index === 0 ? '📍' : '✓'}
+                                                    {index === 0 ? '📍' : index === 1 ? '💰' : '✓'}
                                                 </span>
                                             </div>
                                             <div>
-                                                <p className='font-bold text-gray-900'>{slide.floatingBadge.title}</p>
-                                                <p className='text-sm text-gray-600'>{slide.floatingBadge.subtitle}</p>
+                                                <p className='font-bold text-gray-700'>{slide.floatingBadge.title}</p>
+                                                <p className='text-sm text-gray-500'>{slide.floatingBadge.subtitle}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -330,31 +295,28 @@ export default function Slider({ language = 'en' }) {
                 ))}
             </div>
 
-
-            {/* Navigation Arrows - Blue-Green Theme */}
+            {/* Navigation Arrows - Light Blue */}
             <button 
                 onClick={handlePrev}
-                className='absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-[#DCEBFF]'
+                className='absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-[#F0F7FF] p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-[#D1E5F7]'
                 aria-label="Previous slide"
             >
-                <svg className='w-6 h-6 text-gray-700 group-hover:text-[#4C9EFF]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='w-6 h-6 text-gray-700 group-hover:text-[#5BA3EB]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
                 </svg>
             </button>
 
-
             <button 
                 onClick={handleNext}
-                className='absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-[#DCEBFF]'
+                className='absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 bg-white/95 hover:bg-[#F0F7FF] p-3 lg:p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group border border-[#D1E5F7]'
                 aria-label="Next slide"
             >
-                <svg className='w-6 h-6 text-gray-700 group-hover:text-[#46C47E]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <svg className='w-6 h-6 text-gray-700 group-hover:text-[#5BA3EB]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                 </svg>
             </button>
 
-
-            {/* Dots Navigation - Blue-Green Gradient */}
+            {/* Dots Navigation - Light Blue */}
             <div className='absolute bottom-32 lg:bottom-36 left-1/2 -translate-x-1/2 z-40 flex gap-3'>
                 {slides.map((_, index) => (
                     <button
@@ -368,32 +330,28 @@ export default function Slider({ language = 'en' }) {
                         }}
                         className={`transition-all duration-300 rounded-full ${
                             open === index 
-                                ? index === 0 
-                                    ? 'w-12 h-3 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E]' 
-                                    : 'w-12 h-3 bg-gradient-to-r from-[#A4D3FF] to-[#8DE4AF]'
-                                : 'w-3 h-3 bg-[#DCEBFF] hover:bg-gradient-to-r hover:from-[#B0D8FF] hover:to-[#C7F5D9]'
+                                ? 'w-12 h-3 bg-[#5BA3EB]' 
+                                : 'w-3 h-3 bg-[#D1E5F7] hover:bg-[#5BA3EB]'
                         } shadow-md hover:scale-110`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
                 ))}
             </div>
 
-
             {/* Trust Indicators - Bottom Bar */}
-            <div className='hidden lg:flex absolute bottom-0 left-0 right-0 z-30 bg-white/98 backdrop-blur-sm border-t border-[#DCEBFF] py-6 shadow-md'>
+            <div className='hidden lg:flex absolute bottom-0 left-0 right-0 z-30 bg-white/98 backdrop-blur-sm border-t border-[#D1E5F7] py-6 shadow-md'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-16'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8'>
                         {indicators.map((item, idx) => (
                             <div key={idx} className='text-center group cursor-pointer'>
                                 <div className='text-2xl lg:text-3xl mb-2 group-hover:scale-125 transition-transform'>{item.icon}</div>
-                                <p className='font-bold text-gray-900 text-sm lg:text-base'>{item.text}</p>
-                                <p className='text-xs lg:text-sm text-gray-600'>{item.subtext}</p>
+                                <p className='font-bold text-gray-700 text-sm lg:text-base'>{item.text}</p>
+                                <p className='text-xs lg:text-sm text-gray-500'>{item.subtext}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-
 
             {/* CSS Animations */}
             <style jsx>{`
@@ -408,7 +366,6 @@ export default function Slider({ language = 'en' }) {
                     }
                 }
 
-
                 @keyframes fadeInRight {
                     from {
                         opacity: 0;
@@ -419,7 +376,6 @@ export default function Slider({ language = 'en' }) {
                         transform: translateX(0);
                     }
                 }
-
 
                 @keyframes slideInUp {
                     from {
@@ -432,7 +388,6 @@ export default function Slider({ language = 'en' }) {
                     }
                 }
 
-
                 @keyframes slideInLeft {
                     from {
                         opacity: 0;
@@ -444,7 +399,6 @@ export default function Slider({ language = 'en' }) {
                     }
                 }
 
-
                 @keyframes fadeIn {
                     from {
                         opacity: 0;
@@ -453,7 +407,6 @@ export default function Slider({ language = 'en' }) {
                         opacity: 1;
                     }
                 }
-
 
                 @keyframes float {
                     0%, 100% {
@@ -464,31 +417,25 @@ export default function Slider({ language = 'en' }) {
                     }
                 }
 
-
                 .animate-fadeInLeft {
                     animation: fadeInLeft 0.8s ease-out forwards;
                 }
-
 
                 .animate-fadeInRight {
                     animation: fadeInRight 0.8s ease-out forwards;
                 }
 
-
                 .animate-slideInUp {
                     animation: slideInUp 0.6s ease-out forwards;
                 }
-
 
                 .animate-slideInLeft {
                     animation: slideInLeft 0.5s ease-out forwards;
                 }
 
-
                 .animate-fadeIn {
                     animation: fadeIn 0.8s ease-out forwards;
                 }
-
 
                 .animate-float {
                     animation: float 3s ease-in-out infinite;

@@ -153,12 +153,12 @@ export default function Home() {
   const t = content[language];
 
   return (
-    <div className='w-[100vw] overflow-x-hidden bg-gradient-to-br from-[#f9fcff] via-[#f2f8ff] to-[#e9fff2]'>
-      {/* Language Toggle Button - Blue-Green Gradient */}
+    <div className='w-[100vw] overflow-x-hidden bg-[#f8f9fb]'>
+      {/* Language Toggle Button - Light Blue */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] hover:from-[#3A8AE8] hover:to-[#3AB56D] text-white font-medium px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-[#5BA3EB] hover:bg-[#4A92DA] text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
         >
           <FaGlobe className="w-4 h-4" />
           <span className="text-sm">{language === 'en' ? 'हिंदी' : 'English'}</span>
@@ -181,12 +181,12 @@ export default function Home() {
                 alt="Pharmaceutical Excellence" 
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#4C9EFF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#5BA3EB]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
             <div className='md:space-y-5 space-y-3 order-1 md:order-2 p-4' data-aos="fade-left" data-aos-delay="200">
               <h1 className='font-bold lg:text-4xl text-3xl text-gray-900 leading-tight'>
-                {t.heroTitle} <span className='block bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent text-2xl mt-2'>{t.heroSubtitle}</span>
+                {t.heroTitle} <span className='block text-[#5BA3EB] text-2xl mt-2'>{t.heroSubtitle}</span>
               </h1>
               <p className='text-lg font-medium text-gray-700'>{t.heroTagline}</p>
               <div className='space-y-4'>
@@ -195,10 +195,10 @@ export default function Home() {
                 <p className='lg:text-base text-gray-600 leading-relaxed'>{t.heroPara3}</p>
               </div>
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => navigate('/request')} className='bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] hover:from-[#3A8AE8] hover:to-[#3AB56D] cursor-pointer text-white font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                <button onClick={() => navigate('/request')} className='bg-[#5BA3EB] hover:bg-[#4A92DA] cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroCTA}
                 </button>
-                <button onClick={() => navigate('/products')} className='bg-white border-2 border-[#DCEBFF] hover:bg-[#F7FBFF] cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                <button onClick={() => navigate('/products')} className='bg-white border-2 border-[#D1E5F7] hover:bg-[#F0F7FF] cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroSecondary}
                 </button>
               </div>
@@ -208,7 +208,7 @@ export default function Home() {
       </div>
 
       {/* Product Categories */}
-      <div className="bg-white text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
+      <div className="bg-[#F0F7FF] text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
         <Container>
           <div className="md:space-y-10 space-y-6">
             <div className='text-center space-y-4' data-aos="zoom-in">
@@ -221,8 +221,8 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
               
               {/* Human Medicines */}
-              <div className='flex flex-col rounded-lg items-center bg-gradient-to-br from-[#f7fbff] to-[#eef5ff] text-gray-900 justify-center p-8 border-2 border-[#DCEBFF] hover:border-[#4C9EFF] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
-                <div className='bg-white border-2 border-[#DCEBFF] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#4C9EFF]'>
+              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
+                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Human Medicines" loading="lazy" />
                 </div>
                 <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.humanMedicines}</h3>
@@ -230,8 +230,8 @@ export default function Home() {
               </div>
               
               {/* Surgical & Consumables */}
-              <div className='flex flex-col rounded-lg items-center bg-gradient-to-br from-[#f7fbff] to-[#eef5ff] text-gray-900 justify-center p-8 border-2 border-[#DCEBFF] hover:border-[#4C9EFF] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
-                <div className='bg-white border-2 border-[#DCEBFF] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#4C9EFF]'>
+              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
+                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Surgical & Consumables" loading="lazy" />
                 </div>
                 <h3 className='text-xl font-bold text-center text-gray-900 mb-2'>{t.surgical}</h3>
@@ -239,8 +239,8 @@ export default function Home() {
               </div>
               
               {/* Veterinary Medicines */}
-              <div className='flex flex-col rounded-lg items-center bg-gradient-to-br from-[#f0fff5] to-[#e8fff2] text-gray-900 justify-center p-8 border-2 border-[#DCEBFF] hover:border-[#46C47E] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
-                <div className='bg-white border-2 border-[#DCEBFF] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#46C47E]'>
+              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
+                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Veterinary Medicines" loading="lazy" />
                 </div>
                 <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.veterinary}</h3>
@@ -248,8 +248,8 @@ export default function Home() {
               </div>
 
               {/* Ayurvedic Products */}
-              <div className='flex flex-col rounded-lg items-center bg-gradient-to-br from-[#f0fff5] to-[#e8fff2] text-gray-900 justify-center p-8 border-2 border-[#DCEBFF] hover:border-[#46C47E] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
-                <div className='bg-white border-2 border-[#DCEBFF] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#46C47E]'>
+              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
+                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/7667/7667708.png" alt="Ayurvedic Products" loading="lazy" />
                 </div>
                 <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.ayurveda}</h3>
@@ -257,8 +257,8 @@ export default function Home() {
               </div>
 
               {/* General Medical Items */}
-              <div className='flex flex-col rounded-lg items-center bg-gradient-to-br from-[#f7fbff] to-[#eef5ff] text-gray-900 justify-center p-8 border-2 border-[#DCEBFF] hover:border-[#4C9EFF] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
-                <div className='bg-white border-2 border-[#DCEBFF] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#4C9EFF]'>
+              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
+                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
                   <img width={80} src="https://cdn-icons-png.flaticon.com/512/3147/3147072.png" alt="General Medical Items" loading="lazy" />
                 </div>
                 <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.generalItems}</h3>
@@ -271,17 +271,17 @@ export default function Home() {
       </div>
 
       {/* Human Medicines Partners Grid */}
-      <div className="bg-white py-12 border-t border-[#DCEBFF]" data-aos="fade-up">
+      <div className="bg-white py-12 border-t border-[#D1E5F7]" data-aos="fade-up">
         <Container>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.humanPartnersTitle} <span className="bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent">{t.humanPartnersHighlight}</span>
+            {t.humanPartnersTitle} <span className="text-[#5BA3EB]">{t.humanPartnersHighlight}</span>
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
             {humanPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#DCEBFF] hover:border-[#4C9EFF] p-4 h-28"
+                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-4 h-28"
                 data-aos="zoom-in"
                 data-aos-delay={index * 30}
               >
@@ -289,7 +289,7 @@ export default function Home() {
                   src={partner.logo}
                   alt={partner.alt}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain  transition-all duration-300"
                 />
               </div>
             ))}
@@ -298,17 +298,17 @@ export default function Home() {
       </div>
 
       {/* Veterinary Medicines Partners Grid */}
-      <div className="bg-gradient-to-br from-[#f7fbff] to-[#f0fff5] py-12 border-y border-[#DCEBFF]" data-aos="fade-up">
+      <div className="bg-[#F0F7FF] py-12 border-y border-[#D1E5F7]" data-aos="fade-up">
         <Container>
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.vetPartnersTitle} <span className="bg-gradient-to-r from-[#46C47E] to-[#3AB56D] bg-clip-text text-transparent">{t.vetPartnersHighlight}</span>
+            {t.vetPartnersTitle} <span className="text-[#5BA3EB]">{t.vetPartnersHighlight}</span>
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
             {vetPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#DCEBFF] hover:border-[#C7F5D9] p-4 h-28"
+                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-4 h-28"
                 data-aos="zoom-in"
                 data-aos-delay={index * 40}
               >
@@ -316,7 +316,7 @@ export default function Home() {
                   src={partner.logo}
                   alt={partner.alt}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain  transition-all duration-300"
                 />
               </div>
             ))}
@@ -327,7 +327,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <div className='py-10 bg-white'>
         <h2 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-gray-900' data-aos="fade-up">
-          {t.testimonialsTitle} <span className='bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent'>{t.testimonialsHighlight}</span>
+          {t.testimonialsTitle} <span className='text-[#5BA3EB]'>{t.testimonialsHighlight}</span>
         </h2>
         <div className="mx-auto w-full lg:mb-5 mb-2 h-full" data-aos="fade-up" data-aos-delay="200">
           <Slider1 language={language} />
@@ -335,9 +335,9 @@ export default function Home() {
       </div>
 
       {/* FAQ Section */}
-      <div className='bg-gradient-to-br from-[#f2f8ff] to-[#e9fff2] py-12'>
+      <div className='bg-[#F0F7FF] py-12'>
         <h2 className='lg:text-4xl text-center text-3xl font-bold lg:my-10 my-8 text-gray-900' data-aos="fade-up">
-          {t.faqTitle} <span className='bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent'>{t.faqHighlight}</span>
+          {t.faqTitle} <span className='text-[#5BA3EB]'>{t.faqHighlight}</span>
         </h2>
         
         <Container>
@@ -351,13 +351,13 @@ export default function Home() {
             ].map(({ id, q, a, delay }) => (
               <div 
                 key={id}
-                className="border-2 border-[#DCEBFF] bg-white lg:text-base text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" 
+                className="border-2 border-[#D1E5F7] bg-white lg:text-base text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" 
                 data-aos="zoom-in" 
                 data-aos-delay={delay}
               >
                 <div 
                   onClick={() => toggles(id)} 
-                  className="p-4 text-white cursor-pointer font-semibold rounded-t-lg bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] hover:from-[#3A8AE8] hover:to-[#3AB56D] transition-all duration-300 flex justify-between items-center"
+                  className="p-4 text-white cursor-pointer font-semibold rounded-t-lg bg-[#5BA3EB] hover:bg-[#4A92DA] transition-all duration-300 flex justify-between items-center"
                 >
                   <span>{q}</span>
                   <span className={`transform transition-transform duration-300 ${open === id ? 'rotate-180' : ''}`}>
