@@ -26,7 +26,7 @@ export default function Request() {
       heroDesc: 'Fill out the form below and receive detailed quotations within 24 hours',
       benefits: [
         { title: 'Instant Quotes', desc: 'Receive detailed pricing within 24 hours' },
-        // { title: 'Fast Delivery', desc: 'Quick dispatch and reliable shipping' },
+        { title: 'Fast Delivery', desc: 'Quick dispatch and reliable shipping' },
         { title: 'Best Prices', desc: 'Competitive wholesale rates for bulk orders' },
         { title: 'Custom Lists', desc: 'Tailored product catalogs for your needs' }
       ],
