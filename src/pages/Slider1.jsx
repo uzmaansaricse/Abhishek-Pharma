@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
+
 export default function Slider1({ language = 'en' }) {
     const slidesData = {
         en: [
@@ -105,11 +106,13 @@ export default function Slider1({ language = 'en' }) {
         ]
     };
 
+
     const slides = slidesData[language];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+
 
     // Detect screen size
     useEffect(() => {
@@ -122,10 +125,12 @@ export default function Slider1({ language = 'en' }) {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+
     // Calculate max index based on screen size
     const getMaxIndex = () => {
         return isMobile ? slides.length - 1 : slides.length - 3;
     };
+
 
     // Auto-play functionality
     useEffect(() => {
@@ -137,6 +142,7 @@ export default function Slider1({ language = 'en' }) {
         }
     }, [currentIndex, isPaused, isMobile]);
 
+
     const handleNext = () => {
         if (!isAnimating) {
             setIsAnimating(true);
@@ -146,6 +152,7 @@ export default function Slider1({ language = 'en' }) {
         }
     };
 
+
     const handlePrev = () => {
         if (!isAnimating) {
             setIsAnimating(true);
@@ -154,6 +161,7 @@ export default function Slider1({ language = 'en' }) {
             setTimeout(() => setIsAnimating(false), 700);
         }
     };
+
 
     // Calculate the translate value
     const getTranslateValue = () => {
@@ -165,9 +173,10 @@ export default function Slider1({ language = 'en' }) {
         }
     };
 
+
     return (
         <div 
-            className="relative w-full py-8 md:py-12 bg-blue-50"
+            className="relative w-full py-8 md:py-12 bg-gradient-to-br from-[#f2f8ff] via-[#e8f4ff] to-[#e9fff2]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -187,52 +196,60 @@ export default function Slider1({ language = 'en' }) {
                                 key={index} 
                                 className="w-full md:w-1/3 flex-shrink-0 px-3 md:px-4"
                             >
-                                {/* Individual Testimonial Card */}
-                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border border-blue-200 h-full flex flex-col">
+                                {/* Individual Testimonial Card - Blue-Green Theme */}
+                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border-2 border-[#DCEBFF] hover:border-[#B0D8FF] h-full flex flex-col group">
                                     
-                                    {/* Quote Icon */}
+                                    {/* Quote Icon - Blue-Green Gradient */}
                                     <div className="mb-4">
-                                        <FaQuoteLeft className="w-10 h-10 md:w-12 md:h-12 text-blue-200" />
+                                        <div className="inline-flex p-3 bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] rounded-lg group-hover:from-[#D8EAFF] group-hover:to-[#D8FFE5] transition-all duration-300">
+                                            <FaQuoteLeft className="w-8 h-8 md:w-10 md:h-10 text-[#4C9EFF]" />
+                                        </div>
                                     </div>
+
 
                                     {/* Testimonial Text with proper wrapping */}
                                     <div className="flex-grow mb-6">
-                                        <p className="text-blue-700 text-base md:text-lg leading-relaxed italic break-words whitespace-normal">
+                                        <p className="text-gray-700 text-base md:text-lg leading-relaxed italic break-words whitespace-normal">
                                             "{slide.text}"
                                         </p>
                                     </div>
 
-                                    {/* Star Rating */}
+
+                                    {/* Star Rating - Yellow/Gold */}
                                     <div className="flex gap-1 mb-4">
                                         {Array.from({ length: slide.rating }).map((_, i) => (
                                             <span key={i} className="text-yellow-400 text-xl">★</span>
                                         ))}
                                     </div>
 
-                                    {/* Divider */}
-                                    <div className="w-16 h-1 bg-blue-800 mb-6"></div>
+
+                                    {/* Divider - Blue-Green Gradient */}
+                                    <div className="w-16 h-1 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] mb-6 rounded-full"></div>
+
 
                                     {/* Reviewer Info */}
                                     <div className="flex items-center gap-4">
-                                        {/* Avatar */}
+                                        {/* Avatar with Blue-Green Border */}
                                         <div className="relative flex-shrink-0">
+                                            <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-sm opacity-50"></div>
                                             <img
                                                 src={slide.image}
                                                 alt={slide.name}
-                                                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-blue-800"
+                                                className="relative w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#DCEBFF]"
                                                 loading="lazy"
                                             />
                                         </div>
 
+
                                         {/* Name & Position */}
                                         <div className="flex-grow">
-                                            <h4 className="font-bold text-blue-900 text-lg md:text-xl mb-1">
+                                            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-1">
                                                 {slide.name}
                                             </h4>
-                                            <p className="text-blue-600 text-sm md:text-base">
+                                            <p className="text-gray-600 text-sm md:text-base">
                                                 {slide.position}
                                             </p>
-                                            <p className="text-blue-500 text-xs md:text-sm">
+                                            <p className="text-gray-500 text-xs md:text-sm">
                                                 {slide.location}
                                             </p>
                                         </div>
@@ -243,27 +260,30 @@ export default function Slider1({ language = 'en' }) {
                     </div>
                 </div>
 
-                {/* Navigation Arrows */}
+
+                {/* Navigation Arrows - Blue-Green Theme */}
                 <button
                     onClick={handlePrev}
                     disabled={isAnimating}
-                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-300"
+                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#DCEBFF] group"
                     aria-label="Previous testimonials"
                 >
-                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-blue-700" />
+                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#4C9EFF] transition-colors" />
                 </button>
+
 
                 <button
                     onClick={handleNext}
                     disabled={isAnimating}
-                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-300"
+                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gradient-to-br hover:from-[#E8F2FF] hover:to-[#E8FFF2] disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-[#DCEBFF] group"
                     aria-label="Next testimonials"
                 >
-                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-blue-700" />
+                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700 group-hover:text-[#46C47E] transition-colors" />
                 </button>
             </div>
 
-            {/* Dot Indicators */}
+
+            {/* Dot Indicators - Blue-Green Gradient */}
             <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: getMaxIndex() + 1 }).map((_, index) => (
                     <button
@@ -277,8 +297,8 @@ export default function Slider1({ language = 'en' }) {
                         }}
                         className={`transition-all duration-500 rounded-full ${
                             currentIndex === index
-                                ? 'w-8 h-3 bg-blue-800'
-                                : 'w-3 h-3 bg-blue-300 hover:bg-blue-500'
+                                ? 'w-8 h-3 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] shadow-sm'
+                                : 'w-3 h-3 bg-[#DCEBFF] hover:bg-gradient-to-r hover:from-[#B0D8FF] hover:to-[#C7F5D9]'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
