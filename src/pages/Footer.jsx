@@ -62,7 +62,7 @@ export default function Footer() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-md opacity-50"></div>
                   <img 
-                     src="/i.jpg" 
+                    src="/i.jpg"
                     alt="Abhishek Pharma Logo" 
                     className="relative w-16 h-16 shadow-md transform hover:scale-105 transition-transform duration-300 rounded-full border-2 border-[#DCEBFF]"
                   />
@@ -79,7 +79,7 @@ export default function Footer() {
               </p>
               
               {/* Social Media Icons - Blue-Green Design */}
-          
+             
             </div>
 
 
