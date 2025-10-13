@@ -47,7 +47,7 @@ export default function Header() {
     { name: 'HOME', path: '/' },
     { name: 'ABOUT', path: '/about' },
     { name: 'PRODUCTS', path: '/products' },
-    { name: 'CONTACT', path: '/contact' },
+    // { name: 'CONTACT', path: '/contact' },
   ];
 
 
@@ -77,7 +77,7 @@ export default function Header() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-sm opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                 <img 
-                  src="/lo.png" 
+                  src="/i.jpg" 
                   alt="Abhishek Pharma Logo"
                   className="relative w-14 h-14 rounded-full shadow-sm transform group-hover:scale-105 transition-all duration-300 border-2 border-[#DCEBFF]"
                 />
@@ -85,15 +85,18 @@ export default function Header() {
 
 
               {/* Brand Name - Blue-Green Typography */}
-              <div>
-                <h1 className="text-xl font-bold leading-5 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent group-hover:from-[#3A8AE8] group-hover:to-[#3AB56D] transition-all duration-300">
-                  ABHISHEK
-                  <br />
-                  <span className="text-gray-700">
-                    PHARMA
-                  </span>
-                </h1>
-              </div>
+<div>
+  <h1 className="text-xl font-bold leading-5">
+    <span className="text-[#4C9EFF] transition-all duration-300">
+      ABHISHEK
+    </span>
+    <span className="ml-2 text-gray-700">
+      PHARMA
+    </span>
+  </h1>
+</div>
+
+
             </a>
 
 
@@ -131,7 +134,7 @@ export default function Header() {
                 onClick={() => setActiveLink('/request')}
                 className="ml-4 px-6 py-2.5 bg-gradient-to-r from-[#BEE3FF] via-[#A4D3FF] to-[#C7F5D9] hover:from-[#A4D3FF] hover:to-[#8DE4AF] text-gray-800 font-bold text-sm rounded-full shadow-sm hover:shadow-md hover:scale-105 transform transition-all duration-300"
               >
-                REQUEST QUOTE
+                Contact
               </a>
             </div>
           </div>
@@ -155,18 +158,22 @@ export default function Header() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-sm opacity-40"></div>
               <img 
-                src="/lo.png" 
+                src="/i.jpg" 
                 alt="Abhishek Pharma Logo"
                 className="relative w-12 h-12 rounded-full shadow-sm border-2 border-[#DCEBFF]"
               />
             </div>
-            <h1 className="font-bold text-base leading-4 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent">
-              ABHISHEK
-              <br />
-              <span className="text-gray-700">
-                PHARMA
-              </span>
-            </h1>
+          
+  <h1 className="text-xl font-bold leading-5">
+    <span className="text-[#4C9EFF] transition-all duration-300">
+      ABHISHEK
+    </span>
+    <span className="ml-2 text-gray-700">
+      PHARMA
+    </span>
+  </h1>
+
+            
           </a>
 
 
@@ -279,7 +286,7 @@ export default function Header() {
                 animation: open ? `slideInRight 0.3s ease-out 0.5s both` : 'none',
               }}
             >
-              REQUEST QUOTE
+              CONTACT
             </a>
           </div>
 

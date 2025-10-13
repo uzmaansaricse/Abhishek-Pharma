@@ -281,7 +281,7 @@ export default function Home() {
             {humanPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#DCEBFF] hover:border-[#B0D8FF] p-4 h-28"
+                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#DCEBFF] hover:border-[#4C9EFF] p-4 h-28"
                 data-aos="zoom-in"
                 data-aos-delay={index * 30}
               >

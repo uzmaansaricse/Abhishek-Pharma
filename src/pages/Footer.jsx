@@ -62,7 +62,7 @@ export default function Footer() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-md opacity-50"></div>
                   <img 
-                    src={logo} 
+                     src="/i.jpg" 
                     alt="Abhishek Pharma Logo" 
                     className="relative w-16 h-16 shadow-md transform hover:scale-105 transition-transform duration-300 rounded-full border-2 border-[#DCEBFF]"
                   />
@@ -79,36 +79,7 @@ export default function Footer() {
               </p>
               
               {/* Social Media Icons - Blue-Green Design */}
-              <div className="flex space-x-3">
-                <a 
-                  href="#" 
-                  className="group bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] hover:bg-gradient-to-br hover:from-[#4C9EFF] hover:to-[#46C47E] p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-sm hover:shadow-md"
-                  aria-label="Facebook"
-                >
-                  <FaFacebookF className="text-lg text-[#4C9EFF] group-hover:text-white transition-colors" />
-                </a>
-                <a 
-                  href="#" 
-                  className="group bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] hover:bg-gradient-to-br hover:from-[#4C9EFF] hover:to-[#46C47E] p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-sm hover:shadow-md"
-                  aria-label="LinkedIn"
-                >
-                  <FaLinkedinIn className="text-lg text-[#4C9EFF] group-hover:text-white transition-colors" />
-                </a>
-                <a 
-                  href="#" 
-                  className="group bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] hover:bg-gradient-to-br hover:from-[#4C9EFF] hover:to-[#46C47E] p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-sm hover:shadow-md"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram className="text-lg text-[#46C47E] group-hover:text-white transition-colors" />
-                </a>
-                <a 
-                  href="#" 
-                  className="group bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] hover:bg-gradient-to-br hover:from-[#4C9EFF] hover:to-[#46C47E] p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-sm hover:shadow-md"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter className="text-lg text-[#4C9EFF] group-hover:text-white transition-colors" />
-                </a>
-              </div>
+          
             </div>
 
 

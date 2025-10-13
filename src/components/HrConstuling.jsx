@@ -277,7 +277,7 @@ export default function PharmaceuticalServices() {
                 href="/request"
                 className="px-8 py-4 bg-yellow-400 text-gray-900 font-bold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transform transition-all duration-300"
               >
-                Request Quote
+                Contact
               </a>
             </div>
           </div>
