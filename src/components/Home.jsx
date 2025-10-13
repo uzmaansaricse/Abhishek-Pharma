@@ -159,12 +159,12 @@ export default function Home() {
 
 
   return (
-    <div className='w-[100vw] overflow-x-hidden bg-gray-50'>
+    <div className='w-[100vw] overflow-x-hidden bg-primary-light'>
       {/* Language Toggle Button */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-blue-800 hover:bg-blue-900 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
         >
           <FaGlobe className="w-4 h-4" />
           <span className="text-sm">{language === 'en' ? 'हिंदी' : 'English'}</span>
@@ -189,24 +189,24 @@ export default function Home() {
                 alt="Pharmaceutical Excellence" 
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
             <div className='md:space-y-5 space-y-3 order-1 md:order-2 p-4' data-aos="fade-left" data-aos-delay="200">
-              <h1 className='font-bold lg:text-4xl text-3xl text-gray-900 leading-tight'>
-                {t.heroTitle} <span className='block text-gray-600 text-2xl mt-2'>{t.heroSubtitle}</span>
+              <h1 className='font-bold lg:text-4xl text-3xl text-blue-900 leading-tight'>
+                {t.heroTitle} <span className='block text-blue-600 text-2xl mt-2'>{t.heroSubtitle}</span>
               </h1>
-              <p className='text-lg font-medium text-gray-700'>{t.heroTagline}</p>
+              <p className='text-lg font-medium text-blue-700'>{t.heroTagline}</p>
               <div className='space-y-4'>
-                <p className='lg:text-base text-gray-600 leading-relaxed'>{t.heroPara1}</p>
-                <p className='lg:text-base text-gray-600 leading-relaxed'>{t.heroPara2}</p>
-                <p className='lg:text-base text-gray-600 leading-relaxed'>{t.heroPara3}</p>
+                <p className='lg:text-base text-blue-600 leading-relaxed'>{t.heroPara1}</p>
+                <p className='lg:text-base text-blue-600 leading-relaxed'>{t.heroPara2}</p>
+                <p className='lg:text-base text-blue-600 leading-relaxed'>{t.heroPara3}</p>
               </div>
               <div className="flex gap-4 flex-wrap">
-                <button onClick={() => navigate('/request-quote')} className='bg-gray-800 hover:bg-gray-900 cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                <button onClick={() => navigate('/request-quote')} className='bg-blue-800 hover:bg-blue-900 cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroCTA}
                 </button>
-                <button onClick={() => navigate('/products')} className='bg-white border-2 border-gray-800 hover:bg-gray-50 cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                <button onClick={() => navigate('/products')} className='bg-white border-2 border-primary hover:bg-primary-light cursor-pointer text-text-dark font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroSecondary}
                 </button>
               </div>
@@ -216,12 +216,12 @@ export default function Home() {
       </div>
 
 {/* Product Categories - UPDATED WITH RELEVANT ICONS */}
-<div className="bg-white text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
+<div className="bg-white text-blue-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
   <Container>
     <div className="md:space-y-10 space-y-6">
       <div className='text-center space-y-4' data-aos="zoom-in">
-        <h2 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h2>
-        <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
+        <h2 className='font-bold lg:text-4xl text-3xl text-blue-900'>{t.productsTitle}</h2>
+        <p className='lg:text-base text-blue-600 lg:w-[850px] mx-auto w-full px-4'>
           {t.productsDesc}
         </p>
       </div>
@@ -230,48 +230,48 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
         
         {/* Human Medicines */}
-        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
-          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+        <div className='flex flex-col rounded-lg items-center bg-blue-50 text-blue-900 justify-center p-8 border border-blue-200 hover:border-blue-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
+          <div className='bg-white border border-blue-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
             <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Human Medicines" loading="lazy" />
           </div>
-          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.humanMedicines}</h3>
-          <p className='text-sm text-gray-600 text-center'>{t.humanDesc}</p>
+          <h3 className='text-xl font-bold text-blue-900 mb-2 text-center'>{t.humanMedicines}</h3>
+          <p className='text-sm text-blue-600 text-center'>{t.humanDesc}</p>
         </div>
         
         {/* Surgical & Consumables */}
-        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
-          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+        <div className='flex flex-col rounded-lg items-center bg-blue-50 text-blue-900 justify-center p-8 border border-blue-200 hover:border-blue-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
+          <div className='bg-white border border-blue-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
             <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Surgical & Consumables" loading="lazy" />
           </div>
-          <h3 className='text-xl font-bold text-center text-gray-900 mb-2'>{t.surgical}</h3>
-          <p className='text-sm text-gray-600 text-center'>{t.surgicalDesc}</p>
+          <h3 className='text-xl font-bold text-center text-blue-900 mb-2'>{t.surgical}</h3>
+          <p className='text-sm text-blue-600 text-center'>{t.surgicalDesc}</p>
         </div>
         
         {/* Veterinary Medicines */}
-        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
-          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+        <div className='flex flex-col rounded-lg items-center bg-blue-50 text-blue-900 justify-center p-8 border border-blue-200 hover:border-blue-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
+          <div className='bg-white border border-blue-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
             <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Veterinary Medicines" loading="lazy" />
           </div>
-          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.veterinary}</h3>
-          <p className='text-sm text-gray-600 text-center'>{t.vetDesc}</p>
+          <h3 className='text-xl font-bold text-blue-900 mb-2 text-center'>{t.veterinary}</h3>
+          <p className='text-sm text-blue-600 text-center'>{t.vetDesc}</p>
         </div>
 
         {/* Ayurvedic Products - UPDATED ICON */}
-        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
-          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+        <div className='flex flex-col rounded-lg items-center bg-blue-50 text-blue-900 justify-center p-8 border border-blue-200 hover:border-blue-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
+          <div className='bg-white border border-blue-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
             <img width={80} src="https://cdn-icons-png.flaticon.com/512/7667/7667708.png" alt="Ayurvedic Products" loading="lazy" />
           </div>
-          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.ayurveda}</h3>
-          <p className='text-sm text-gray-600 text-center'>{t.ayurvedaDesc}</p>
+          <h3 className='text-xl font-bold text-blue-900 mb-2 text-center'>{t.ayurveda}</h3>
+          <p className='text-sm text-blue-600 text-center'>{t.ayurvedaDesc}</p>
         </div>
 
         {/* General Medical Items - UPDATED ICON */}
-        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
-          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+        <div className='flex flex-col rounded-lg items-center bg-blue-50 text-blue-900 justify-center p-8 border border-blue-200 hover:border-blue-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
+          <div className='bg-white border border-blue-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
             <img width={80} src="https://cdn-icons-png.flaticon.com/512/3147/3147072.png" alt="General Medical Items" loading="lazy" />
           </div>
-          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.generalItems}</h3>
-          <p className='text-sm text-gray-600 text-center'>{t.generalItemsDesc}</p>
+          <h3 className='text-xl font-bold text-blue-900 mb-2 text-center'>{t.generalItems}</h3>
+          <p className='text-sm text-blue-600 text-center'>{t.generalItemsDesc}</p>
         </div>
         
       </div>
@@ -282,17 +282,17 @@ export default function Home() {
 
 
       {/* Human Medicines Partners Grid */}
-      <div className="bg-white py-12 border-t border-gray-200" data-aos="fade-up">
+      <div className="bg-white py-12 border-t border-blue-200" data-aos="fade-up">
         <Container>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.humanPartnersTitle} <span className="text-gray-600">{t.humanPartnersHighlight}</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-blue-900">
+            {t.humanPartnersTitle} <span className="text-blue-600">{t.humanPartnersHighlight}</span>
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
             {humanPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-gray-200 p-4 h-28"
+                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-blue-200 p-4 h-28"
                 data-aos="zoom-in"
                 data-aos-delay={index * 30}
               >
@@ -300,7 +300,7 @@ export default function Home() {
                   src={partner.logo}
                   alt={partner.alt}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain bluescale hover:bluescale-0 transition-all duration-300"
                 />
               </div>
             ))}
@@ -310,17 +310,17 @@ export default function Home() {
 
 
       {/* Veterinary Medicines Partners Grid */}
-      <div className="bg-gray-50 py-12 border-y border-gray-200" data-aos="fade-up">
+      <div className="bg-blue-50 py-12 border-y border-blue-200" data-aos="fade-up">
         <Container>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.vetPartnersTitle} <span className="text-gray-600">{t.vetPartnersHighlight}</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-blue-900">
+            {t.vetPartnersTitle} <span className="text-blue-600">{t.vetPartnersHighlight}</span>
           </h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
             {vetPartners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-gray-200 p-4 h-28"
+                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border border-blue-200 p-4 h-28"
                 data-aos="zoom-in"
                 data-aos-delay={index * 40}
               >
@@ -328,7 +328,7 @@ export default function Home() {
                   src={partner.logo}
                   alt={partner.alt}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain bluescale hover:bluescale-0 transition-all duration-300"
                 />
               </div>
             ))}
@@ -339,8 +339,8 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <div className='py-10 bg-white'>
-        <h2 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-gray-900' data-aos="fade-up">
-          {t.testimonialsTitle} <span className='text-gray-600'>{t.testimonialsHighlight}</span>
+        <h2 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-blue-900' data-aos="fade-up">
+          {t.testimonialsTitle} <span className='text-blue-600'>{t.testimonialsHighlight}</span>
         </h2>
         <div className="mx-auto w-full lg:mb-5 mb-2 h-full" data-aos="fade-up" data-aos-delay="200">
           <Slider1 language={language} />
@@ -349,9 +349,9 @@ export default function Home() {
 
 
       {/* FAQ Section */}
-      <div className='bg-gray-50 py-12'>
-        <h2 className='lg:text-4xl text-center text-3xl font-bold lg:my-10 my-8 text-gray-900' data-aos="fade-up">
-          {t.faqTitle} <span className='text-gray-600'>{t.faqHighlight}</span>
+      <div className='bg-blue-50 py-12'>
+        <h2 className='lg:text-4xl text-center text-3xl font-bold lg:my-10 my-8 text-blue-900' data-aos="fade-up">
+          {t.faqTitle} <span className='text-blue-600'>{t.faqHighlight}</span>
         </h2>
         
         <Container>
@@ -365,13 +365,13 @@ export default function Home() {
             ].map(({ id, q, a, delay }) => (
               <div 
                 key={id}
-                className="border border-gray-300 bg-white lg:text-base text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" 
+                className="border border-blue-300 bg-white lg:text-base text-sm rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" 
                 data-aos="zoom-in" 
                 data-aos-delay={delay}
               >
                 <div 
                   onClick={() => toggles(id)} 
-                  className="p-4 text-white cursor-pointer font-semibold rounded-t-lg bg-gray-800 hover:bg-gray-900 transition-all duration-300 flex justify-between items-center"
+                  className="p-4 text-white cursor-pointer font-semibold rounded-t-lg bg-blue-800 hover:bg-blue-900 transition-all duration-300 flex justify-between items-center"
                 >
                   <span>{q}</span>
                   <span className={`transform transition-transform duration-300 ${open === id ? 'rotate-180' : ''}`}>
@@ -379,7 +379,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className={`transition-all duration-500 ease-in-out ${open === id ? "max-h-40 p-4" : 'max-h-0 p-0'} overflow-hidden`}>
-                  <p className='text-gray-700 leading-relaxed'>{a}</p>
+                  <p className='text-blue-700 leading-relaxed'>{a}</p>
                 </div>
               </div>
             ))}

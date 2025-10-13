@@ -246,7 +246,7 @@ export default function About() {
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          className="group flex items-center gap-2 bg-blue-800 hover:bg-blue-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
         >
           <FaGlobe className="w-5 h-5" />
           <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
@@ -255,16 +255,16 @@ export default function About() {
 
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-20 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
         
         <Container>
           <div className="relative z-10 text-center" data-aos="fade-up">
             <h1 className="text-4xl lg:text-6xl font-bold mb-4" data-aos="zoom-in">
-              {t.heroTitle} <span className="text-gray-300">{t.heroHighlight}</span>
+              {t.heroTitle} <span className="text-blue-300">{t.heroHighlight}</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-xl lg:text-2xl text-blue-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
               {t.heroSubtitle}
             </p>
             
@@ -278,7 +278,7 @@ export default function About() {
                   data-aos-delay={index * 100}
                 >
                   <h3 className="text-3xl lg:text-4xl font-bold text-white mb-2">{stat.number}</h3>
-                  <p className="text-sm lg:text-base text-gray-300">{stat.label}</p>
+                  <p className="text-sm lg:text-base text-blue-300">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -288,21 +288,21 @@ export default function About() {
 
 
       {/* Our Story Section */}
-      <div className="py-16 bg-gray-50" data-aos="fade-up">
+      <div className="py-16 bg-blue-50" data-aos="fade-up">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image Section */}
             <div className="relative" data-aos="fade-right">
-              <div className="absolute -inset-4 bg-gray-200 rounded-3xl blur-xl opacity-50"></div>
+              <div className="absolute -inset-4 bg-blue-200 rounded-3xl blur-xl opacity-50"></div>
               <img
                 src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800"
                 alt="Pharmaceutical Excellence"
-                className="relative rounded-2xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-500 border-2 border-gray-200"
+                className="relative rounded-2xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-500 border-2 border-blue-200"
                 loading="lazy"
               />
               
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-gray-800 rounded-xl p-6 shadow-xl animate-float border-2 border-gray-200">
+              <div className="absolute -bottom-6 -right-6 bg-blue-800 rounded-xl p-6 shadow-xl animate-float border-2 border-blue-200">
                 <MdVerified className="w-12 h-12 text-white" />
                 <p className="text-white font-bold mt-2">{language === 'en' ? 'ISO Certified' : 'आईएसओ प्रमाणित'}</p>
               </div>
@@ -312,16 +312,16 @@ export default function About() {
             {/* Content Section */}
             <div className="space-y-6" data-aos="fade-left">
               <div className="inline-block">
-                <span className="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                <span className="bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                   {t.storyBadge}
                 </span>
               </div>
               
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                {t.storyTitle} <span className="text-gray-700">{t.storyHighlight}</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-blue-900">
+                {t.storyTitle} <span className="text-blue-700">{t.storyHighlight}</span>
               </h2>
               
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-blue-600 leading-relaxed">
                 <p className="text-lg">{t.storyPara1}</p>
                 <p className="text-lg">{t.storyPara2}</p>
                 <p className="text-lg">{t.storyPara3}</p>
@@ -333,7 +333,7 @@ export default function About() {
                 {t.features.map((feature, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-gray-100 border-2 border-gray-300 rounded-lg text-gray-800 font-medium text-sm hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all duration-300"
+                    className="px-4 py-2 bg-blue-100 border-2 border-blue-300 rounded-lg text-blue-800 font-medium text-sm hover:bg-blue-800 hover:text-white hover:border-blue-800 transition-all duration-300"
                   >
                     {feature}
                   </span>
@@ -349,10 +349,10 @@ export default function About() {
       <div className="py-16 bg-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {t.whyBestTitle} <span className="text-gray-700">{t.whyBestHighlight}</span>
+            <h2 className="text-3xl lg:text-5xl font-bold text-blue-900 mb-4">
+              {t.whyBestTitle} <span className="text-blue-700">{t.whyBestHighlight}</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-600 max-w-3xl mx-auto">
               {t.whyBestSubtitle}
             </p>
           </div>
@@ -364,19 +364,19 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-800"
+                  className="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-blue-200 hover:border-blue-800"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
                   <div className="mb-6">
-                    <div className="inline-block p-4 bg-gray-800 rounded-xl group-hover:bg-gray-700 transition-all duration-300 shadow-md">
+                    <div className="inline-block p-4 bg-blue-800 rounded-xl group-hover:bg-blue-700 transition-all duration-300 shadow-md">
                       <Icon className="w-10 h-10 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {reason.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-blue-600 leading-relaxed">
                     {reason.desc}
                   </p>
                 </div>
@@ -388,16 +388,16 @@ export default function About() {
 
 
       {/* NEW: Everything Under One Roof Section */}
-      <div className="py-16 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 text-white" data-aos="fade-up">
+      <div className="py-16 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 text-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-              {t.oneStopTitle} <span className="text-gray-300">{t.oneStopHighlight}</span>
+              {t.oneStopTitle} <span className="text-blue-300">{t.oneStopHighlight}</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+            <p className="text-xl text-blue-300 max-w-3xl mx-auto mb-4">
               {t.oneStopSubtitle}
             </p>
-            <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+            <p className="text-lg text-blue-400 max-w-4xl mx-auto">
               {t.oneStopDesc}
             </p>
           </div>
@@ -409,7 +409,7 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white/5 backdrop-blur-sm rounded-xl p-8 border-2 border-white/10 hover:bg-white/10 hover:border-gray-300 transition-all duration-500 transform hover:-translate-y-2"
+                  className="group bg-white/5 backdrop-blur-sm rounded-xl p-8 border-2 border-white/10 hover:bg-white/10 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-2"
                   data-aos="flip-left"
                   data-aos-delay={index * 100}
                 >
@@ -421,7 +421,7 @@ export default function About() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-blue-300 leading-relaxed">
                     {benefit.desc}
                   </p>
                 </div>
@@ -435,7 +435,7 @@ export default function About() {
             <p className="text-2xl font-bold text-white mb-4">
               {language === 'en' ? 'One Supplier. Complete Solutions. Zero Hassle.' : 'एक आपूर्तिकर्ता। पूर्ण समाधान। शून्य परेशानी।'}
             </p>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-blue-300">
               {language === 'en' 
                 ? 'From tablets to veterinary medicines, surgical supplies to promotional items—Abhishek Pharma is your trusted one-stop pharmaceutical partner.'
                 : 'गोलियों से लेकर पशु चिकित्सा दवाओं तक, शल्य चिकित्सा आपूर्ति से लेकर प्रचार वस्तुओं तक—अभिषेक फार्मा आपका विश्वसनीय वन-स्टॉप फार्मास्युटिकल साझेदार है।'}
@@ -449,10 +449,10 @@ export default function About() {
       <div className="py-16 bg-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {t.valuesTitle} <span className="text-gray-700">{t.valuesHighlight}</span>
+            <h2 className="text-3xl lg:text-5xl font-bold text-blue-900 mb-4">
+              {t.valuesTitle} <span className="text-blue-700">{t.valuesHighlight}</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-600 max-w-3xl mx-auto">
               {t.valuesSubtitle}
             </p>
           </div>
@@ -464,19 +464,19 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-400"
+                  className="group bg-blue-50 rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 border-2 border-blue-200 hover:border-blue-400"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
                   <div className="mb-6">
-                    <div className="inline-block p-4 bg-gray-200 rounded-xl group-hover:bg-gray-800 transition-all duration-300">
-                      <Icon className="w-10 h-10 text-gray-700 group-hover:text-white transition-colors" />
+                    <div className="inline-block p-4 bg-blue-200 rounded-xl group-hover:bg-blue-800 transition-all duration-300">
+                      <Icon className="w-10 h-10 text-blue-700 group-hover:text-white transition-colors" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-blue-800 transition-colors">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-blue-600 leading-relaxed">
                     {value.desc}
                   </p>
                 </div>
@@ -488,12 +488,12 @@ export default function About() {
 
 
       {/* Vision & Mission Section */}
-      <div className="py-16 bg-gray-50" data-aos="fade-up">
+      <div className="py-16 bg-blue-50" data-aos="fade-up">
         <Container>
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Vision Card */}
             <div
-              className="relative bg-gray-800 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
+              className="relative bg-blue-800 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
               data-aos="fade-right"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
@@ -502,7 +502,7 @@ export default function About() {
                   <FaBullseye className="w-12 h-12" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">{t.visionTitle}</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-blue-300 leading-relaxed">
                   {t.visionDesc}
                 </p>
               </div>
@@ -511,7 +511,7 @@ export default function About() {
 
             {/* Mission Card */}
             <div
-              className="relative bg-gray-700 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
+              className="relative bg-blue-700 rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
               data-aos="fade-left"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
@@ -520,7 +520,7 @@ export default function About() {
                   <FaHeart className="w-12 h-12" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4">{t.missionTitle}</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-blue-300 leading-relaxed">
                   {t.missionDesc}
                 </p>
               </div>
@@ -531,13 +531,13 @@ export default function About() {
 
 
       {/* Certifications Section */}
-      <div className="py-16 bg-gray-900 text-white" data-aos="fade-up">
+      <div className="py-16 bg-blue-900 text-white" data-aos="fade-up">
         <Container>
           <div className="text-center mb-12" data-aos="zoom-in">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-              {t.certTitle} <span className="text-gray-300">{t.certHighlight}</span>
+              {t.certTitle} <span className="text-blue-300">{t.certHighlight}</span>
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-blue-400">
               {t.certSubtitle}
             </p>
           </div>
@@ -549,15 +549,15 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center border-2 border-white/10 hover:bg-white/10 hover:border-gray-300 transition-all duration-300 transform hover:scale-105"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center border-2 border-white/10 hover:bg-white/10 hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
                   data-aos="flip-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="inline-block p-4 bg-gray-800 rounded-xl mb-4">
+                  <div className="inline-block p-4 bg-blue-800 rounded-xl mb-4">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-200">{cert.title}</h3>
-                  <p className="text-gray-400">{cert.desc}</p>
+                  <h3 className="text-xl font-bold mb-2 text-blue-200">{cert.title}</h3>
+                  <p className="text-blue-400">{cert.desc}</p>
                 </div>
               );
             })}
@@ -565,7 +565,7 @@ export default function About() {
 
 
           <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-blue-400 text-lg max-w-3xl mx-auto">
               {t.certDesc}
             </p>
           </div>
@@ -574,25 +574,25 @@ export default function About() {
 
 
       {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-gray-800 to-gray-700 text-white" data-aos="fade-up">
+      <div className="py-16 bg-gradient-to-r from-blue-800 to-blue-700 text-white" data-aos="fade-up">
         <Container>
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-aos="zoom-in">
               {t.ctaTitle}
             </h2>
-            <p className="text-xl mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-xl mb-8 text-blue-300" data-aos="fade-up" data-aos-delay="200">
               {t.ctaSubtitle}
             </p>
             <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-white text-gray-900 font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
+                className="px-8 py-4 bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
               >
                 {t.ctaBtn1}
               </a>
               <a
                 href="/request-quote"
-                className="px-8 py-4 bg-gray-900 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 border-2 border-white"
+                className="px-8 py-4 bg-blue-900 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 border-2 border-white"
               >
                 {t.ctaBtn2}
               </a>

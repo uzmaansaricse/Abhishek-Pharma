@@ -147,15 +147,15 @@ export default function Contact() {
     const contactInfo = [
         {
             icon: FaPhoneAlt,
-            color: 'gray-800'
+            color: 'blue-800'
         },
         {
             icon: FaPhoneAlt,
-            color: 'gray-700'
+            color: 'blue-700'
         },
         {
             icon: MdEmail,
-            color: 'gray-800'
+            color: 'blue-800'
         }
     ];
 
@@ -165,28 +165,28 @@ export default function Contact() {
 
     return (
         <div className="w-[100vw] overflow-x-hidden bg-white min-h-screen">
-            {/* Language Toggle Button - Gray Theme */}
+            {/* Language Toggle Button - blue Theme */}
             <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
                 <button
                     onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-                    className="group flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="group flex items-center gap-2 bg-blue-800 hover:bg-blue-900 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                     <FaGlobe className="w-5 h-5" />
                     <span>{language === 'en' ? 'हिंदी' : 'English'}</span>
                 </button>
             </div>
 
-            {/* Hero Section - Clean Gray */}
-            <div className="relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 text-white py-20 overflow-hidden">
+            {/* Hero Section - Clean blue */}
+            <div className="relative bg-gradient-to-r from-blue-800 via-blue-700 to-blue-900 text-white py-20 overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-600/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
                 
                 <Container>
                     <div className="relative z-10 text-center max-w-4xl mx-auto" data-aos="fade-up">
                         <h1 className="text-4xl lg:text-6xl font-bold mb-6" data-aos="zoom-in">
-                            {t.heroTitle} <span className="text-gray-300">{t.heroHighlight}</span>
+                            {t.heroTitle} <span className="text-blue-300">{t.heroHighlight}</span>
                         </h1>
-                        <p className="text-xl lg:text-2xl text-gray-300" data-aos="fade-up" data-aos-delay="200">
+                        <p className="text-xl lg:text-2xl text-blue-300" data-aos="fade-up" data-aos-delay="200">
                             {t.heroSubtitle}
                         </p>
                     </div>
@@ -203,15 +203,15 @@ export default function Contact() {
                                 <a
                                     key={index}
                                     href={info.link}
-                                    className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-200 hover:border-gray-400"
+                                    className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-blue-200 hover:border-blue-400"
                                     data-aos="flip-up"
                                     data-aos-delay={index * 100}
                                 >
                                     <div className={`inline-flex p-4 bg-${contactInfo[index].color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                                         <IconComponent className="w-6 h-6 text-white" />
                                     </div>
-                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
-                                    <p className="text-gray-700 font-medium">{info.detail}</p>
+                                    <h3 className="text-lg font-bold text-blue-900 mb-2">{info.title}</h3>
+                                    <p className="text-blue-700 font-medium">{info.detail}</p>
                                 </a>
                             );
                         })}
@@ -219,22 +219,22 @@ export default function Contact() {
                 </Container>
             </div>
 
-            {/* Main Content - Light Gray Background */}
-            <div className="py-16 bg-gray-50" data-aos="fade-up">
+            {/* Main Content - Light blue Background */}
+            <div className="py-16 bg-blue-50" data-aos="fade-up">
                 <Container>
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Form Section */}
-                        <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-200" data-aos="fade-right">
+                        <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-blue-200" data-aos="fade-right">
                             <div className="mb-8">
                                 <div className="inline-block mb-4">
-                                    <span className="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                    <span className="bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-semibold">
                                         {t.formBadge}
                                     </span>
                                 </div>
-                                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                                    {t.formTitle} <span className="text-gray-700">{t.formHighlight}</span>
+                                <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+                                    {t.formTitle} <span className="text-blue-700">{t.formHighlight}</span>
                                 </h2>
-                                <p className="text-gray-600">
+                                <p className="text-blue-600">
                                     {t.formSubtitle}
                                 </p>
                             </div>
@@ -261,7 +261,7 @@ export default function Contact() {
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                            <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                                 {t.nameLabel} <span className="text-red-500">*</span>
                                             </label>
                                             <input
@@ -270,13 +270,13 @@ export default function Contact() {
                                                 value={formData.name}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white"
                                                 placeholder={t.namePlaceholder}
                                             />
                                         </div>
 
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                            <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                                 {t.businessLabel}
                                             </label>
                                             <input
@@ -284,7 +284,7 @@ export default function Contact() {
                                                 name="companyName"
                                                 value={formData.companyName}
                                                 onChange={handleChange}
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white"
                                                 placeholder={t.businessPlaceholder}
                                             />
                                         </div>
@@ -292,7 +292,7 @@ export default function Contact() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                            <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                                 {t.cityLabel}
                                             </label>
                                             <input
@@ -300,13 +300,13 @@ export default function Contact() {
                                                 name="jobTitle"
                                                 value={formData.jobTitle}
                                                 onChange={handleChange}
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white"
                                                 placeholder={t.cityPlaceholder}
                                             />
                                         </div>
 
                                         <div className="group">
-                                            <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                            <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                                 {t.emailLabel} <span className="text-red-500">*</span>
                                             </label>
                                             <input
@@ -315,14 +315,14 @@ export default function Contact() {
                                                 value={formData.email}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
+                                                className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white"
                                                 placeholder={t.emailPlaceholder}
                                             />
                                         </div>
                                     </div>
 
                                     <div className="group">
-                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                        <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                             {t.phoneLabel} <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -331,13 +331,13 @@ export default function Contact() {
                                             value={formData.mobile}
                                             onChange={handleChange}
                                             required
-                                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white"
+                                            className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white"
                                             placeholder={t.phonePlaceholder}
                                         />
                                     </div>
 
                                     <div className="group">
-                                        <label className="block text-gray-700 font-semibold mb-2 group-focus-within:text-gray-900 transition-colors">
+                                        <label className="block text-blue-700 font-semibold mb-2 group-focus-within:text-blue-900 transition-colors">
                                             {t.messageLabel} <span className="text-red-500">*</span>
                                         </label>
                                         <textarea
@@ -346,14 +346,14 @@ export default function Contact() {
                                             onChange={handleChange}
                                             rows="5"
                                             required
-                                            className="w-full p-4 border-2 border-gray-200 focus:border-gray-800 focus:outline-none rounded-lg transition-all duration-300 bg-gray-50 focus:bg-white resize-none"
+                                            className="w-full p-4 border-2 border-blue-200 focus:border-blue-800 focus:outline-none rounded-lg transition-all duration-300 bg-blue-50 focus:bg-white resize-none"
                                             placeholder={t.messagePlaceholder}
                                         ></textarea>
                                     </div>
 
                                     <button
                                         type="submit"
-                                        className="w-full bg-gray-800 text-white py-4 px-8 hover:bg-gray-900 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
+                                        className="w-full bg-blue-800 text-white py-4 px-8 hover:bg-blue-900 rounded-lg font-bold text-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
                                     >
                                         <MdSend className="w-5 h-5" />
                                         {t.submitBtn}
@@ -364,8 +364,8 @@ export default function Contact() {
 
                         {/* Office Info Section - Updated */}
                         <div className="space-y-8" data-aos="fade-left">
-                            {/* Office Details Card - Gray Theme */}
-                            <div className="bg-gray-800 text-white rounded-2xl p-8 lg:p-10 shadow-lg relative overflow-hidden">
+                            {/* Office Details Card - blue Theme */}
+                            <div className="bg-blue-800 text-white rounded-2xl p-8 lg:p-10 shadow-lg relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
                                 
                                 <div className="relative z-10">
@@ -378,16 +378,16 @@ export default function Contact() {
                                                 <FaPhoneAlt className="w-5 h-5" />
                                             </div>
                                             <div className="space-y-3">
-                                                <p className="text-gray-300 text-sm mb-2">{t.phoneText}</p>
+                                                <p className="text-blue-300 text-sm mb-2">{t.phoneText}</p>
                                                 <div>
                                                     <p className="font-semibold">Manoj Kumar Bajaj</p>
-                                                    <a href="tel:+919414147250" className="text-gray-300 hover:text-white transition-colors">
+                                                    <a href="tel:+919414147250" className="text-blue-300 hover:text-white transition-colors">
                                                         +91 9414147250
                                                     </a>
                                                 </div>
                                                 <div>
                                                     <p className="font-semibold">Dinesh Bajaj</p>
-                                                    <a href="tel:+919636302626" className="text-gray-300 hover:text-white transition-colors">
+                                                    <a href="tel:+919636302626" className="text-blue-300 hover:text-white transition-colors">
                                                         +91 9636302626
                                                     </a>
                                                 </div>
@@ -400,8 +400,8 @@ export default function Contact() {
                                                 <MdEmail className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-gray-300 text-sm mb-1">{t.emailText}</p>
-                                                <a href="mailto:info@abhishekpharma.com" className="font-semibold hover:text-gray-300 transition-colors break-all">
+                                                <p className="text-blue-300 text-sm mb-1">{t.emailText}</p>
+                                                <a href="mailto:info@abhishekpharma.com" className="font-semibold hover:text-blue-300 transition-colors break-all">
                                                     info@abhishekpharma.com
                                                 </a>
                                             </div>
@@ -416,7 +416,7 @@ export default function Contact() {
                                                 <FaMapMarkerAlt className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-gray-300 text-sm mb-1">{t.locationText}</p>
+                                                <p className="text-blue-300 text-sm mb-1">{t.locationText}</p>
                                                 <p className="font-semibold mb-2">{t.officeAddress}</p>
                                                 <p className="text-blue-300 hover:text-blue-200 text-sm flex items-center gap-1">
                                                     {t.viewMap} →
@@ -441,7 +441,7 @@ export default function Contact() {
                                 </div>
                             </div>
 
-                            {/* Why Contact Us Cards - Gray Theme */}
+                            {/* Why Contact Us Cards - blue Theme */}
                             <div className="grid md:grid-cols-2 gap-4">
                                 {t.whyContact.map((item, index) => {
                                     const icons = [FaClock, FaHeadset];
@@ -449,15 +449,15 @@ export default function Contact() {
                                     return (
                                         <div
                                             key={index}
-                                            className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-200"
+                                            className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-blue-200"
                                             data-aos="zoom-in"
                                             data-aos-delay={index * 100}
                                         >
-                                            <div className="inline-flex p-3 bg-gray-200 rounded-xl mb-4">
-                                                <Icon className="w-6 h-6 text-gray-700" />
+                                            <div className="inline-flex p-3 bg-blue-200 rounded-xl mb-4">
+                                                <Icon className="w-6 h-6 text-blue-700" />
                                             </div>
-                                            <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
-                                            <p className="text-gray-600 text-sm">{item.desc}</p>
+                                            <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+                                            <p className="text-blue-600 text-sm">{item.desc}</p>
                                         </div>
                                     );
                                 })}

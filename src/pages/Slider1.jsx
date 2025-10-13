@@ -167,7 +167,7 @@ export default function Slider1({ language = 'en' }) {
 
     return (
         <div 
-            className="relative w-full py-8 md:py-12 bg-gray-50"
+            className="relative w-full py-8 md:py-12 bg-blue-50"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -188,16 +188,16 @@ export default function Slider1({ language = 'en' }) {
                                 className="w-full md:w-1/3 flex-shrink-0 px-3 md:px-4"
                             >
                                 {/* Individual Testimonial Card */}
-                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border border-gray-200 h-full flex flex-col">
+                                <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 p-6 md:p-8 border border-blue-200 h-full flex flex-col">
                                     
                                     {/* Quote Icon */}
                                     <div className="mb-4">
-                                        <FaQuoteLeft className="w-10 h-10 md:w-12 md:h-12 text-gray-200" />
+                                        <FaQuoteLeft className="w-10 h-10 md:w-12 md:h-12 text-blue-200" />
                                     </div>
 
                                     {/* Testimonial Text with proper wrapping */}
                                     <div className="flex-grow mb-6">
-                                        <p className="text-gray-700 text-base md:text-lg leading-relaxed italic break-words whitespace-normal">
+                                        <p className="text-blue-700 text-base md:text-lg leading-relaxed italic break-words whitespace-normal">
                                             "{slide.text}"
                                         </p>
                                     </div>
@@ -210,7 +210,7 @@ export default function Slider1({ language = 'en' }) {
                                     </div>
 
                                     {/* Divider */}
-                                    <div className="w-16 h-1 bg-gray-800 mb-6"></div>
+                                    <div className="w-16 h-1 bg-blue-800 mb-6"></div>
 
                                     {/* Reviewer Info */}
                                     <div className="flex items-center gap-4">
@@ -219,20 +219,20 @@ export default function Slider1({ language = 'en' }) {
                                             <img
                                                 src={slide.image}
                                                 alt={slide.name}
-                                                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-gray-800"
+                                                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-blue-800"
                                                 loading="lazy"
                                             />
                                         </div>
 
                                         {/* Name & Position */}
                                         <div className="flex-grow">
-                                            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-1">
+                                            <h4 className="font-bold text-blue-900 text-lg md:text-xl mb-1">
                                                 {slide.name}
                                             </h4>
-                                            <p className="text-gray-600 text-sm md:text-base">
+                                            <p className="text-blue-600 text-sm md:text-base">
                                                 {slide.position}
                                             </p>
-                                            <p className="text-gray-500 text-xs md:text-sm">
+                                            <p className="text-blue-500 text-xs md:text-sm">
                                                 {slide.location}
                                             </p>
                                         </div>
@@ -247,19 +247,19 @@ export default function Slider1({ language = 'en' }) {
                 <button
                     onClick={handlePrev}
                     disabled={isAnimating}
-                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-300"
+                    className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-300"
                     aria-label="Previous testimonials"
                 >
-                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
+                    <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-blue-700" />
                 </button>
 
                 <button
                     onClick={handleNext}
                     disabled={isAnimating}
-                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-300"
+                    className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 z-30 bg-white hover:bg-blue-100 disabled:opacity-50 disabled:cursor-not-allowed p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-300"
                     aria-label="Next testimonials"
                 >
-                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-700" />
+                    <FaChevronRight className="w-5 h-5 md:w-6 md:h-6 text-blue-700" />
                 </button>
             </div>
 
@@ -277,8 +277,8 @@ export default function Slider1({ language = 'en' }) {
                         }}
                         className={`transition-all duration-500 rounded-full ${
                             currentIndex === index
-                                ? 'w-8 h-3 bg-gray-800'
-                                : 'w-3 h-3 bg-gray-300 hover:bg-gray-500'
+                                ? 'w-8 h-3 bg-blue-800'
+                                : 'w-3 h-3 bg-blue-300 hover:bg-blue-500'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />

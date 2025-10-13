@@ -1,5 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './theme.css'
 import Layout from './pages/Layout'
 import Home from './components/Home'
 import About from './components/About'

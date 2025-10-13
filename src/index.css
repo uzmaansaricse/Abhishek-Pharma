@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+:root {
+  --primary-color: #B3E0FF;  /* Light blue color */
+  --primary-light: #E6F5FF;  /* Lighter blue for hover states */
+  --primary-dark: #80CCFF;   /* Darker blue for active states */
+  --white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #666666;
+}
+
 
 /* Add to your global CSS file */
 @keyframes spin-slow {
