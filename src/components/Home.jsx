@@ -24,28 +24,28 @@ export default function Home() {
     { name: 'Alembic', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTKpce6EVMgVuPklFSlotjlQxiACqyTYvRg&s', alt: 'Alembic pharmaceutical logo' },
     { name: 'Cipla', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cipla_logo.svg/1200px-Cipla_logo.svg.png', alt: 'Cipla pharmaceutical logo' },
     { name: 'Pil', logo: 'https://pilindia.co.in/cdn/shop/files/logo.webp?crop=center&height=300&v=1746648055&width=300', alt: 'PIL pharmaceutical logo' },
-    { name: 'Medley', logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQGAXkf3MCI2ow/company-logo_200_200/company-logo_200_200/0/1630594190088/medley_pharmaceuticals_ltd_logo?e=2147483647&v=beta&t=g80fBimliYkyiI5OTZe984ULobr5DGngSLtTQw6d0h4', alt: 'Medley pharmaceutical logo' },
+    { name: 'Medley', logo: 'https://medleyhealthcare.in/assets/images/logo.jpg', alt: 'Medley pharmaceutical logo' },
     { name: 'Bestochem', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29mIsOYOFI2IZGxF1x90hr4b1Zp1HkRiaEw&s', alt: 'Bestochem pharmaceutical logo' },
     { name: 'Lupin', logo: 'https://upload.wikimedia.org/wikipedia/en/f/f7/The_Lupin_Logo.svg', alt: 'Lupin pharmaceutical logo' },
     { name: 'Biochem', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT8ONYntbhBOSTRmZ0vp-b8MsBuFag7hg06z2hMtfAV6Wjn-5F_WrnY-NkFNJPUBaKjA&usqp=CAU', alt: 'Biochem pharmaceutical logo' },
     { name: 'Morphem', logo: 'https://m.media-amazon.com/images/S/abs-image-upload-na/f/AmazonStores/A21TJRUUN4KGV/b1883b3231e613b2fd7948c5c6c56644.w400.h400.jpg', alt: 'Morphem pharmaceutical logo' },
     { name: 'Zen Lab', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGbGcbWldAl59fdCb6blIM_xlwaZHOdxb7OAkDTVX-qssr1vqtAy7vabyB2jqvmF4vg4E&usqp=CAU', alt: 'Zen Lab pharmaceutical logo' },
-    { name: 'Orison Pharma', logo: 'https://orisonpharmaceutical.com/assets/images/1695753131orison.png', alt: 'Orison pharmaceutical logo' },
+    { name: 'Orison Pharma', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOkvhwyNZ5QbhldLBrhmYJKI_RUtkUhSEgg&s', alt: 'Orison pharmaceutical logo' },
     { name: 'LeeFord', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBz1c4_n0smveOSWBIhbl00QfObVGBZyoyGA&s', alt: 'LeeFord pharmaceutical logo' },
     { name: 'Elder', logo: 'https://medicaldialogues.in/wp-content/uploads/2015/10/No-plans-to-inv12279.jpg', alt: 'Elder pharmaceutical logo' },
     { name: 'Zydus Cadila', logo: 'https://ehealth.eletsonline.com/wp-content/uploads/2019/03/Zydus-Cadila.jpg', alt: 'Zydus Cadila pharmaceutical logo' },
     { name: 'Abbott', logo: 'https://www.abbott.in/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png', alt: 'Abbott pharmaceutical logo' },
     { name: 'Torque', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSrRSOWa9_LHTT5ZsMtzck0UYox4CP_UWuag&s', alt: 'Torque pharmaceutical logo' },
     { name: 'Germed', logo: 'https://www.pharmacompass.com/image/logo/germed-55673.png', alt: 'Germed pharmaceutical logo' },
-    { name: 'Khandelwal Laboratories', logo: 'https://media.licdn.com/dms/image/v2/C4D0BAQG7MbK_nYQ7bQ/company-logo_200_200/company-logo_200_200/0/1642426049446/khandelwal_laboratories_privatelimited_logo?e=2147483647&v=beta&t=ayXTcIyBVaIKHvAv0anmV8cUaUNVzSkF2E7-zFDDKF0', alt: 'Khandelwal Laboratories logo' },
+    { name: 'Khandelwal Laboratories', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtDk-q0eO_lmlS_OWo6fhbcBzG5Iybmcux8A&s', alt: 'Khandelwal Laboratories logo' },
     { name: 'Glenmark', logo: 'https://upload.wikimedia.org/wikipedia/en/6/62/Glenmark_Pharmaceuticals_logo.png', alt: 'Glenmark pharmaceutical logo' },
-    { name: 'Mankind', logo: 'https://media.licdn.com/dms/image/v2/C560BAQELBuDa-xrYFQ/company-logo_200_200/company-logo_200_200/0/1631313525504?e=2147483647&v=beta&t=thgCGmJkuv1qqLNLVdBBxIKLSiyQA3-Nb4edlbasaf8', alt: 'Mankind pharmaceutical logo' },
+    { name: 'Mankind', logo: 'https://s3-symbol-logo.tradingview.com/mankind-pharma-limited--600.png', alt: 'Mankind pharmaceutical logo' },
     { name: 'Ranbaxy Lab', logo: 'https://smartisystems.com/wp-content/uploads/2024/05/image1.jpg', alt: 'Ranbaxy pharmaceutical logo' },
     { name: 'IndSwift', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVftkZ50LQZpfSVbAtXSwiBFIrsFElLgvgw&s', alt: 'IndSwift pharmaceutical logo' },
     { name: 'Universal', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZWKhGczmuGxvfOiTEb9Z9N2-AWlKCtnpGDQ&s', alt: 'Universal pharmaceutical logo' },
     { name: 'Univent', logo: 'https://engexportdirectory.org/wp-content/uploads/2018/08/logo-2-1.png', alt: 'Univent pharmaceutical logo' },
-    { name: 'Torrent', logo: 'https://media.licdn.com/dms/image/v2/C560BAQFW13K-6R9CGg/company-logo_200_200/company-logo_200_200/0/1631350983906?e=2147483647&v=beta&t=Y6U60HqfR4NHjIyG0LaUAw9SNW9m4FhtYX2MlnEt_ZE', alt: 'Torrent pharmaceutical logo' },
-    { name: 'Zuventus', logo: 'https://media.licdn.com/dms/image/v2/D4D0BAQHED04FqHmBFw/company-logo_200_200/company-logo_200_200/0/1665049635256/zuventushealthcarelimited_logo?e=2147483647&v=beta&t=afYkyjYaILqgAmf0TWwOt-L5rVTo2cU-INPB6Q8z1R0', alt: 'Zuventus pharmaceutical logo' },
+    { name: 'Torrent', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7mnYV7Us2TAfUD6DQAFPG6enoCQa2MwKdg&s', alt: 'Torrent pharmaceutical logo' },
+    { name: 'Zuventus', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-TB0o7PBh_mPOHxbkm7AuP5krSUb5R_qTg&s', alt: 'Zuventus pharmaceutical logo' },
     { name: 'Laborate', logo: 'https://images.jdmagicbox.com/comp/panipat/35/9999pmuldelstds000635/catalogue/laborate-pharmaceuticals-india-ltd-panipat-allopathic-medicine-manufacturers-hge1h6f1xf.jpg', alt: 'Laborate pharmaceutical logo' },
   ];
 
@@ -72,7 +72,7 @@ export default function Home() {
   const content = {
     en: {
       heroTitle: 'Wholesale Branded & Promotional Medicines',
-      heroSubtitle: 'Since 2010',
+      heroSubtitle: 'Since 2003',
       heroTagline: 'ISO‑certified pan‑India supplier for pharmacies, hospitals & distributors',
       heroCTA: 'Request a Quote',
       heroSecondary: 'View Product Categories',
@@ -88,6 +88,10 @@ export default function Home() {
       surgicalDesc: 'Medical devices, surgical instruments & disposable supplies',
       veterinary: 'Veterinary Medicines',
       vetDesc: 'Quality animal healthcare products for livestock & companion animals',
+      ayurveda: 'Ayurvedic Products',
+      ayurvedaDesc: 'Traditional herbal medicines, wellness supplements & natural formulations',
+      generalItems: 'General Medical Items',
+      generalItemsDesc: 'IV cannulas, syringes, bandages & essential medical supplies',
       testimonialsTitle: 'What Clients Say About',
       testimonialsHighlight: 'Abhishek Pharma',
       humanPartnersTitle: 'Human Medicines',
@@ -109,7 +113,7 @@ export default function Home() {
     },
     hi: {
       heroTitle: 'थोक ब्रांडेड और प्रचार दवाएं',
-      heroSubtitle: '2010 से',
+      heroSubtitle: '2003 से',
       heroTagline: 'ISO‑प्रमाणित पैन‑इंडिया आपूर्तिकर्ता फार्मेसियों, अस्पतालों और वितरकों के लिए',
       heroCTA: 'कोटेशन का अनुरोध करें',
       heroSecondary: 'उत्पाद श्रेणियां देखें',
@@ -125,6 +129,10 @@ export default function Home() {
       surgicalDesc: 'चिकित्सा उपकरण, शल्य चिकित्सा उपकरण और डिस्पोजेबल आपूर्ति',
       veterinary: 'पशु चिकित्सा दवाएं',
       vetDesc: 'पशुधन और साथी जानवरों के लिए गुणवत्ता पशु स्वास्थ्य उत्पाद',
+      ayurveda: 'आयुर्वेदिक उत्पाद',
+      ayurvedaDesc: 'पारंपरिक हर्बल दवाएं, वेलनेस सप्लीमेंट्स और प्राकृतिक फॉर्मूलेशन',
+      generalItems: 'सामान्य चिकित्सा सामग्री',
+      generalItemsDesc: 'IV कैनुला, सीरिंज, पट्टियां और आवश्यक चिकित्सा आपूर्ति',
       testimonialsTitle: 'ग्राहक क्या कहते हैं',
       testimonialsHighlight: 'अभिषेक फार्मा के बारे में',
       humanPartnersTitle: 'मानव दवाएं',
@@ -177,7 +185,7 @@ export default function Home() {
             <div className='relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group' data-aos="zoom-in" data-aos-duration="800">
               <img 
                 className='rounded-lg w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700' 
-                src="https://vijay-overseas.vercel.app/img/firm.jpg" 
+                src="https://pdq-funding.co.uk/wp-content/uploads/2022/08/How-to-start-your-own-pharmacy-business.jpg.webp" 
                 alt="Pharmaceutical Excellence" 
                 loading="lazy"
               />
@@ -207,46 +215,70 @@ export default function Home() {
         </Container>
       </div>
 
-
-      {/* Product Categories */}
-      <div className="bg-white text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
-        <Container>
-          <div className="md:space-y-10 space-y-6">
-            <div className='text-center space-y-4' data-aos="zoom-in">
-              <h2 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h2>
-              <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
-                {t.productsDesc}
-              </p>
-            </div>
-            
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 px-4">
-              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
-                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Human Medicines" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2'>{t.humanMedicines}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.humanDesc}</p>
-              </div>
-              
-              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
-                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Surgical & Consumables" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-center text-gray-900 mb-2'>{t.surgical}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.surgicalDesc}</p>
-              </div>
-              
-              <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
-                <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Veterinary Medicines" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2'>{t.veterinary}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.vetDesc}</p>
-              </div>
-            </div>
-          </div>
-        </Container>
+{/* Product Categories - UPDATED WITH RELEVANT ICONS */}
+<div className="bg-white text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
+  <Container>
+    <div className="md:space-y-10 space-y-6">
+      <div className='text-center space-y-4' data-aos="zoom-in">
+        <h2 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h2>
+        <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
+          {t.productsDesc}
+        </p>
       </div>
+      
+      {/* 5-Column Grid for Desktop, Responsive for Mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
+        
+        {/* Human Medicines */}
+        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
+          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+            <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Human Medicines" loading="lazy" />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.humanMedicines}</h3>
+          <p className='text-sm text-gray-600 text-center'>{t.humanDesc}</p>
+        </div>
+        
+        {/* Surgical & Consumables */}
+        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
+          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+            <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Surgical & Consumables" loading="lazy" />
+          </div>
+          <h3 className='text-xl font-bold text-center text-gray-900 mb-2'>{t.surgical}</h3>
+          <p className='text-sm text-gray-600 text-center'>{t.surgicalDesc}</p>
+        </div>
+        
+        {/* Veterinary Medicines */}
+        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
+          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+            <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Veterinary Medicines" loading="lazy" />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.veterinary}</h3>
+          <p className='text-sm text-gray-600 text-center'>{t.vetDesc}</p>
+        </div>
+
+        {/* Ayurvedic Products - UPDATED ICON */}
+        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
+          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+            <img width={80} src="https://cdn-icons-png.flaticon.com/512/7667/7667708.png" alt="Ayurvedic Products" loading="lazy" />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.ayurveda}</h3>
+          <p className='text-sm text-gray-600 text-center'>{t.ayurvedaDesc}</p>
+        </div>
+
+        {/* General Medical Items - UPDATED ICON */}
+        <div className='flex flex-col rounded-lg items-center bg-gray-50 text-gray-900 justify-center p-8 border border-gray-200 hover:border-gray-400 shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
+          <div className='bg-white border border-gray-200 p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>
+            <img width={80} src="https://cdn-icons-png.flaticon.com/512/3147/3147072.png" alt="General Medical Items" loading="lazy" />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.generalItems}</h3>
+          <p className='text-sm text-gray-600 text-center'>{t.generalItemsDesc}</p>
+        </div>
+        
+      </div>
+    </div>
+  </Container>
+</div>
+
 
 
       {/* Human Medicines Partners Grid */}
@@ -305,7 +337,7 @@ export default function Home() {
       </div>
 
 
-      {/* Testimonials Section - NEW 3-CARD SLIDER */}
+      {/* Testimonials Section */}
       <div className='py-10 bg-white'>
         <h2 className='font-bold text-center lg:text-4xl text-3xl mb-8 text-gray-900' data-aos="fade-up">
           {t.testimonialsTitle} <span className='text-gray-600'>{t.testimonialsHighlight}</span>
