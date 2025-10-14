@@ -17,7 +17,7 @@ export default function Slider({ language = 'en' }) {
                     'Same trusted service, better infrastructure',
                     'Easily accessible location for your convenience',
                 ],
-                button: 'Visit Us Today',
+                button: 'See Our New Location',
                 buttonLink: '/contact',
                 contentImage: '/images/gemini.png',
                 badge: 'New Address 2025',
@@ -33,7 +33,7 @@ export default function Slider({ language = 'en' }) {
                     'Premium quality at wholesale rates',
                     'Bulk discounts & promotional offers',
                 ],
-                button: 'Check Our Prices',
+                button: 'See Our Products',
                 buttonLink: '/products',
                 contentImage: '/images/bszw84mq0i.jpg',
                 badge: 'Best Price Guarantee',
@@ -65,8 +65,8 @@ export default function Slider({ language = 'en' }) {
                     'Healthcare Partnerships',
                     'Expert Support Team',
                 ],
-                button: 'Get Quote',
-                buttonLink: '/request',
+                button: 'About Us',
+                buttonLink: '/about',
                 contentImage: '/images/lois-blog.jpg',
                 badge: 'Trusted Since 2003',
                 floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
@@ -217,7 +217,7 @@ export default function Slider({ language = 'en' }) {
                                     <div className='inline-block'>
                                         <span className={`px-5 py-2 rounded-lg text-sm font-semibold shadow-md ${
                                             index === 0 || index === 1
-                                                ? 'bg-[#5BA3EB] text-white animate-pulse' 
+                                                ? 'bg-[#5BA3EB] text-white' 
                                                 : 'bg-[#E0EFFF] text-gray-700'
                                         }`}>
                                             {index === 0 ? '🎉 ' : index === 1 ? '💰 ' : '✨ '}{slide.badge}
@@ -225,9 +225,9 @@ export default function Slider({ language = 'en' }) {
                                     </div>
 
                                     {/* Main Title - LIGHTER Blue for ALL slides */}
-                                    <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl leading-tight animate-slideInUp text-[#5BA3EB]">
+                                    <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl leading-tight animate-slideInUp text-[#333333]">
                                         {slide.title.split('!')[0]}
-                                        <span className="text-[#5BA3EB]">!</span>
+                                        <span className="text-[#333333]">!</span>
                                     </h1>
 
                                     {/* Subtitle - Lighter gray */}

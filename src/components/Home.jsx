@@ -65,90 +65,94 @@ export default function Home() {
     { name: 'Animax Pharma', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Mv6lrkcHdjlpOGXjaWC4cMYho5dUTLsn_Q&s', alt: 'Animax Pharma veterinary logo' },
   ];
 
-  const content = {
-    en: {
-      heroTitle: 'Wholesale Branded & Promotional Medicines',
-      heroSubtitle: 'Since 2003',
-      heroTagline: 'ISO‑certified pan‑India supplier for pharmacies, hospitals & distributors',
-      heroCTA: 'Request a Quote',
-      heroSecondary: 'View Product Categories',
-      heroPara1: 'Abhishek Pharma delivers premium wholesale pharmaceutical services from our offices in India. Our approach is built on trust, quality, and results that matter.',
-      heroPara2: 'We specialize in branded medicines, promotional products, and supply chain solutions that help healthcare businesses streamline operations and meet market demands.',
-      heroPara3: 'Partnering with pharmacies, hospitals, and distributors, we bring reliable supply practices and products that support health goals.',
-      learnMore: 'LEARN MORE',
-      productsTitle: 'Our Product Categories',
-      productsDesc: 'Abhishek Pharma offers expert-driven pharmaceutical solutions from our offices in India, helping businesses access quality medicines. Our team provides customized supplies to empower healthcare across industries.',
-      humanMedicines: 'Human Medicines',
-      humanDesc: 'Comprehensive range of tablets, capsules, injections & liquid formulations',
-      surgical: 'Surgical & Consumables',
-      surgicalDesc: 'Medical devices, surgical instruments & disposable supplies',
-      veterinary: 'Veterinary Medicines',
-      vetDesc: 'Quality animal healthcare products for livestock & companion animals',
-      ayurveda: 'Ayurvedic Products',
-      ayurvedaDesc: 'Traditional herbal medicines, wellness supplements & natural formulations',
-      generalItems: 'General Medical Items',
-      generalItemsDesc: 'IV cannulas, syringes, bandages & essential medical supplies',
-      testimonialsTitle: 'What Clients Say About',
-      testimonialsHighlight: 'Abhishek Pharma',
-      humanPartnersTitle: 'Human Medicines',
-      humanPartnersHighlight: 'Partners',
-      vetPartnersTitle: 'Veterinary Medicines',
-      vetPartnersHighlight: 'Partners',
-      faqTitle: 'Frequently Asked',
-      faqHighlight: 'Questions',
-      faq1Q: 'What products does Abhishek Pharma offer?',
-      faq1A: 'We specialize in tablets, injections, syrups, Ayurvedic medicines, promotional products, and OTC items for healthcare needs across India.',
-      faq2Q: 'Do you provide bulk or promotional supplies?',
-      faq2A: 'Yes, we actively supply bulk orders and promotional medicines with competitive pricing and reliable delivery.',
-      faq3Q: 'How does Abhishek Pharma ensure product quality?',
-      faq3A: 'We follow strict quality checks, source from certified manufacturers, and ensure compliance with regulatory standards before distribution.',
-      faq4Q: 'Can you customize supply for my business?',
-      faq4A: 'Absolutely. All our supplies are tailor-made to suit your requirements, from bulk to specific product needs.',
-      faq5Q: 'Where are your offices located?',
-      faq5A: 'We have offices in India, serving clients across the country and beyond.',
-    },
-    hi: {
-      heroTitle: 'थोक ब्रांडेड और प्रचार दवाएं',
-      heroSubtitle: '2003 से',
-      heroTagline: 'ISO‑प्रमाणित पैन‑इंडिया आपूर्तिकर्ता फार्मेसियों, अस्पतालों और वितरकों के लिए',
-      heroCTA: 'कोटेशन का अनुरोध करें',
-      heroSecondary: 'उत्पाद श्रेणियां देखें',
-      heroPara1: 'अभिषेक फार्मा भारत में हमारे कार्यालयों से प्रीमियम थोक फार्मास्युटिकल सेवाएं प्रदान करता है।',
-      heroPara2: 'हम ब्रांडेड दवाओं, प्रचार उत्पादों और आपूर्ति श्रृंखला समाधानों में विशेषज्ञ हैं।',
-      heroPara3: 'फार्मेसियों, अस्पतालों और वितरकों के साथ साझेदारी करते हुए, हम विश्वसनीय उत्पाद लाते हैं।',
-      learnMore: 'और जानें',
-      productsTitle: 'हमारी उत्पाद श्रेणियां',
-      productsDesc: 'अभिषेक फार्मा भारत में विशेषज्ञ-संचालित फार्मास्युटिकल समाधान प्रदान करता है।',
-      humanMedicines: 'मानव दवाएं',
-      humanDesc: 'गोलियां, कैप्सूल, इंजेक्शन और तरल फॉर्मूलेशन की व्यापक श्रृंखला',
-      surgical: 'शल्य चिकित्सा और उपभोग्य सामग्रियां',
-      surgicalDesc: 'चिकित्सा उपकरण, शल्य चिकित्सा उपकरण और डिस्पोजेबल आपूर्ति',
-      veterinary: 'पशु चिकित्सा दवाएं',
-      vetDesc: 'पशुधन और साथी जानवरों के लिए गुणवत्ता पशु स्वास्थ्य उत्पाद',
-      ayurveda: 'आयुर्वेदिक उत्पाद',
-      ayurvedaDesc: 'पारंपरिक हर्बल दवाएं, वेलनेस सप्लीमेंट्स और प्राकृतिक फॉर्मूलेशन',
-      generalItems: 'सामान्य चिकित्सा सामग्री',
-      generalItemsDesc: 'IV कैनुला, सीरिंज, पट्टियां और आवश्यक चिकित्सा आपूर्ति',
-      testimonialsTitle: 'ग्राहक क्या कहते हैं',
-      testimonialsHighlight: 'अभिषेक फार्मा के बारे में',
-      humanPartnersTitle: 'मानव दवाएं',
-      humanPartnersHighlight: 'साझेदार',
-      vetPartnersTitle: 'पशु चिकित्सा दवाएं',
-      vetPartnersHighlight: 'साझेदार',
-      faqTitle: 'अक्सर पूछे जाने वाले',
-      faqHighlight: 'प्रश्न',
-      faq1Q: 'अभिषेक फार्मा कौन से उत्पाद प्रदान करता है?',
-      faq1A: 'हम गोलियां, इंजेक्शन, सिरप, आयुर्वेदिक दवाएं और OTC वस्तुओं में विशेषज्ञ हैं।',
-      faq2Q: 'क्या आप थोक आपूर्ति प्रदान करते हैं?',
-      faq2A: 'हां, हम प्रतिस्पर्धी मूल्य निर्धारण के साथ थोक ऑर्डर की आपूर्ति करते हैं।',
-      faq3Q: 'गुणवत्ता कैसे सुनिश्चित की जाती है?',
-      faq3A: 'हम सख्त गुणवत्ता जांच और नियामक अनुपालन का पालन करते हैं।',
-      faq4Q: 'क्या आप अनुकूलित आपूर्ति कर सकते हैं?',
-      faq4A: 'बिल्कुल। सभी आपूर्ति आपकी आवश्यकताओं के अनुरूप हैं।',
-      faq5Q: 'आपके कार्यालय कहाँ हैं?',
-      faq5A: 'हमारे भारत में कार्यालय हैं।',
-    }
-  };
+const content = {
+  en: {
+    heroTitle: 'Trusted Wholesale Distributor of Allopathic, Ayurvedic & Veterinary Medicines',
+    heroSubtitle: 'Serving Healthcare Since 2003',
+    heroTagline: 'ISO-certified, Pan-India supplier for pharmacies, hospitals & distributors. We deliver anywhere in India!',
+    heroCTA: 'Contact Us', // Primary button
+    // Removed heroSecondary
+    heroPara1: 'Abhishek Pharma has been delivering trusted wholesale pharmaceutical solutions across India since 2003.',
+    heroPara2: 'We deal in branded medicines, Ayurvedic products, and veterinary healthcare supplies — ensuring quality and reliability in every shipment.',
+    heroPara3: 'Partner with us for dependable supply, genuine products, and a commitment to your business growth. We deliver anywhere in India!',
+    learnMore: 'Learn More',
+    productsTitle: 'Our Product Categories',
+    productsDesc: 'Explore our wide range of Allopathic, veterinary, and Ayurvedic medicines, along with surgical and general medical supplies — all sourced from certified manufacturers.',
+    humanMedicines: 'Allopathic Medicines ',
+    humanDesc: 'A complete range of tablets, capsules, syrups, injections & liquid formulations',
+    surgical: 'Surgical & Consumables',
+    surgicalDesc: 'Medical devices, surgical instruments & disposable products',
+    veterinary: 'Veterinary Medicines',
+    vetDesc: 'Animal healthcare solutions for livestock & companion animals',
+    ayurveda: 'Ayurvedic Products',
+    ayurvedaDesc: 'Herbal medicines, wellness supplements & natural formulations',
+    generalItems: 'General Medical Items',
+    generalItemsDesc: 'IV cannulas, syringes, bandages & other essential supplies',
+    testimonialsTitle: 'What Our Clients Say About',
+    testimonialsHighlight: 'Abhishek Pharma',
+    humanPartnersTitle: 'Allopathic Medicines',
+    humanPartnersHighlight: 'Partners',
+    vetPartnersTitle: 'Veterinary Medicines',
+    vetPartnersHighlight: 'Partners',
+    faqTitle: 'Frequently Asked',
+    faqHighlight: 'Questions',
+    faq1Q: 'What products does Abhishek Pharma offer?',
+    faq1A: 'We offer a wide range of allopathic, Ayurvedic, and veterinary medicines, along with surgical and promotional products for healthcare businesses across India.',
+    faq2Q: 'Do you handle bulk or promotional supplies?',
+    faq2A: 'Yes, we specialize in bulk orders and promotional medicines with competitive pricing and reliable delivery anywhere in India.',
+    faq3Q: 'How do you ensure product quality?',
+    faq3A: 'All our products are sourced from certified manufacturers and go through strict quality checks before dispatch.',
+    faq4Q: 'Can I get customized supplies for my business?',
+    faq4A: 'Absolutely! We offer flexible supply solutions tailored to your specific product and volume needs.',
+    faq5Q: 'Where is your business located?',
+    faq5A: 'We operate from India and supply healthcare partners across the country and beyond.',
+  },
+
+  hi: {
+    heroTitle: 'एलोपैथिक, आयुर्वेदिक और पशु चिकित्सा दवाओं के विश्वसनीय थोक वितरक',
+    heroSubtitle: '2003 से स्वास्थ्य सेवा में विश्वसनीय नाम',
+    heroTagline: 'ISO-प्रमाणित, पैन-इंडिया आपूर्तिकर्ता – फार्मेसी, अस्पताल और वितरकों के लिए। हम भारत में कहीं भी डिलीवरी करते हैं!',
+    heroCTA: 'संपर्क करें', // Primary button
+    // Removed heroSecondary
+    heroPara1: 'अभिषेक फार्मा 2003 से पूरे भारत में भरोसेमंद थोक फार्मास्युटिकल समाधान प्रदान कर रहा है।',
+    heroPara2: 'हम ब्रांडेड, आयुर्वेदिक और पशु चिकित्सा दवाओं के साथ शल्य चिकित्सा व सामान्य चिकित्सा सामग्रियों की आपूर्ति करते हैं।',
+    heroPara3: 'हमारे साथ जुड़ें और पाएँ भरोसेमंद आपूर्ति, गुणवत्तापूर्ण उत्पाद और दीर्घकालिक व्यावसायिक सहयोग। हम भारत में कहीं भी डिलीवरी करते हैं!',
+    learnMore: 'और जानें',
+    productsTitle: 'हमारी उत्पाद श्रेणियां',
+    productsDesc: 'एलोपैथिक, पशु चिकित्सा और आयुर्वेदिक दवाओं के साथ-साथ शल्य चिकित्सा और सामान्य चिकित्सा सामग्रियों की विस्तृत श्रृंखला देखें। सभी उत्पाद प्रमाणित निर्माताओं से प्राप्त किए जाते हैं।',
+    humanMedicines: 'एलोपैथिक दवाएं',
+    humanDesc: 'गोलियां, कैप्सूल, सिरप, इंजेक्शन और अन्य फॉर्मूलेशन',
+    surgical: 'शल्य चिकित्सा एवं उपभोग्य वस्तुएं',
+    surgicalDesc: 'चिकित्सा उपकरण, शल्य उपकरण और डिस्पोजेबल सामग्रियां',
+    veterinary: 'पशु चिकित्सा दवाएं',
+    vetDesc: 'पशुधन और पालतू जानवरों के लिए गुणवत्तापूर्ण उत्पाद',
+    ayurveda: 'आयुर्वेदिक उत्पाद',
+    ayurvedaDesc: 'हर्बल औषधियां, वेलनेस सप्लीमेंट्स और प्राकृतिक उत्पाद',
+    generalItems: 'सामान्य चिकित्सा सामग्री',
+    generalItemsDesc: 'IV कैनुला, सीरिंज, पट्टियां और आवश्यक चिकित्सा आपूर्ति',
+    testimonialsTitle: 'हमारे ग्राहकों की राय',
+    testimonialsHighlight: 'अभिषेक फार्मा के बारे में',
+    humanPartnersTitle: 'एलोपैथिक दवाएं',
+    humanPartnersHighlight: 'साझेदार',
+    vetPartnersTitle: 'पशु चिकित्सा दवाएं',
+    vetPartnersHighlight: 'साझेदार',
+    faqTitle: 'अक्सर पूछे जाने वाले',
+    faqHighlight: 'प्रश्न',
+    faq1Q: 'अभिषेक फार्मा कौन-कौन से उत्पाद प्रदान करता है?',
+    faq1A: 'हम एलोपैथिक, आयुर्वेदिक और पशु चिकित्सा दवाएं, साथ ही शल्य चिकित्सा और प्रचारात्मक उत्पाद प्रदान करते हैं।',
+    faq2Q: 'क्या आप थोक और प्रचारात्मक आपूर्ति करते हैं?',
+    faq2A: 'हाँ, हम प्रतिस्पर्धी मूल्य पर थोक और प्रचारात्मक दवाओं की विश्वसनीय आपूर्ति करते हैं, भारत में कहीं भी डिलीवरी के साथ।',
+    faq3Q: 'आप उत्पाद की गुणवत्ता कैसे सुनिश्चित करते हैं?',
+    faq3A: 'हम प्रमाणित निर्माताओं से ही उत्पाद प्राप्त करते हैं और हर बैच की गुणवत्ता जांच करते हैं।',
+    faq4Q: 'क्या मैं अपनी आवश्यकता के अनुसार आपूर्ति प्राप्त कर सकता हूँ?',
+    faq4A: 'बिलकुल, हम आपकी ज़रूरतों के अनुसार कस्टमाइज़्ड आपूर्ति समाधान प्रदान करते हैं।',
+    faq5Q: 'आपका व्यवसाय कहाँ स्थित है?',
+    faq5A: 'हम भारत से कार्यरत हैं और देशभर के स्वास्थ्य भागीदारों को आपूर्ति करते हैं।',
+  }
+};
+
+
+
 
   const t = content[language];
 
@@ -198,9 +202,9 @@ export default function Home() {
                 <button onClick={() => navigate('/request')} className='bg-[#5BA3EB] hover:bg-[#4A92DA] cursor-pointer text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroCTA}
                 </button>
-                <button onClick={() => navigate('/products')} className='bg-white border-2 border-[#D1E5F7] hover:bg-[#F0F7FF] cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
+                {/* <button onClick={() => navigate('/products')} className='bg-white border-2 border-[#D1E5F7] hover:bg-[#F0F7FF] cursor-pointer text-gray-800 font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-all duration-300'>
                   {t.heroSecondary}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -208,67 +212,84 @@ export default function Home() {
       </div>
 
       {/* Product Categories */}
-      <div className="bg-[#F0F7FF] text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
-        <Container>
-          <div className="md:space-y-10 space-y-6">
-            <div className='text-center space-y-4' data-aos="zoom-in">
-              <h2 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h2>
-              <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
-                {t.productsDesc}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
-              
-              {/* Human Medicines */}
-              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-duration="600">
-                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Human Medicines" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.humanMedicines}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.humanDesc}</p>
-              </div>
-              
-              {/* Surgical & Consumables */}
-              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="100" data-aos-duration="600">
-                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/2621/2621046.png" alt="Surgical & Consumables" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-center text-gray-900 mb-2'>{t.surgical}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.surgicalDesc}</p>
-              </div>
-              
-              {/* Veterinary Medicines */}
-              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="200" data-aos-duration="600">
-                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" alt="Veterinary Medicines" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.veterinary}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.vetDesc}</p>
-              </div>
-
-              {/* Ayurvedic Products */}
-              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="300" data-aos-duration="600">
-                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/7667/7667708.png" alt="Ayurvedic Products" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.ayurveda}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.ayurvedaDesc}</p>
-              </div>
-
-              {/* General Medical Items */}
-              <div className='flex flex-col rounded-lg items-center bg-white text-gray-900 justify-center p-8 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] shadow-sm hover:shadow-lg transform hover:-translate-y-2 transition-all duration-500 group cursor-pointer' data-aos="flip-left" data-aos-delay="400" data-aos-duration="600">
-                <div className='bg-[#F0F7FF] border-2 border-[#D1E5F7] p-6 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:border-[#5BA3EB]'>
-                  <img width={80} src="https://cdn-icons-png.flaticon.com/512/3147/3147072.png" alt="General Medical Items" loading="lazy" />
-                </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-2 text-center'>{t.generalItems}</h3>
-                <p className='text-sm text-gray-600 text-center'>{t.generalItemsDesc}</p>
-              </div>
-              
-            </div>
-          </div>
-        </Container>
+  {/* Product Categories */}
+<div className="bg-[#F0F7FF] text-gray-900 lg:py-16 py-10 lg:my-10 my-5" data-aos="fade-up">
+  <Container>
+    <div className="md:space-y-10 space-y-6">
+      <div className='text-center space-y-4' data-aos="zoom-in">
+        <h2 className='font-bold lg:text-4xl text-3xl text-gray-900'>{t.productsTitle}</h2>
+        <p className='lg:text-base text-gray-600 lg:w-[850px] mx-auto w-full px-4'>
+          {t.productsDesc}
+        </p>
       </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-4">
+
+        {/* Human Medicines */}
+        <div className='flex flex-col items-center justify-center cursor-pointer group'>
+          <img 
+            src="/alll.png" 
+            alt="Allopathic Medicines" 
+            className="w-40 h-auto mb-4 transition-transform duration-300 group-hover:scale-110" 
+            loading="lazy" 
+          />
+          <h3 className='text-2xl font-bold text-gray-900 mb-2 text-center'>{t.humanMedicines}</h3>
+          <p className='text-base text-gray-600 text-center'>{t.humanDesc}</p>
+        </div>
+
+        {/* Surgical & Consumables */}
+        <div className='flex flex-col items-center justify-center cursor-pointer group'>
+          <img 
+            src="s.png" 
+            alt="Surgical & Consumables" 
+            className="w-40 h-auto mb-4 transition-transform duration-300 group-hover:scale-110" 
+            loading="lazy" 
+          />
+          <h3 className='text-2xl font-bold text-gray-900 mb-2 text-center'>{t.surgical}</h3>
+          <p className='text-base text-gray-600 text-center'>{t.surgicalDesc}</p>
+        </div>
+
+        {/* Veterinary Medicines */}
+        <div className='flex flex-col items-center justify-center cursor-pointer group'>
+          <img 
+            src="2.png" 
+            alt="Veterinary Medicines" 
+            className="w-40 h-auto mb-4 transition-transform duration-300 group-hover:scale-110" 
+            loading="lazy" 
+          />
+          <h3 className='text-2xl font-bold text-gray-900 mb-2 text-center'>{t.veterinary}</h3>
+          <p className='text-base text-gray-600 text-center'>{t.vetDesc}</p>
+        </div>
+
+        {/* Ayurvedic Products */}
+        <div className='flex flex-col items-center justify-center cursor-pointer group'>
+          <img 
+            src="ay.png" 
+            alt="Ayurvedic Products" 
+            className="w-40 h-auto mb-4 transition-transform duration-300 group-hover:scale-110" 
+            loading="lazy" 
+          />
+          <h3 className='text-2xl font-bold text-gray-900 mb-2 text-center'>{t.ayurveda}</h3>
+          <p className='text-base text-gray-600 text-center'>{t.ayurvedaDesc}</p>
+        </div>
+
+        {/* General Medical Items */}
+        <div className='flex flex-col items-center justify-center cursor-pointer group'>
+          <img 
+            src="g.png" 
+            alt="General Medical Items" 
+            className="w-40 h-auto mb-4 transition-transform duration-300 group-hover:scale-110" 
+            loading="lazy" 
+          />
+          <h3 className='text-2xl font-bold text-gray-900 mb-2 text-center'>{t.generalItems}</h3>
+          <p className='text-base text-gray-600 text-center'>{t.generalItemsDesc}</p>
+        </div>
+
+      </div>
+    </div>
+  </Container>
+</div>
+
 
       {/* Human Medicines Partners Grid */}
       <div className="bg-white py-12 border-t border-[#D1E5F7]" data-aos="fade-up">

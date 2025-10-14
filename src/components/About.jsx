@@ -33,9 +33,7 @@ export default function About() {
         { title: 'Extensive Product Range', desc: 'From human medicines to veterinary products, surgical supplies to promotional items—we stock it all under one roof.', icon: 'boxes' },
         { title: 'Verified Quality Assurance', desc: 'Every product sourced from certified manufacturers. ISO 9001:2015 certified operations with full regulatory compliance.', icon: 'shield' },
         { title: 'Competitive Wholesale Pricing', desc: 'Volume discounts, promotional offers, and transparent pricing. No hidden costs or surprise charges.', icon: 'money' },
-        { title: 'Pan-India Distribution', desc: 'Reliable logistics network ensuring timely delivery to every corner of India. Cold-chain handling for sensitive products.', icon: 'truck' },
-        { title: 'Dedicated Support Team', desc: '24/7 customer support, order tracking, and responsive after-sales service. Your success is our priority.', icon: 'headset' },
-        { title: '15+ Years of Trust', desc: 'Serving 500+ healthcare partners with consistent quality and reliability. Long-term relationships built on integrity.', icon: 'award' }
+        
       ],
       
       oneStopTitle: 'Everything Under',
@@ -44,10 +42,8 @@ export default function About() {
       oneStopDesc: 'We understand the challenges of managing multiple vendor relationships, inconsistent quality, and delayed deliveries. That\'s why we\'ve built a comprehensive pharmaceutical supply ecosystem—so you can focus on patient care while we handle the rest.',
       oneStopBenefits: [
         { title: 'Single Point of Contact', desc: 'One supplier for all your pharmaceutical needs. Simplified ordering, invoicing, and communication.', icon: 'user' },
-        { title: 'Diverse Product Portfolio', desc: 'Human medicines, veterinary products, surgical consumables, Ayurvedic formulations, OTC items, and promotional goods—all available.', icon: 'medicines' },
-        { title: 'Streamlined Procurement', desc: 'Reduce administrative burden. Single purchase order, one delivery schedule, consolidated billing.', icon: 'inventory' },
-        { title: 'Consistent Quality Standards', desc: 'No more worrying about varying quality from different suppliers. Uniform excellence across all product categories.', icon: 'verified' },
-        { title: 'Bulk Order Efficiency', desc: 'Combine orders across categories for better pricing and reduced shipping costs. Volume discounts automatically applied.', icon: 'warehouse' },
+      { title: 'Consistent Quality Standards', desc: 'No more worrying about varying quality from different suppliers. Uniform excellence across all product categories.', icon: 'verified' },
+
         { title: 'Faster Turnaround Time', desc: 'No coordination delays between multiple vendors. Single warehouse, faster processing, quicker delivery.', icon: 'clock' }
       ],
       
@@ -58,9 +54,7 @@ export default function About() {
         { title: 'Quality Assurance', desc: 'We ensure every product meets the highest standards of pharmaceutical excellence and safety.' },
         { title: 'Trust & Integrity', desc: 'Building lasting relationships through transparent practices and ethical business conduct.' },
         { title: 'Customer Focus', desc: 'Your satisfaction drives us. We provide personalized service and support at every step.' },
-        { title: 'Sustainability', desc: 'Committed to environmentally responsible practices in all our operations.' },
-        { title: 'Excellence', desc: 'Continuous improvement and innovation in pharmaceutical distribution and service.' },
-        { title: 'Compliance', desc: 'Full adherence to regulatory requirements and industry best practices.' }
+  
       ],
       visionTitle: 'Our Vision',
       visionDesc: 'To be the leading wholesale supplier of pharmaceutical products, promoting health and wellness through reliable and accessible medicines across India and beyond.',
@@ -74,11 +68,7 @@ export default function About() {
         { title: 'Drug License', desc: 'Valid & Updated' },
         { title: 'GSTIN Registered', desc: 'Tax Compliant' }
       ],
-      certDesc: 'We are fully licensed and compliant with all regulatory requirements for pharmaceutical distribution. Our certifications ensure that every product we supply meets the highest standards of quality and safety.',
-      ctaTitle: 'Ready to Partner With Us?',
-      ctaSubtitle: 'Join hundreds of healthcare providers who trust Abhishek Pharma for their pharmaceutical needs',
-      ctaBtn1: 'Contact Us Today',
-      ctaBtn2: 'Request a Quote'
+    
     },
     hi: {
       heroTitle: 'अभिषेक फार्मा ',
@@ -105,9 +95,7 @@ export default function About() {
         { title: 'व्यापक उत्पाद श्रृंखला', desc: 'मानव दवाओं से लेकर पशु चिकित्सा उत्पादों तक—सब कुछ एक छत के नीचे।', icon: 'boxes' },
         { title: 'सत्यापित गुणवत्ता आश्वासन', desc: 'प्रमाणित निर्माताओं से प्राप्त हर उत्पाद। ISO 9001:2015 प्रमाणित संचालन।', icon: 'shield' },
         { title: 'प्रतिस्पर्धी थोक मूल्य', desc: 'वॉल्यूम छूट, पारदर्शी मूल्य निर्धारण। कोई छिपी हुई लागत नहीं।', icon: 'money' },
-        { title: 'पैन-इंडिया वितरण', desc: 'भारत के हर कोने में समय पर डिलीवरी। संवेदनशील उत्पादों के लिए कोल्ड-चेन हैंडलिंग।', icon: 'truck' },
-        { title: 'समर्पित सहायता टीम', desc: '24/7 ग्राहक सहायता, ऑर्डर ट्रैकिंग, और उत्तरदायी सेवा।', icon: 'headset' },
-        { title: '15+ वर्षों का विश्वास', desc: '500+ स्वास्थ्य साझेदारों की सेवा। ईमानदारी पर बने दीर्घकालिक संबंध।', icon: 'award' }
+        
       ],
       
       oneStopTitle: 'सब कुछ',
@@ -116,10 +104,9 @@ export default function About() {
       oneStopDesc: 'हम कई विक्रेता संबंधों, असंगत गुणवत्ता और विलंबित डिलीवरी की चुनौतियों को समझते हैं। इसलिए हमने एक व्यापक फार्मास्युटिकल आपूर्ति पारिस्थितिकी तंत्र बनाया है।',
       oneStopBenefits: [
         { title: 'एकल संपर्क बिंदु', desc: 'आपकी सभी फार्मास्युटिकल जरूरतों के लिए एक आपूर्तिकर्ता। सरलीकृत ऑर्डरिंग।', icon: 'user' },
-        { title: 'विविध उत्पाद पोर्टफोलियो', desc: 'मानव दवाएं, पशु चिकित्सा उत्पाद, शल्य चिकित्सा उपभोग्य सामग्रियां—सभी उपलब्ध।', icon: 'medicines' },
-        { title: 'सुव्यवस्थित खरीद', desc: 'प्रशासनिक बोझ कम करें। एकल खरीद आदेश, समेकित बिलिंग।', icon: 'inventory' },
+      
         { title: 'सुसंगत गुणवत्ता मानक', desc: 'विभिन्न आपूर्तिकर्ताओं से अलग-अलग गुणवत्ता की चिंता नहीं।', icon: 'verified' },
-        { title: 'थोक ऑर्डर दक्षता', desc: 'बेहतर मूल्य निर्धारण के लिए श्रेणियों में ऑर्डर संयोजित करें।', icon: 'warehouse' },
+    
         { title: 'तेज़ टर्नअराउंड समय', desc: 'कई विक्रेताओं के बीच कोई समन्वय देरी नहीं। तेज़ प्रसंस्करण।', icon: 'clock' }
       ],
       
@@ -130,9 +117,7 @@ export default function About() {
         { title: 'गुणवत्ता आश्वासन', desc: 'हम सुनिश्चित करते हैं कि प्रत्येक उत्पाद उच्चतम मानकों को पूरा करता है।' },
         { title: 'विश्वास और ईमानदारी', desc: 'पारदर्शी प्रथाओं के माध्यम से स्थायी संबंध।' },
         { title: 'ग्राहक फोकस', desc: 'आपकी संतुष्टि हमें प्रेरित करती है।' },
-        { title: 'स्थिरता', desc: 'पर्यावरण की दृष्टि से जिम्मेदार प्रथाओं के लिए प्रतिबद्ध।' },
-        { title: 'उत्कृष्टता', desc: 'फार्मास्युटिकल वितरण में निरंतर सुधार।' },
-        { title: 'अनुपालन', desc: 'नियामक आवश्यकताओं का पूर्ण पालन।' }
+    
       ],
       visionTitle: 'हमारी दृष्टि',
       visionDesc: 'विश्वसनीय दवाओं के माध्यम से स्वास्थ्य को बढ़ावा देते हुए फार्मास्युटिकल उत्पादों का अग्रणी थोक आपूर्तिकर्ता बनना।',
@@ -146,11 +131,7 @@ export default function About() {
         { title: 'औषधि लाइसेंस', desc: 'वैध और अद्यतन' },
         { title: 'GSTIN पंजीकृत', desc: 'कर अनुपालन' }
       ],
-      certDesc: 'हम फार्मास्युटिकल वितरण के लिए सभी नियामक आवश्यकताओं के साथ पूरी तरह से लाइसेंस प्राप्त हैं।',
-      ctaTitle: 'हमारे साथ साझेदारी करने के लिए तैयार हैं?',
-      ctaSubtitle: 'सैकड़ों स्वास्थ्य सेवा प्रदाताओं में शामिल हों जो अभिषेक फार्मा पर भरोसा करते हैं',
-      ctaBtn1: 'आज ही संपर्क करें',
-      ctaBtn2: 'कोट का अनुरोध करें'
+   
     }
   };
 
@@ -345,7 +326,7 @@ export default function About() {
             })}
           </div>
 
-          <div className="mt-12 text-center bg-white/5 rounded-2xl p-8 border-2 border-white/10" data-aos="fade-up" data-aos-delay="300">
+          {/* <div className="mt-12 text-center bg-white/5 rounded-2xl p-8 border-2 border-white/10" data-aos="fade-up" data-aos-delay="300">
             <p className="text-2xl font-bold text-white mb-4">
               {language === 'en' ? 'One Supplier. Complete Solutions. Zero Hassle.' : 'एक आपूर्तिकर्ता। पूर्ण समाधान। शून्य परेशानी।'}
             </p>
@@ -354,7 +335,7 @@ export default function About() {
                 ? 'From tablets to veterinary medicines, surgical supplies to promotional items—Abhishek Pharma is your trusted one-stop pharmaceutical partner.'
                 : 'गोलियों से लेकर पशु चिकित्सा दवाओं तक, शल्य चिकित्सा आपूर्ति से लेकर प्रचार वस्तुओं तक—अभिषेक फार्मा आपका विश्वसनीय वन-स्टॉप फार्मास्युटिकल साझेदार है।'}
             </p>
-          </div>
+          </div> */}
         </Container>
       </div>
 
@@ -478,7 +459,7 @@ export default function About() {
       </div>
 
       {/* CTA Section - Blue-Green Gradient */}
-      <div className="py-16 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] text-white" data-aos="fade-up">
+      {/* <div className="py-16 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] text-white" data-aos="fade-up">
         <Container>
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-aos="zoom-in">
@@ -503,7 +484,7 @@ export default function About() {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
 
       <style jsx>{`
         @keyframes float {
