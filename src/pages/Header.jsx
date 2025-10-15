@@ -214,7 +214,7 @@ export default function Header() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-full blur-sm opacity-50"></div>
                 <img 
-                  src="/lo.png" 
+                  src="/i.jpg" 
                   alt="Abhishek Pharma Logo"
                   className="relative w-12 h-12 rounded-full shadow-sm border-2 border-white"
                 />

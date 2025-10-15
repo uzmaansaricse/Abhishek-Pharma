@@ -13,7 +13,7 @@ export default function About() {
       heroHighlight: 'Abhishek Pharma',
       heroSubtitle: 'Trusted Wholesale Supplier of Quality Pharmaceutical Products',
       stats: [
-        { number: '15+', label: 'Years Experience' },
+        { number: '20+', label: 'Years Experience' },
         { number: '500+', label: 'Healthcare Partners' },
         { number: '10K+', label: 'Products' },
         { number: '24/7', label: 'Support' }
@@ -56,11 +56,7 @@ export default function About() {
         { title: 'Customer Focus', desc: 'Your satisfaction drives us. We provide personalized service and support at every step.' },
   
       ],
-      visionTitle: 'Our Vision',
-      visionDesc: 'To be the leading wholesale supplier of pharmaceutical products, promoting health and wellness through reliable and accessible medicines across India and beyond.',
-      missionTitle: 'Our Mission',
-      missionDesc: 'To provide high-quality, authentic medicines and exceptional service to healthcare providers, ensuring customer satisfaction and contributing to better health outcomes for all.',
-      certTitle: 'Certifications &',
+      
       certHighlight: 'Licenses',
       certSubtitle: 'Fully compliant with all regulatory requirements',
       certifications: [
@@ -119,10 +115,7 @@ export default function About() {
         { title: 'ग्राहक फोकस', desc: 'आपकी संतुष्टि हमें प्रेरित करती है।' },
     
       ],
-      visionTitle: 'हमारी दृष्टि',
-      visionDesc: 'विश्वसनीय दवाओं के माध्यम से स्वास्थ्य को बढ़ावा देते हुए फार्मास्युटिकल उत्पादों का अग्रणी थोक आपूर्तिकर्ता बनना।',
-      missionTitle: 'हमारा मिशन',
-      missionDesc: 'उच्च गुणवत्ता वाली दवाएं और असाधारण सेवा प्रदान करना, ग्राहक संतुष्टि सुनिश्चित करना।',
+
       certTitle: 'प्रमाणन और',
       certHighlight: 'लाइसेंस',
       certSubtitle: 'सभी नियामक आवश्यकताओं के साथ पूरी तरह से अनुपालन',
@@ -213,24 +206,24 @@ export default function About() {
               </div>
             </div>
 
-            <div className="space-y-6" data-aos="fade-left">
+            <div className="space-y-6 text-center" data-aos="fade-left">
               <div className="inline-block">
                 <span className="bg-gradient-to-r from-[#BEE3FF] to-[#C7F5D9] text-gray-800 px-5 py-2 rounded-full text-sm font-semibold shadow-sm">
                   {t.storyBadge}
                 </span>
               </div>
-              
+
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 {t.storyTitle} <span className="bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent">{t.storyHighlight}</span>
               </h2>
-              
+
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p className="text-lg">{t.storyPara1}</p>
                 <p className="text-lg">{t.storyPara2}</p>
                 <p className="text-lg">{t.storyPara3}</p>
               </div>
 
-              <div className="flex flex-wrap gap-3 pt-4">
+              <div className="flex flex-wrap gap-3 pt-4 justify-center">
                 {t.features.map((feature, index) => (
                   <span
                     key={index}
@@ -257,25 +250,18 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {t.whyBestReasons.map((reason, index) => {
               const Icon = getWhyBestIcon(reason.icon);
               return (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-[#f7fbff] to-[#f0fff5] rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-[#DCEBFF] hover:border-[#B0D8FF]"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="mb-6">
-                    <div className="inline-block p-4 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl group-hover:from-[#3A8AE8] group-hover:to-[#3AB56D] transition-all duration-300 shadow-md">
-                      <Icon className="w-10 h-10 text-white" />
-                    </div>
+                <div key={index} className="text-center" data-aos="fade-up" data-aos-delay={index * 100}>
+                  <div className="inline-block p-4 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl mb-6">
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {reason.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-600 leading-relaxed">
                     {reason.desc}
                   </p>
                 </div>
@@ -326,16 +312,7 @@ export default function About() {
             })}
           </div>
 
-          {/* <div className="mt-12 text-center bg-white/5 rounded-2xl p-8 border-2 border-white/10" data-aos="fade-up" data-aos-delay="300">
-            <p className="text-2xl font-bold text-white mb-4">
-              {language === 'en' ? 'One Supplier. Complete Solutions. Zero Hassle.' : 'एक आपूर्तिकर्ता। पूर्ण समाधान। शून्य परेशानी।'}
-            </p>
-            <p className="text-lg text-[#E8FFF2]">
-              {language === 'en' 
-                ? 'From tablets to veterinary medicines, surgical supplies to promotional items—Abhishek Pharma is your trusted one-stop pharmaceutical partner.'
-                : 'गोलियों से लेकर पशु चिकित्सा दवाओं तक, शल्य चिकित्सा आपूर्ति से लेकर प्रचार वस्तुओं तक—अभिषेक फार्मा आपका विश्वसनीय वन-स्टॉप फार्मास्युटिकल साझेदार है।'}
-            </p>
-          </div> */}
+       
         </Container>
       </div>
 
@@ -351,25 +328,19 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="space-y-8 max-w-4xl mx-auto"> */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {t.values.map((value, index) => {
               const Icon = valueIcons[index];
               return (
-                <div
-                  key={index}
-                  className="group bg-white rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-[#DCEBFF] hover:border-[#B0D8FF]"
-                  data-aos="flip-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="mb-6">
-                    <div className="inline-block p-4 bg-gradient-to-br from-[#E8F2FF] to-[#E8FFF2] rounded-xl group-hover:from-[#4C9EFF] group-hover:to-[#46C47E] transition-all duration-300">
-                      <Icon className="w-10 h-10 text-[#4C9EFF] group-hover:text-white transition-colors" />
-                    </div>
+                <div key={index} className="text-center" data-aos="flip-up" data-aos-delay={index * 100}>
+                  <div className="inline-block p-4 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl mb-6">
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-600 leading-relaxed">
                     {value.desc}
                   </p>
                 </div>
@@ -380,43 +351,7 @@ export default function About() {
       </div>
 
       {/* Vision & Mission Section - Blue-Green Gradients */}
-      <div className="py-16 bg-white" data-aos="fade-up">
-        <Container>
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div
-              className="relative bg-gradient-to-br from-[#4C9EFF] to-[#3A8AE8] rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
-              data-aos="fade-right"
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-block p-4 bg-white/10 rounded-xl mb-6">
-                  <FaBullseye className="w-12 h-12" />
-                </div>
-                <h3 className="text-3xl font-bold mb-4">{t.visionTitle}</h3>
-                <p className="text-lg text-[#E8F2FF] leading-relaxed">
-                  {t.visionDesc}
-                </p>
-              </div>
-            </div>
 
-            <div
-              className="relative bg-gradient-to-br from-[#46C47E] to-[#3AB56D] rounded-2xl p-10 text-white overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-500"
-              data-aos="fade-left"
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <div className="inline-block p-4 bg-white/10 rounded-xl mb-6">
-                  <FaHeart className="w-12 h-12" />
-                </div>
-                <h3 className="text-3xl font-bold mb-4">{t.missionTitle}</h3>
-                <p className="text-lg text-[#E8FFF2] leading-relaxed">
-                  {t.missionDesc}
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
 
       {/* Certifications Section - Blue-Green Gradient */}
       <div className="py-16 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] text-white" data-aos="fade-up">
@@ -458,33 +393,7 @@ export default function About() {
         </Container>
       </div>
 
-      {/* CTA Section - Blue-Green Gradient */}
-      {/* <div className="py-16 bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] text-white" data-aos="fade-up">
-        <Container>
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6" data-aos="zoom-in">
-              {t.ctaTitle}
-            </h2>
-            <p className="text-xl mb-8 text-[#E8FFF2]" data-aos="fade-up" data-aos-delay="200">
-              {t.ctaSubtitle}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-white text-gray-800 font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
-              >
-                {t.ctaBtn1}
-              </a>
-              <a
-                href="/request"
-                className="px-8 py-4 bg-gradient-to-r from-[#3A8AE8] to-[#3AB56D] text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 border-2 border-white"
-              >
-                {t.ctaBtn2}
-              </a>
-            </div>
-          </div>
-        </Container>
-      </div> */}
+    
 
       <style jsx>{`
         @keyframes float {
