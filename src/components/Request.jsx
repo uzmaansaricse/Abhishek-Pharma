@@ -26,7 +26,7 @@ export default function Contact() {
       contactCards: [
         { title: 'Call Manoj Kumar', detail: '+91 9414147250', link: 'tel:+919414147250' },
         { title: 'Call Dinesh Bajaj', detail: '+91 9636302626', link: 'tel:+919636302626' },
-        { title: 'Email Us', detail: 'info@abhishekpharma.com', link: 'mailto:info@abhishekpharma.com' }
+        { title: 'Email Us', detail: ' ankitbajaj7250@gmail.com', link: 'mailto: ankitbajaj7250@gmail.com' }
       ],
       formBadge: 'Send Enquiry',
       formTitle: "Let's Start a",

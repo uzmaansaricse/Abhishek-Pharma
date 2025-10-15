@@ -304,13 +304,13 @@ export default function Header() {
                 <span className="font-medium">+91 9414147250</span>
               </a>
               <a
-                href="mailto:info@abhishekpharma.com"
+                href="mailto: ankitbajaj7250@gmail.com"
                 className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors duration-300"
               >
                 <div className="p-2 bg-white rounded-lg shadow-sm">
                   <FaEnvelope className="w-4 h-4 text-[#46C47E]" />
                 </div>
-                <span className="font-medium text-sm">info@abhishekpharma.com</span>
+                <span className="font-medium text-sm"> ankitbajaj7250@gmail.com</span>
               </a>
             </div>
           </div>
