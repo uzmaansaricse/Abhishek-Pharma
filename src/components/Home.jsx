@@ -181,7 +181,7 @@ const content = {
             <div className='relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 group' data-aos="zoom-in" data-aos-duration="800">
               <img 
                 className='rounded-lg w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700' 
-                src="https://pdq-funding.co.uk/wp-content/uploads/2022/08/How-to-start-your-own-pharmacy-business.jpg.webp" 
+                src="/pk.png" 
                 alt="Pharmaceutical Excellence" 
                 loading="lazy"
               />
@@ -289,61 +289,61 @@ const content = {
     </div>
   </Container>
 </div>
+{/* Human Medicines Partners Grid */}
+<div className="bg-white py-12 border-t border-[#D1E5F7]" data-aos="fade-up">
+  <Container>
+    <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
+      {t.humanPartnersTitle} <span className="text-[#5BA3EB]">{t.humanPartnersHighlight}</span>
+    </h2>
+    
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
+      {humanPartners.map((partner, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-3 h-20 sm:h-24 md:h-28"
+          data-aos="zoom-in"
+          data-aos-delay={index * 30}
+        >
+          <img
+            src={partner.logo}
+            alt={partner.alt}
+            loading="lazy"
+            className="max-w-full max-h-full object-contain transition-all duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </Container>
+</div>
+
+{/* Veterinary Medicines Partners Grid */}
+<div className="bg-[#F0F7FF] py-12 border-y border-[#D1E5F7]" data-aos="fade-up">
+  <Container>
+    <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
+      {t.vetPartnersTitle} <span className="text-[#5BA3EB]">{t.vetPartnersHighlight}</span>
+    </h2>
+    
+    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+      {vetPartners.map((partner, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-3 h-20 sm:h-24 md:h-28"
+          data-aos="zoom-in"
+          data-aos-delay={index * 40}
+        >
+          <img
+            src={partner.logo}
+            alt={partner.alt}
+            loading="lazy"
+            className="max-w-full max-h-full object-contain transition-all duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </Container>
+</div>
 
 
-      {/* Human Medicines Partners Grid */}
-      <div className="bg-white py-12 border-t border-[#D1E5F7]" data-aos="fade-up">
-        <Container>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.humanPartnersTitle} <span className="text-[#5BA3EB]">{t.humanPartnersHighlight}</span>
-          </h2>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
-            {humanPartners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-4 h-28"
-                data-aos="zoom-in"
-                data-aos-delay={index * 30}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.alt}
-                  loading="lazy"
-                  className="max-w-full max-h-full object-contain  transition-all duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </Container>
-      </div>
-
-      {/* Veterinary Medicines Partners Grid */}
-      <div className="bg-[#F0F7FF] py-12 border-y border-[#D1E5F7]" data-aos="fade-up">
-        <Container>
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-900">
-            {t.vetPartnersTitle} <span className="text-[#5BA3EB]">{t.vetPartnersHighlight}</span>
-          </h2>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
-            {vetPartners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 border-2 border-[#D1E5F7] hover:border-[#5BA3EB] p-4 h-28"
-                data-aos="zoom-in"
-                data-aos-delay={index * 40}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.alt}
-                  loading="lazy"
-                  className="max-w-full max-h-full object-contain  transition-all duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </Container>
-      </div>
 
       {/* Testimonials Section */}
       <div className='py-10 bg-white'>
