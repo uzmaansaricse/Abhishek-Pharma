@@ -2,108 +2,97 @@ import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
 export default function Slider1({ language = 'en' }) {
-    const slidesData = {
-        en: [
-            {
-                name: 'Dr. Rajesh Sharma',
-                position: 'Pharmacy Owner',
-                location: 'Mumbai',
-                image: 'https://randomuser.me/api/portraits/men/32.jpg',
-                rating: 5,
-                text: 'Abhishek Pharma has been our reliable supplier for branded medicines. Their quality and timely delivery are unmatched!',
-            },
-            {
-                name: 'Dr. Priya Singh',
-                position: 'Medical Distributor',
-                location: 'Delhi',
-                image: 'https://randomuser.me/api/portraits/women/44.jpg',
-                rating: 5,
-                text: 'We appreciate their bulk supply options and promotional products. Great service and competitive pricing!',
-            },
-            {
-                name: 'Dr. Anil Kumar',
-                position: 'Hospital Manager',
-                location: 'Bangalore',
-                image: 'https://randomuser.me/api/portraits/men/52.jpg',
-                rating: 5,
-                text: 'Abhishek Pharma ensures authentic medicines and excellent support. Highly recommended for healthcare providers.',
-            },
-            {
-                name: 'Dr. Sunita Verma',
-                position: 'Clinical Director',
-                location: 'Chennai',
-                image: 'https://randomuser.me/api/portraits/women/65.jpg',
-                rating: 5,
-                text: 'Outstanding pharmaceutical solutions with genuine products. Their team is professional, responsive, and always reliable.',
-            },
-            {
-                name: 'Vikram Patel',
-                position: 'Pharmacy Chain Owner',
-                location: 'Pune',
-                image: 'https://randomuser.me/api/portraits/men/71.jpg',
-                rating: 5,
-                text: 'Working with Abhishek Pharma for 5+ years. Their consistency in quality and delivery makes them our trusted partner.',
-            },
-            {
-                name: 'Meera Reddy',
-                position: 'Medical Store Owner',
-                location: 'Hyderabad',
-                image: 'https://randomuser.me/api/portraits/women/28.jpg',
-                rating: 5,
-                text: 'Excellent service with authentic products. The team is always responsive and delivery is always on time.',
-            },
-        ],
-        hi: [
-            {
-                name: 'डॉ. राजेश शर्मा',
-                position: 'फार्मेसी मालिक',
-                location: 'मुंबई',
-                image: 'https://randomuser.me/api/portraits/men/32.jpg',
-                rating: 5,
-                text: 'अभिषेक फार्मा ब्रांडेड दवाओं के लिए हमारा विश्वसनीय आपूर्तिकर्ता रहा है। उनकी गुणवत्ता और समय पर डिलीवरी बेजोड़ है!',
-            },
-            {
-                name: 'डॉ. प्रिया सिंह',
-                position: 'चिकित्सा वितरक',
-                location: 'दिल्ली',
-                image: 'https://randomuser.me/api/portraits/women/44.jpg',
-                rating: 5,
-                text: 'हम उनके थोक आपूर्ति विकल्पों और प्रचार उत्पादों की सराहना करते हैं। बढ़िया सेवा और प्रतिस्पर्धी मूल्य निर्धारण!',
-            },
-            {
-                name: 'डॉ. अनिल कुमार',
-                position: 'अस्पताल प्रबंधक',
-                location: 'बैंगलोर',
-                image: 'https://randomuser.me/api/portraits/men/52.jpg',
-                rating: 5,
-                text: 'अभिषेक फार्मा प्रामाणिक दवाएं और उत्कृष्ट सहायता सुनिश्चित करता है। स्वास्थ्य सेवा प्रदाताओं के लिए अत्यधिक अनुशंसित।',
-            },
-            {
-                name: 'डॉ. सुनीता वर्मा',
-                position: 'क्लिनिकल निदेशक',
-                location: 'चेन्नई',
-                image: 'https://randomuser.me/api/portraits/women/65.jpg',
-                rating: 5,
-                text: 'वास्तविक उत्पादों के साथ उत्कृष्ट फार्मास्युटिकल समाधान। उनकी टीम पेशेवर, उत्तरदायी और हमेशा विश्वसनीय है।',
-            },
-            {
-                name: 'विक्रम पटेल',
-                position: 'फार्मेसी चेन मालिक',
-                location: 'पुणे',
-                image: 'https://randomuser.me/api/portraits/men/71.jpg',
-                rating: 5,
-                text: '5+ वर्षों से अभिषेक फार्मा के साथ काम कर रहे हैं। गुणवत्ता और वितरण में उनकी स्थिरता उन्हें हमारा विश्वसनीय साझेदार बनाती है।',
-            },
-            {
-                name: 'मीरा रेड्डी',
-                position: 'मेडिकल स्टोर मालिक',
-                location: 'हैदराबाद',
-                image: 'https://randomuser.me/api/portraits/women/28.jpg',
-                rating: 5,
-                text: 'प्रामाणिक उत्पादों के साथ उत्कृष्ट सेवा। टीम हमेशा उत्तरदायी है और डिलीवरी हमेशा समय पर होती है।',
-            },
-        ]
-    };
+  const slidesData = {
+    en: [
+        {
+            name: 'Dr. Rajesh Sharma',
+            position: 'Pharmacy Owner',
+            location: 'Jaipur',
+            rating: 5,
+            text: 'Abhishek Pharma has been our reliable supplier for high-quality medicines. Their timely delivery and service are excellent!',
+        },
+        {
+            name: 'Dr. Priya Meena',
+            position: 'Medical Distributor',
+            location: 'Ajmer',
+            rating: 5,
+            text: 'We appreciate their bulk supply options and smooth service. Always professional and trustworthy.',
+        },
+        {
+            name: 'Dr. Anil Choudhary',
+            position: 'Hospital Manager',
+            location: 'Bikaner',
+            rating: 5,
+            text: 'Abhishek Pharma ensures genuine medicines and quick support. Highly recommended for healthcare providers.',
+        },
+        {
+            name: 'Dr. Sunita Rathore',
+            position: 'Clinical Director',
+            location: 'Udaipur',
+            rating: 5,
+            text: 'They provide excellent pharmaceutical products with great consistency and care. Very satisfied with their service.',
+        },
+        {
+            name: 'Vikram Singh',
+            position: 'Pharmacy Chain Owner',
+            location: 'Jodhpur',
+            rating: 5,
+            text: 'Working with Abhishek Pharma for years. Their quality and reliability make them our trusted partner.',
+        },
+        {
+            name: 'Meera Sharma',
+            position: 'Medical Store Owner',
+            location: 'Kota',
+            rating: 5,
+            text: 'Authentic products, quick delivery, and supportive team. Highly reliable supplier.',
+        },
+    ],
+    hi: [
+        {
+            name: 'डॉ. राजेश शर्मा',
+            position: 'फार्मेसी मालिक',
+            location: 'जयपुर',
+            rating: 5,
+            text: 'अभिषेक फार्मा हमारे लिए उच्च गुणवत्ता वाली दवाओं का विश्वसनीय आपूर्तिकर्ता रहा है। उनकी समय पर डिलीवरी और सेवा उत्कृष्ट है!',
+        },
+        {
+            name: 'डॉ. प्रिया मीणा',
+            position: 'चिकित्सा वितरक',
+            location: 'अजमेर',
+            rating: 5,
+            text: 'हम उनकी थोक आपूर्ति और सुचारू सेवा की सराहना करते हैं। हमेशा पेशेवर और भरोसेमंद टीम।',
+        },
+        {
+            name: 'डॉ. अनिल चौधरी',
+            position: 'अस्पताल प्रबंधक',
+            location: 'बीकानेर',
+            rating: 5,
+            text: 'अभिषेक फार्मा प्रामाणिक दवाएं और त्वरित सहायता सुनिश्चित करता है। स्वास्थ्य सेवा प्रदाताओं के लिए अत्यधिक अनुशंसित।',
+        },
+        {
+            name: 'डॉ. सुनीता राठौर',
+            position: 'क्लिनिकल निदेशक',
+            location: 'उदयपुर',
+            rating: 5,
+            text: 'वे उत्कृष्ट गुणवत्ता और निरंतरता के साथ दवाएं प्रदान करते हैं। उनकी सेवा से हम बहुत संतुष्ट हैं।',
+        },
+        {
+            name: 'विक्रम सिंह',
+            position: 'फार्मेसी चेन मालिक',
+            location: 'जोधपुर',
+            rating: 5,
+            text: 'हम कई वर्षों से अभिषेक फार्मा के साथ काम कर रहे हैं। उनकी गुणवत्ता और विश्वसनीयता उन्हें हमारा भरोसेमंद साझेदार बनाती है।',
+        },
+        {
+            name: 'मीरा शर्मा',
+            position: 'मेडिकल स्टोर मालिक',
+            location: 'कोटा',
+            rating: 5,
+            text: 'प्रामाणिक उत्पाद, त्वरित डिलीवरी और सहायक टीम। अत्यंत विश्वसनीय आपूर्तिकर्ता।',
+        },
+    ]
+};
+
 
     const slides = slidesData[language];
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -217,15 +206,7 @@ export default function Slider1({ language = 'en' }) {
                                     {/* Reviewer Info */}
                                     <div className="flex items-center gap-4">
                                         {/* Avatar with Light Blue Border */}
-                                        <div className="relative flex-shrink-0">
-                                            <div className="absolute inset-0 bg-[#D1E5F7] rounded-full blur-sm opacity-40"></div>
-                                            <img
-                                                src={slide.image}
-                                                alt={slide.name}
-                                                className="relative w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-[#D1E5F7]"
-                                                loading="lazy"
-                                            />
-                                        </div>
+                                     
 
                                         {/* Name & Position */}
                                         <div className="flex-grow">

@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                We are a trusted wholesale supplier of branded and promotional medicines, providing high-quality pharmaceutical products across India.
+               We are a trusted wholesale supplier of genuine and high-quality medicines, serving pharmacies and healthcare providers across India.
               </p>
             </div>
 
@@ -66,8 +66,8 @@ export default function Footer() {
                   { name: 'Home', path: '/' },
                   { name: 'Products', path: '/products' },
                   { name: 'About Us', path: '/about' },
-                  { name: 'Request Quote', path: '/request' },
-                  { name: 'Contact', path: '/contact' },
+                  // { name: 'Request Quote', path: '/request' },
+                  { name: 'Contact', path: '/request' },
                 ].map((link, index) => (
                   <li key={index}>
                     <a 
@@ -170,11 +170,7 @@ export default function Footer() {
               <p>
                 © 2025 <span className="bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent font-semibold">Abhishek Pharma</span>. All rights reserved.
               </p>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
-                <a href="/privacy" className="hover:text-gray-900 transition-colors hover:underline">Privacy Policy</a>
-                <a href="/terms" className="hover:text-gray-900 transition-colors hover:underline">Terms & Conditions</a>
-                <a href="/sitemap" className="hover:text-gray-900 transition-colors hover:underline">Sitemap</a>
-              </div>
+            
             </div>
           </div>
         </div>
