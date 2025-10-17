@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 export default function Slider({ language = 'en' }) {
@@ -161,11 +161,17 @@ export default function Slider({ language = 'en' }) {
 
     const [open, setOpen] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef(null);
 
     useEffect(() => {
-        const interval = setInterval(() => handleNext(), 4000);
-        return () => clearInterval(interval);
-    }, []);
+        intervalRef.current = setInterval(() => {
+            if (!isPaused) {
+                handleNext();
+            }
+        }, 4000);
+        return () => clearInterval(intervalRef.current);
+    }, [isPaused]);
 
     const handleNext = () => {
         if (!isAnimating) {
@@ -187,8 +193,20 @@ export default function Slider({ language = 'en' }) {
         navigate(link);
     };
 
+    const handleTouchStart = () => {
+        setIsPaused(true);
+    };
+
+    const handleTouchEnd = () => {
+        setIsPaused(false);
+    };
+
     return (
-        <div className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-[#F0F7FF]">
+        <div
+            className="w-full relative h-auto min-h-[600px] md:min-h-[700px] lg:min-h-screen overflow-hidden bg-[#F0F7FF]"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+        >
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-[#D1E5F7]/30 rounded-full blur-3xl"></div>
