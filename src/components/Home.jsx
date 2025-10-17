@@ -96,16 +96,21 @@ const content = {
     vetPartnersHighlight: 'Partners',
     faqTitle: 'Frequently Asked',
     faqHighlight: 'Questions',
-    faq1Q: 'What products does Abhishek Pharma offer?',
-    faq1A: 'We offer a wide range of allopathic, Ayurvedic, and veterinary medicines, along with surgical and promotional products for healthcare businesses across India.',
-    faq2Q: 'Do you handle bulk or promotional supplies?',
-    faq2A: 'Yes, we specialize in bulk orders and promotional medicines with competitive pricing and reliable delivery anywhere in India.',
-    faq3Q: 'How do you ensure product quality?',
-    faq3A: 'All our products are sourced from certified manufacturers and go through strict quality checks before dispatch.',
-    faq4Q: 'Can I get customized supplies for my business?',
-    faq4A: 'Absolutely! We offer flexible supply solutions tailored to your specific product and volume needs.',
-    faq5Q: 'Where is your business located?',
-    faq5A: 'We operate from India and supply healthcare partners across the country and beyond.',
+    
+          faq1Q: 'What products does Abhishek Pharma offer?',
+      faq1A: 'We offer a complete range of allopathic, Ayurvedic, and veterinary medicines, along with surgical and promotional products — all available at wholesale rates for medical stores and hospitals across India.',
+
+      faq2Q: 'Do you handle bulk and promotional orders?',
+      faq2A: 'Yes! We specialize in bulk supply for pharmacies, clinics, and distributors. Whether you need promotional medicines or branded products, we ensure best prices and fast delivery — anywhere in India.',
+
+      faq3Q: 'How do you ensure product quality?',
+      faq3A: 'All our products come directly from certified and reputed pharmaceutical manufacturers. Every batch undergoes strict quality checks before dispatch, ensuring you always receive genuine and safe products.',
+
+      faq4Q: 'Can I get customized supply for my business?',
+      faq4A: 'Absolutely! Whether you need specific brands, quantities, or product types, we provide flexible supply solutions customized for your business needs.',
+
+      faq5Q: 'Where is Abhishek Pharma located?',
+      faq5A: 'We are proudly based in Nokha, Rajasthan, and serve healthcare businesses across India with reliable, fast, and trusted supply services.',
   },
 
   hi: {
@@ -138,16 +143,21 @@ const content = {
     vetPartnersHighlight: 'साझेदार',
     faqTitle: 'अक्सर पूछे जाने वाले',
     faqHighlight: 'प्रश्न',
+    
     faq1Q: 'अभिषेक फार्मा कौन-कौन से उत्पाद प्रदान करता है?',
-    faq1A: 'हम एलोपैथिक, आयुर्वेदिक और पशु चिकित्सा दवाएं, साथ ही शल्य चिकित्सा और प्रचारात्मक उत्पाद प्रदान करते हैं।',
-    faq2Q: 'क्या आप थोक और प्रचारात्मक आपूर्ति करते हैं?',
-    faq2A: 'हाँ, हम प्रतिस्पर्धी मूल्य पर थोक और प्रचारात्मक दवाओं की विश्वसनीय आपूर्ति करते हैं, भारत में कहीं भी डिलीवरी के साथ।',
-    faq3Q: 'आप उत्पाद की गुणवत्ता कैसे सुनिश्चित करते हैं?',
-    faq3A: 'हम प्रमाणित निर्माताओं से ही उत्पाद प्राप्त करते हैं और हर बैच की गुणवत्ता जांच करते हैं।',
-    faq4Q: 'क्या मैं अपनी आवश्यकता के अनुसार आपूर्ति प्राप्त कर सकता हूँ?',
-    faq4A: 'बिलकुल, हम आपकी ज़रूरतों के अनुसार कस्टमाइज़्ड आपूर्ति समाधान प्रदान करते हैं।',
-    faq5Q: 'आपका व्यवसाय कहाँ स्थित है?',
-    faq5A: 'हम भारत से कार्यरत हैं और देशभर के स्वास्थ्य भागीदारों को आपूर्ति करते हैं।',
+      faq1A: 'हम एलोपैथिक, आयुर्वेदिक और पशु चिकित्सा दवाएं, साथ ही शल्य चिकित्सा और प्रचारात्मक उत्पाद थोक दरों पर पूरे भारत में उपलब्ध कराते हैं।',
+
+      faq2Q: 'क्या आप थोक और प्रचारात्मक ऑर्डर संभालते हैं?',
+      faq2A: 'हाँ! हम फार्मेसी, क्लिनिक और डिस्ट्रीब्यूटर्स के लिए थोक आपूर्ति में विशेषज्ञ हैं। हम प्रतिस्पर्धी दरों पर दवाएं और प्रचार सामग्री प्रदान करते हैं — पूरे भारत में डिलीवरी सहित।',
+
+      faq3Q: 'आप उत्पादों की गुणवत्ता कैसे सुनिश्चित करते हैं?',
+      faq3A: 'हम केवल प्रमाणित और विश्वसनीय निर्माताओं से ही दवाएं प्राप्त करते हैं। हर बैच की सख्त गुणवत्ता जांच की जाती है ताकि आपको हमेशा असली और सुरक्षित उत्पाद मिले।',
+
+      faq4Q: 'क्या मैं अपने व्यवसाय के लिए कस्टमाइज्ड सप्लाई ले सकता हूँ?',
+      faq4A: 'बिलकुल! आप अपनी जरूरत के हिसाब से ब्रांड, मात्रा और प्रोडक्ट टाइप चुन सकते हैं — हम पूरी तरह से कस्टमाइज्ड सप्लाई उपलब्ध कराते हैं।',
+
+      faq5Q: 'अभिषेक फार्मा कहाँ स्थित है?',
+      faq5A: 'हम राजस्थान के नोखा से संचालित हैं और पूरे भारत के मेडिकल व्यवसायों को भरोसेमंद व समय पर आपूर्ति प्रदान करते हैं।',
   }
 };
 
