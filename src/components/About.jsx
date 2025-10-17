@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import Container from '../pages/Container';
-import { FaShieldAlt, FaAward, FaCertificate, FaHeart, FaHandshake, FaLeaf, FaBullseye, FaGlobe, FaCheckCircle, FaTruck, FaUserMd, FaBoxes, FaMoneyBillWave, FaHeadset, FaWarehouse, FaClock } from 'react-icons/fa';
+import {
+  FaShieldAlt, FaAward, FaCertificate, FaHeart, FaHandshake, FaLeaf,
+  FaBullseye, FaGlobe, FaCheckCircle, FaTruck, FaUserMd, FaBoxes,
+  FaMoneyBillWave, FaHeadset, FaWarehouse, FaClock
+} from 'react-icons/fa';
 import { MdVerified, MdLocalShipping, MdInventory } from 'react-icons/md';
 import { GiMedicines } from 'react-icons/gi';
 
 export default function About() {
   const [language, setLanguage] = useState('en');
+  const [paused, setPaused] = useState(false); // 🟢 Added for touch-pause feature
 
-  const content = {
+    const content = {
     en: {
       heroTitle: 'About',
       heroHighlight: 'Abhishek Pharma',
@@ -132,9 +137,6 @@ export default function About() {
   };
 
   const t = content[language];
-  const valueIcons = [FaShieldAlt, FaHandshake, FaHeart, FaLeaf, FaAward, MdVerified];
-  const certIcons = [FaCertificate, FaShieldAlt, MdVerified];
-
   const getWhyBestIcon = (iconName) => {
     const icons = { boxes: FaBoxes, shield: FaShieldAlt, money: FaMoneyBillWave, truck: FaTruck, headset: FaHeadset, award: FaAward, verified: MdVerified, handshake: FaHandshake, heart: FaHeart };
     return icons[iconName];
@@ -147,7 +149,7 @@ export default function About() {
 
   return (
     <div className="w-[100vw] overflow-x-hidden bg-white">
-      {/* Language Toggle Button - Blue-Green Gradient */}
+      {/* Language Toggle */}
       <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
         <button
           onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
@@ -158,8 +160,7 @@ export default function About() {
         </button>
       </div>
 
-      {/* Hero Section - Blue-Green Gradient */}
-      <div className="relative bg-gradient-to-br from-[#4C9EFF] via-[#5AB4F5] to-[#46C47E] text-white py-20 overflow-hidden">
+       <div className="relative bg-gradient-to-br from-[#4C9EFF] via-[#5AB4F5] to-[#46C47E] text-white py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#46C47E]/20 rounded-full blur-3xl"></div>
         
@@ -190,16 +191,26 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Our Story Section - Light Blue-Green Background */}
-      <div className="py-16 bg-gradient-to-br from-[#f2f8ff] to-[#e9fff2]" data-aos="fade-up">
+      {/* Our Story Section */}
+      <div className="py-16 bg-gradient-to-br from-[#f2f8ff] to-[#e9fff2]">
+
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative" data-aos="fade-right">
+            
+            {/* 🟢 Image Section with pause-on-touch */}
+            <div
+              className="relative"
+              data-aos="fade-right"
+              onTouchStart={() => setPaused(true)}
+              onTouchEnd={() => setPaused(false)}
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+            >
               <div className="absolute -inset-4 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-3xl blur-xl opacity-30"></div>
               <img
                 src="drug.png"
                 alt="Pharmaceutical Excellence"
-                className="relative rounded-2xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-500 border-4 border-white"
+                className={`relative rounded-2xl shadow-lg w-full h-auto transform transition-transform duration-500 border-4 border-white ${paused ? '' : 'hover:scale-105 animate-float'}`}
                 loading="lazy"
               />
               
@@ -209,7 +220,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="space-y-6 text-center" data-aos="fade-left">
+                 <div className="space-y-6 text-center" data-aos="fade-left">
               <div className="inline-block">
                 <span className="bg-gradient-to-r from-[#BEE3FF] to-[#C7F5D9] text-gray-800 px-5 py-2 rounded-full text-sm font-semibold shadow-sm">
                   {t.storyBadge}
@@ -314,30 +325,13 @@ export default function About() {
               );
             })}
           </div>
-
-       
         </Container>
       </div>
-
-
-
-      {/* Vision & Mission Section - Blue-Green Gradients */}
-
-
-
-
-    
-
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
         }
-
         .animate-float {
           animation: float 3s ease-in-out infinite;
         }
@@ -345,3 +339,11 @@ export default function About() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
