@@ -210,8 +210,8 @@ export default function About() {
               <img
                 src="drug.png"
                 alt="Pharmaceutical Excellence"
-                className={`relative rounded-2xl shadow-lg w-full h-auto transform transition-transform duration-500 border-4 border-white ${paused ? '' : 'hover:scale-105 animate-float'}`}
-                loading="lazy"
+                className={`relative rounded-2xl shadow-lg w-full h-auto  border-4 border-white `}
+                
               />
               
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl p-6 shadow-xl animate-float border-2 border-white">
