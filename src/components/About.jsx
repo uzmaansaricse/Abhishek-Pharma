@@ -14,7 +14,7 @@ export default function About() {
       heroSubtitle: 'Trusted Wholesale Supplier of Quality Pharmaceutical Products',
       stats: [
         { number: '20+', label: 'Years Experience' },
-        { number: '500+', label: 'Healthcare Partners' },
+        { number: '200+', label: 'Healthcare Partners' },
         { number: '10K+', label: 'Products' },
         { number: '24/7', label: 'Support' }
       ],
@@ -31,9 +31,12 @@ export default function About() {
       whyBestSubtitle: 'The trusted choice for pharmaceutical wholesale distribution',
       whyBestReasons: [
         { title: 'Extensive Product Range', desc: 'From human medicines to veterinary products, surgical supplies to promotional items—we stock it all under one roof.', icon: 'boxes' },
-        { title: 'Verified Quality Assurance', desc: 'Every product sourced from certified manufacturers. ISO 9001:2015 certified operations with full regulatory compliance.', icon: 'shield' },
+       
         { title: 'Competitive Wholesale Pricing', desc: 'Volume discounts, promotional offers, and transparent pricing. No hidden costs or surprise charges.', icon: 'money' },
-        
+        { title: 'Quality Assurance', desc: 'We ensure every product meets the highest standards of pharmaceutical excellence and safety.', icon: 'verified' },
+        { title: 'Trust & Integrity', desc: 'Building lasting relationships through transparent practices and ethical business conduct.', icon: 'handshake' },
+        { title: 'Customer Focus', desc: 'Your satisfaction drives us. We provide personalized service and support at every step.', icon: 'heart' },
+         { title: 'Verified Quality Assurance', desc: 'Every product sourced from certified manufacturers.', icon: 'shield' },
       ],
       
       oneStopTitle: 'Everything Under',
@@ -57,12 +60,12 @@ export default function About() {
   
       ],
       
-      certHighlight: 'Licenses',
-      certSubtitle: 'Fully compliant with all regulatory requirements',
+      certHighlight: '',
+      certSubtitle: '',
       certifications: [
-        { title: 'ISO 9001:2015', desc: 'Quality Management System' },
-        { title: 'Drug License', desc: 'Valid & Updated' },
-        { title: 'GSTIN Registered', desc: 'Tax Compliant' }
+       
+        // { title: 'Drug License', desc: 'Valid & Updated' },
+        
       ],
     
     },
@@ -72,7 +75,7 @@ export default function About() {
       heroSubtitle: 'गुणवत्तापूर्ण फार्मास्युटिकल उत्पादों का विश्वसनीय थोक आपूर्तिकर्ता',
       stats: [
         { number: '15+', label: 'वर्षों का अनुभव' },
-        { number: '500+', label: 'स्वास्थ्य साझेदार' },
+        { number: '200+', label: 'स्वास्थ्य साझेदार' },
         { number: '10K+', label: 'उत्पाद' },
         { number: '24/7', label: 'सहायता' }
       ],
@@ -89,9 +92,9 @@ export default function About() {
       whyBestSubtitle: 'फार्मास्युटिकल थोक वितरण के लिए विश्वसनीय विकल्प',
       whyBestReasons: [
         { title: 'व्यापक उत्पाद श्रृंखला', desc: 'मानव दवाओं से लेकर पशु चिकित्सा उत्पादों तक—सब कुछ एक छत के नीचे।', icon: 'boxes' },
-        { title: 'सत्यापित गुणवत्ता आश्वासन', desc: 'प्रमाणित निर्माताओं से प्राप्त हर उत्पाद। ISO 9001:2015 प्रमाणित संचालन।', icon: 'shield' },
+       
         { title: 'प्रतिस्पर्धी थोक मूल्य', desc: 'वॉल्यूम छूट, पारदर्शी मूल्य निर्धारण। कोई छिपी हुई लागत नहीं।', icon: 'money' },
-        
+         { title: 'सत्यापित गुणवत्ता आश्वासन', desc: 'प्रमाणित निर्माताओं से प्राप्त हर उत्पाद।।', icon: 'shield' },
       ],
       
       oneStopTitle: 'सब कुछ',
@@ -116,13 +119,13 @@ export default function About() {
     
       ],
 
-      certTitle: 'प्रमाणन और',
-      certHighlight: 'लाइसेंस',
-      certSubtitle: 'सभी नियामक आवश्यकताओं के साथ पूरी तरह से अनुपालन',
+      certTitle: '',
+      certHighlight: '',
+      certSubtitle: '',
       certifications: [
-        { title: 'ISO 9001:2015', desc: 'गुणवत्ता प्रबंधन प्रणाली' },
-        { title: 'औषधि लाइसेंस', desc: 'वैध और अद्यतन' },
-        { title: 'GSTIN पंजीकृत', desc: 'कर अनुपालन' }
+        // { title: 'ISO 9001:2015', desc: 'गुणवत्ता प्रबंधन प्रणाली' },
+        // { title: 'औषधि लाइसेंस', desc: 'वैध और अद्यतन' },
+        // { title: 'GSTIN पंजीकृत', desc: 'कर अनुपालन' }
       ],
    
     }
@@ -133,7 +136,7 @@ export default function About() {
   const certIcons = [FaCertificate, FaShieldAlt, MdVerified];
 
   const getWhyBestIcon = (iconName) => {
-    const icons = { boxes: FaBoxes, shield: FaShieldAlt, money: FaMoneyBillWave, truck: FaTruck, headset: FaHeadset, award: FaAward };
+    const icons = { boxes: FaBoxes, shield: FaShieldAlt, money: FaMoneyBillWave, truck: FaTruck, headset: FaHeadset, award: FaAward, verified: MdVerified, handshake: FaHandshake, heart: FaHeart };
     return icons[iconName];
   };
 
@@ -194,7 +197,7 @@ export default function About() {
             <div className="relative" data-aos="fade-right">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#B0D8FF] to-[#C7F5D9] rounded-3xl blur-xl opacity-30"></div>
               <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800"
+                src="drug.png"
                 alt="Pharmaceutical Excellence"
                 className="relative rounded-2xl shadow-lg w-full h-auto transform hover:scale-105 transition-transform duration-500 border-4 border-white"
                 loading="lazy"
@@ -202,7 +205,7 @@ export default function About() {
               
               <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl p-6 shadow-xl animate-float border-2 border-white">
                 <MdVerified className="w-12 h-12 text-white" />
-                <p className="text-white font-bold mt-2">{language === 'en' ? 'ISO Certified' : 'आईएसओ प्रमाणित'}</p>
+                <p className="text-white font-bold mt-2">{language === 'en' ? ' Certified' : ' प्रमाणित'}</p>
               </div>
             </div>
 
@@ -316,82 +319,12 @@ export default function About() {
         </Container>
       </div>
 
-      {/* Values Section */}
-      <div className="py-16 bg-gradient-to-br from-[#f2f8ff] to-[#e9fff2]" data-aos="fade-up">
-        <Container>
-          <div className="text-center mb-12" data-aos="zoom-in">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {t.valuesTitle} <span className="bg-gradient-to-r from-[#4C9EFF] to-[#46C47E] bg-clip-text text-transparent">{t.valuesHighlight}</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t.valuesSubtitle}
-            </p>
-          </div>
 
-          {/* <div className="space-y-8 max-w-4xl mx-auto"> */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {t.values.map((value, index) => {
-              const Icon = valueIcons[index];
-              return (
-                <div key={index} className="text-center" data-aos="flip-up" data-aos-delay={index * 100}>
-                  <div className="inline-block p-4 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] rounded-xl mb-6">
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    {value.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </Container>
-      </div>
 
       {/* Vision & Mission Section - Blue-Green Gradients */}
 
 
-      {/* Certifications Section - Blue-Green Gradient */}
-      <div className="py-16 bg-gradient-to-br from-[#4C9EFF] to-[#46C47E] text-white" data-aos="fade-up">
-        <Container>
-          <div className="text-center mb-12" data-aos="zoom-in">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-4">
-              {t.certTitle} <span className="text-[#C7F5D9]">{t.certHighlight}</span>
-            </h2>
-            <p className="text-xl text-[#E8FFF2]">
-              {t.certSubtitle}
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {t.certifications.map((cert, index) => {
-              const Icon = certIcons[index];
-              return (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center border-2 border-white/10 hover:bg-white/10 hover:border-white/30 transition-all duration-300 transform hover:scale-105"
-                  data-aos="flip-up"
-                  data-aos-delay={index * 100}
-                >
-                  <div className="inline-block p-4 bg-white/10 rounded-xl mb-4">
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-white">{cert.title}</h3>
-                  <p className="text-[#E8FFF2]">{cert.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
-            <p className="text-[#E8FFF2] text-lg max-w-3xl mx-auto">
-              {t.certDesc}
-            </p>
-          </div>
-        </Container>
-      </div>
 
     
 

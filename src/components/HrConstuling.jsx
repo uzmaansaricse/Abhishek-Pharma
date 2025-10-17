@@ -178,7 +178,7 @@ export default function PharmaceuticalServices() {
                   <div className="relative bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-8 border-2 border-teal-200">
                     <div className="space-y-4">
                       {[
-                        'ISO Certified Quality',
+                        'Drug Licence ',
                         'Pan-India Distribution',
                         'Regulatory Compliance',
                         'Competitive Pricing'

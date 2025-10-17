@@ -54,7 +54,7 @@ export default function Slider({ language = 'en' }) {
                 buttonLink: '/contact',
                 contentImage: '/images/2dyKZsSUuYtPBByWY3o1rp3WUnAsftE3ogkGN8fY.jpg',
                 badge: 'Trusted Since 2003',
-                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+                floatingBadge: { title: 'Certified', subtitle: 'Drug Licence' }
             },
             {
                 image: '/images/bannerimg.jpg',
@@ -70,7 +70,7 @@ export default function Slider({ language = 'en' }) {
                 buttonLink: '/about',
                 contentImage: '/images/lois-blog.jpg',
                 badge: 'Trusted Since 2003',
-                floatingBadge: { title: 'Certified', subtitle: 'ISO Compliant' }
+                floatingBadge: { title: 'Certified', subtitle: 'Drug Licence' }
             },
         ],
         hi: [
@@ -144,7 +144,7 @@ export default function Slider({ language = 'en' }) {
     const trustIndicators = {
         en: [
             { icon: '🏆', text: '200+ Partners', subtext: 'Nationwide' },
-            { icon: '✅', text: 'ISO Certified', subtext: 'Quality Assured' },
+            { icon: '✅', text: 'Drug Licence', subtext: 'Quality Assured' },
             { icon: '📦', text: '10K+ Products', subtext: 'In Stock' },
             { icon: '⚡', text: '24/7 Support', subtext: 'Always Available' }
         ],

@@ -127,7 +127,7 @@ export default function PharmaceuticalSupport() {
               {/* Key Benefits */}
               <div className="grid md:grid-cols-3 gap-6 mt-10">
                 {[
-                  { icon: MdVerified, title: 'ISO Certified', desc: 'Quality assured operations' },
+                  { icon: MdVerified, title: 'Drug Licence', desc: 'Quality assured operations' },
                   { icon: MdLocalShipping, title: 'Pan-India Network', desc: 'Nationwide distribution reach' },
                   { icon: MdInventory, title: 'Smart Systems', desc: 'Technology-driven solutions' }
                 ].map((benefit, index) => (
@@ -209,7 +209,7 @@ export default function PharmaceuticalSupport() {
               {[
                 { title: 'Experience', desc: '15+ years in pharmaceutical distribution', icon: '📅' },
                 { title: 'Network', desc: '500+ healthcare partners across India', icon: '🏥' },
-                { title: 'Quality', desc: 'ISO certified with rigorous quality control', icon: '✅' },
+                { title: 'Quality', desc: 'Drug Licenced with rigorous quality control', icon: '✅' },
                 { title: 'Technology', desc: 'Advanced inventory and tracking systems', icon: '💻' },
                 { title: 'Compliance', desc: 'Full regulatory compliance and licensing', icon: '📋' },
                 { title: 'Support', desc: '24/7 customer support and assistance', icon: '🤝' }

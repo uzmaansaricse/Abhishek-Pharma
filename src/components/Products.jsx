@@ -71,7 +71,7 @@ export default function Products() {
       benefitsHighlight: 'Our Products?',
       benefitsSubtitle: 'Quality, reliability, and service you can trust',
       benefits: [
-        { icon: FaCheckCircle, title: 'Authentic Products', desc: 'ISO certified and quality assured' },
+        { icon: FaCheckCircle, title: 'Authentic Products', desc: 'quality assured' },
         { icon: FaTruck, title: 'Fast Delivery', desc: 'Quick and reliable shipping' },
         { icon: FaShieldAlt, title: 'Safe & Secure', desc: 'Proper handling and storage' },
         { icon: MdVerified, title: 'Verified Suppliers', desc: 'Direct from manufacturers' }
