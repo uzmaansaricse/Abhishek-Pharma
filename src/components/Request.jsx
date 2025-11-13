@@ -55,6 +55,43 @@ export default function Contact() {
         { title: 'Best Prices', desc: 'Competitive wholesale rates for bulk orders' },
         { title: 'Custom Lists', desc: 'Tailored product catalogs for your needs' }
       ]
+    },
+    hi: {
+      heroTitle: 'संपर्क में',
+      heroHighlight: 'आइए',
+      heroSubtitle: "सवाल हैं? हम आपकी फार्मास्युटिकल आवश्यकताओं में मदद करने के लिए यहां हैं",
+      contactCards: [
+        { title: 'मनोज कुमार को कॉल करें', detail: '+91 9414147250', link: 'tel:+919414147250' },
+        { title: 'दिनेश बजाज को कॉल करें', detail: '+91 9636302626', link: 'tel:+919636302626' },
+        { title: 'हमें ईमेल करें', detail: ' ankitbajaj7250@gmail.com', link: 'mailto: ankitbajaj7250@gmail.com' }
+      ],
+      formBadge: 'पूछताछ भेजें',
+      formTitle: "आइए एक",
+      formHighlight: 'बातचीत शुरू करें',
+      formSubtitle: "नीचे दिया गया फॉर्म भरें और हमारी टीम 24 घंटों के भीतर आपसे संपर्क करेगी।",
+      nameLabel: 'नाम',
+      businessLabel: 'व्यापार का नाम',
+      cityLabel: 'शहर',
+      emailLabel: 'ईमेल',
+      phoneLabel: 'फोन',
+      messageLabel: 'संदेश',
+      namePlaceholder: 'आपका नाम',
+      businessPlaceholder: 'आपका व्यापार नाम',
+      cityPlaceholder: 'आपका शहर',
+      emailPlaceholder: 'your@email.com',
+      phonePlaceholder: '+91 XXXXX XXXXX',
+      messagePlaceholder: 'हमसे अपनी आवश्यकताओं के बारे में बताएं...',
+      submitBtn: 'पूछताछ सबमिट करें',
+      loadingMsg: 'आपका संदेश भेजा जा रहा है...',
+      successTitle: 'धन्यवाद!',
+      successMsg: 'आपकी पूछताछ सफलतापूर्वक भेजी गई है।',
+      successSubMsg: "हम 24 घंटों के भीतर आपसे संपर्क करेंगे।",
+      benefits: [
+        { title: 'तत्काल कोटेशन', desc: '24 घंटों के भीतर विस्तृत मूल्य निर्धारण प्राप्त करें' },
+        { title: 'तेज डिलीवरी', desc: 'त्वरित प्रेषण और विश्वसनीय शिपिंग' },
+        { title: 'सर्वोत्तम मूल्य', desc: 'थोक ऑर्डर के लिए प्रतिस्पर्धी थोक दरें' },
+        { title: 'कस्टम सूचियां', desc: 'आपकी आवश्यकताओं के लिए तैयार उत्पाद कैटलॉग' }
+      ]
     }
   };
 

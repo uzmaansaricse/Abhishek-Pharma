@@ -54,6 +54,43 @@ export default function RequestContactPage() {
       successTitle: 'Thank You!',
       successMsg: 'Your enquiry has been sent successfully.',
       successSubMsg: "We'll get back to you within 24 hours."
+    },
+    hi: {
+      heroTitle: 'कोट',
+      heroHighlight: 'का अनुरोध करें',
+      heroSubtitle: 'हमारे उत्पाद कैटलॉग और प्रतिस्पर्धी मूल्य निर्धारण तक तत्काल पहुंच प्राप्त करें',
+      heroDesc: 'नीचे दिया गया फॉर्म भरें और 24 घंटों के भीतर विस्तृत कोटेशन प्राप्त करें',
+      benefits: [
+        { title: 'तत्काल कोटेशन', desc: '24 घंटों के भीतर विस्तृत मूल्य निर्धारण प्राप्त करें' },
+        { title: 'तेज डिलीवरी', desc: 'त्वरित प्रेषण और विश्वसनीय शिपिंग' },
+        { title: 'सर्वोत्तम मूल्य', desc: 'थोक ऑर्डर के लिए प्रतिस्पर्धी थोक दरें' },
+        { title: 'कस्टम सूचियां', desc: 'आपकी आवश्यकताओं के लिए तैयार उत्पाद कैटलॉग' }
+      ],
+      formBadge: 'पूछताछ भेजें',
+      formTitle: "आइए एक",
+      formHighlight: 'बातचीत शुरू करें',
+      formSubtitle: "नीचे दिया गया फॉर्म भरें और हमारी टीम 24 घंटों के भीतर आपसे संपर्क करेगी।",
+      fields: {
+        name: 'नाम',
+        companyName: 'व्यापार का नाम',
+        jobTitle: 'शहर',
+        email: 'ईमेल',
+        mobile: 'फोन',
+        message: 'संदेश'
+      },
+      placeholders: {
+        name: 'आपका नाम',
+        companyName: 'आपका व्यापार नाम',
+        jobTitle: 'आपका शहर',
+        email: 'your@email.com',
+        mobile: '+91 XXXXX XXXXX',
+        message: 'हमसे अपनी आवश्यकताओं के बारे में बताएं...'
+      },
+      submitBtn: 'पूछताछ सबमिट करें',
+      loadingMsg: 'आपका संदेश भेजा जा रहा है...',
+      successTitle: 'धन्यवाद!',
+      successMsg: 'आपकी पूछताछ सफलतापूर्वक भेजी गई है।',
+      successSubMsg: "हम 24 घंटों के भीतर आपसे संपर्क करेंगे।"
     }
   };
 
