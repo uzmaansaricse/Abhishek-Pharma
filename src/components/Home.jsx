@@ -7,6 +7,7 @@ import { HiOutlineWrenchScrewdriver } from 'react-icons/hi2'
 import { BiSearchAlt } from 'react-icons/bi'
 import { GiLaptop } from 'react-icons/gi'
 import { useNavigate } from 'react-router'
+import SEO from './SEO'
 
 export default function Home() {
   const [open, setOpen] = useState(null);
@@ -167,17 +168,53 @@ const content = {
   const t = content[language];
 
   return (
-    <div className='w-[100vw] overflow-x-hidden bg-[#f8f9fb]'>
-      {/* Language Toggle Button - Light Blue */}
-      <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
-        <button
-          onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
-          className="group flex items-center gap-2 bg-[#5BA3EB] hover:bg-[#4A92DA] text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-        >
-          <FaGlobe className="w-4 h-4" />
-          <span className="text-sm">{language === 'en' ? 'हिंदी' : 'English'}</span>
-        </button>
-      </div>
+    <>
+      <SEO
+        title="Abhishek Pharma - Trusted Wholesale Distributor of Medicines"
+        description="Abhishek Pharma is a trusted wholesale distributor of allopathic, Ayurvedic, and veterinary medicines. Serving healthcare businesses across India since 2003 with genuine products and reliable supply."
+        keywords="pharmaceutical distributor, wholesale medicines, allopathic medicines, Ayurvedic products, veterinary medicines, pharma supplier India, medical supplies, Abhishek Pharma"
+        canonical="https://abhishekpharma.in"
+        ogTitle="Abhishek Pharma - Leading Pharmaceutical Distributor in India"
+        ogDescription="ISO-certified wholesale distributor of medicines, surgical supplies, and veterinary products. Pan-India delivery with 20+ years of trusted service."
+        ogImage="https://abhishekpharma.in/images/bannerimg.jpg"
+        twitterCard="summary_large_image"
+        twitterTitle="Abhishek Pharma - Trusted Medicine Distributor"
+        twitterDescription="Wholesale medicines, Ayurvedic products, and veterinary supplies. Serving India since 2003."
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Abhishek Pharma",
+          "url": "https://abhishekpharma.in",
+          "logo": "https://abhishekpharma.in/images/bannerimg.jpg",
+          "description": "Trusted wholesale distributor of allopathic, Ayurvedic, and veterinary medicines across India since 2003.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nokha",
+            "addressRegion": "Rajasthan",
+            "addressCountry": "India"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXXXXXXX",
+            "contactType": "customer service"
+          },
+          "sameAs": [
+            "https://www.facebook.com/abhishekpharma",
+            "https://www.linkedin.com/company/abhishek-pharma"
+          ]
+        }}
+      />
+      <div className='w-[100vw] overflow-x-hidden bg-[#f8f9fb]'>
+        {/* Language Toggle Button - Light Blue */}
+        <div className="fixed top-24 right-4 z-50" data-aos="fade-left">
+          <button
+            onClick={() => setLanguage(language === 'en' ? 'hi' : 'en')}
+            className="group flex items-center gap-2 bg-[#5BA3EB] hover:bg-[#4A92DA] text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+          >
+            <FaGlobe className="w-4 h-4" />
+            <span className="text-sm">{language === 'en' ? 'हिंदी' : 'English'}</span>
+          </button>
+        </div>
 
       {/* Hero Slider */}
       <div className="w-full mb-5 h-full" data-aos="fade-down" data-aos-duration="800">
@@ -404,5 +441,6 @@ const content = {
         </Container>
       </div>
     </div>
+    </>
   )
 }

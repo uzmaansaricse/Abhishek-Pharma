@@ -1,5 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import './theme.css'
 import Layout from './pages/Layout'
 import Home from './components/Home'
@@ -38,8 +39,8 @@ export default function App() {
     }
   ])
   return (
-    <>
+    <HelmetProvider>
       <RouterProvider router={router} />
-    </>
+    </HelmetProvider>
   )
 }
